@@ -1,6 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{8EE43D7B-1AA6-497F-AA54-5DD816720F64}" SchemaVersion="119">
 	<SoundcasterSessions>
-		<WorkUnit Name="Default Work Unit" ID="{8EE43D7B-1AA6-497F-AA54-5DD816720F64}" PersistMode="Standalone"/>
+		<WorkUnit Name="Default Work Unit" ID="{8EE43D7B-1AA6-497F-AA54-5DD816720F64}" PersistMode="Standalone">
+			<ChildrenList>
+				<SoundcasterSession Name="Test Soundcaster Session" ID="{C198F855-8AD4-4910-B9EE-41BFF0D08D32}">
+					<ModuleList>
+						<Module>
+							<ObjectRef Name="Branches_8" ID="{AEFAB0B0-54BD-4C05-850D-57CDFF518EA5}" WorkUnitID="{90AC13BD-24B4-4141-9BEF-0F4B77B371EB}"/>
+							<Position X="0" Y="0"/>
+						</Module>
+					</ModuleList>
+					<RTPCValueList ShowAll="true">
+						<RTPCValue>
+							<GameParameterRef Name="SoundEffectsVolume" ID="{F01A5E26-44BC-43DD-A7EC-C90272841464}"/>
+							<Value>50</Value>
+						</RTPCValue>
+						<RTPCValue>
+							<GameParameterRef Name="AmbienceVolume" ID="{FCE220E0-C76C-45AE-BDF5-95D24D411C0F}"/>
+							<Value>50</Value>
+						</RTPCValue>
+						<RTPCValue>
+							<GameParameterRef Name="MasterVolume" ID="{6E25976F-5531-46DD-8014-BB390441D650}"/>
+							<Value>50</Value>
+						</RTPCValue>
+						<RTPCValue>
+							<GameParameterRef Name="MusicVolume" ID="{FF1FA71E-F11D-4746-8861-20932411E7BF}"/>
+							<Value>50</Value>
+						</RTPCValue>
+					</RTPCValueList>
+					<CurrentStateList ShowAll="true"/>
+					<CurrentSwitchList ShowAll="true"/>
+				</SoundcasterSession>
+			</ChildrenList>
+		</WorkUnit>
 	</SoundcasterSessions>
 </WwiseDocument>

@@ -38,8 +38,22 @@ MonoBehaviour:
     ParentPath: Master-Mixer Hierarchy\Default Work Unit
     guid: 4273db616b71da4a8e0ead113fc0cb4b
     GuidInternal: 
-    m_lastTime: -8584944998800840280
+    m_lastTime: -8584943466066282566
     List:
+    - name: Ambience Bus
+      guid: d693a8b312f7334aa80f924c71cbdbe1
+      id: 4202237879
+      PathAndIcons:
+      - ElementName: Master-Mixer Hierarchy
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 4273db616b71da4a8e0ead113fc0cb4b
+      - ElementName: Ambience Bus
+        ObjectType: 2
+        guid: d693a8b312f7334aa80f924c71cbdbe1
+      Path: Master-Mixer Hierarchy\Default Work Unit\Ambience Bus
     - name: Master Audio Bus
       guid: d8a41415a61d2a41a17e75ca0c2149f3
       id: 3803692087
@@ -54,6 +68,34 @@ MonoBehaviour:
         ObjectType: 2
         guid: d8a41415a61d2a41a17e75ca0c2149f3
       Path: Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus
+    - name: Music Bus
+      guid: 83b72cf1a918a74a8099938276fea67e
+      id: 3127962312
+      PathAndIcons:
+      - ElementName: Master-Mixer Hierarchy
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 4273db616b71da4a8e0ead113fc0cb4b
+      - ElementName: Music Bus
+        ObjectType: 2
+        guid: 83b72cf1a918a74a8099938276fea67e
+      Path: Master-Mixer Hierarchy\Default Work Unit\Music Bus
+    - name: Sound Effects Bus
+      guid: 12e14dbf8dcf15498f78f85a212a6c6c
+      id: 57144414
+      PathAndIcons:
+      - ElementName: Master-Mixer Hierarchy
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 4273db616b71da4a8e0ead113fc0cb4b
+      - ElementName: Sound Effects Bus
+        ObjectType: 2
+        guid: 12e14dbf8dcf15498f78f85a212a6c6c
+      Path: Master-Mixer Hierarchy\Default Work Unit\Sound Effects Bus
   BankWwu:
   - PhysicalPath: SoundBanks\Default Work Unit.wwu
     PathAndIcons:
@@ -66,8 +108,22 @@ MonoBehaviour:
     ParentPath: SoundBanks\Default Work Unit
     guid: 01b0af0ec7ad604696383e25c56eb617
     GuidInternal: 
-    m_lastTime: -8584944998800670119
-    List: []
+    m_lastTime: -8584943434294995781
+    List:
+    - name: Test
+      guid: da03f62ed384024a867fd6828ea0b7bb
+      id: 3157003241
+      PathAndIcons:
+      - ElementName: SoundBanks
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 01b0af0ec7ad604696383e25c56eb617
+      - ElementName: Test
+        ObjectType: 7
+        guid: da03f62ed384024a867fd6828ea0b7bb
+      Path: SoundBanks\Default Work Unit\Test
   EventWwu:
   - PhysicalPath: Events\Default Work Unit.wwu
     PathAndIcons:
@@ -80,8 +136,25 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: 423b03fbe80d9141b98abfeb44c02c12
     GuidInternal: 
-    m_lastTime: -8584944998800295250
-    List: []
+    m_lastTime: -8584944970115723934
+    List:
+    - name: Test
+      guid: c64a0b115e300f439719258023aa043d
+      id: 3157003241
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 423b03fbe80d9141b98abfeb44c02c12
+      - ElementName: Test
+        ObjectType: 3
+        guid: c64a0b115e300f439719258023aa043d
+      Path: Events\Default Work Unit\Test
+      maxAttenuation: 0
+      maxDuration: 0.99106574
+      minDuration: 0.99106574
   RtpcWwu:
   - PhysicalPath: Game Parameters\Default Work Unit.wwu
     PathAndIcons:
@@ -94,8 +167,64 @@ MonoBehaviour:
     ParentPath: Game Parameters\Default Work Unit
     guid: 4b251ce0a8240d4989b8d824e2474d7f
     GuidInternal: 
-    m_lastTime: -8584944998800485425
-    List: []
+    m_lastTime: -8584943466066382651
+    List:
+    - name: AmbienceVolume
+      guid: e020e2fc6cc7ae45bdf595d24d411c0f
+      id: 1204480359
+      PathAndIcons:
+      - ElementName: Game Parameters
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 4b251ce0a8240d4989b8d824e2474d7f
+      - ElementName: AmbienceVolume
+        ObjectType: 13
+        guid: e020e2fc6cc7ae45bdf595d24d411c0f
+      Path: Game Parameters\Default Work Unit\AmbienceVolume
+    - name: MasterVolume
+      guid: 6f97256e3155dd468014bb390441d650
+      id: 2918011349
+      PathAndIcons:
+      - ElementName: Game Parameters
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 4b251ce0a8240d4989b8d824e2474d7f
+      - ElementName: MasterVolume
+        ObjectType: 13
+        guid: 6f97256e3155dd468014bb390441d650
+      Path: Game Parameters\Default Work Unit\MasterVolume
+    - name: MusicVolume
+      guid: 1ea71fff1df14647886120932411e7bf
+      id: 2346531308
+      PathAndIcons:
+      - ElementName: Game Parameters
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 4b251ce0a8240d4989b8d824e2474d7f
+      - ElementName: MusicVolume
+        ObjectType: 13
+        guid: 1ea71fff1df14647886120932411e7bf
+      Path: Game Parameters\Default Work Unit\MusicVolume
+    - name: SoundEffectsVolume
+      guid: 265e1af0bc44dd43a7ecc90272841464
+      id: 3402092638
+      PathAndIcons:
+      - ElementName: Game Parameters
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 4b251ce0a8240d4989b8d824e2474d7f
+      - ElementName: SoundEffectsVolume
+        ObjectType: 13
+        guid: 265e1af0bc44dd43a7ecc90272841464
+      Path: Game Parameters\Default Work Unit\SoundEffectsVolume
   StateWwu:
   - PhysicalPath: States\Default Work Unit.wwu
     PathAndIcons:
@@ -139,7 +268,7 @@ MonoBehaviour:
     m_lastTime: -8584944998801641007
     List: []
   ExpandedFileSystemItemIds: 
-  ExpandedWaapiItemIds: 
+  ExpandedWaapiItemIds: 050000000600000008000000090000000a0000000b0000001600000017000000
   AutoSyncSelection: 0
   autoPopulateEnabled: 1
   currentDataSource: 0
