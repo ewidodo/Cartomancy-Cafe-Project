@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{0EAFB001-ADC7-4660-9638-3E25C56EB617}" SchemaVersion="119">
+	<SoundBanks>
+		<WorkUnit Name="Default Work Unit" ID="{0EAFB001-ADC7-4660-9638-3E25C56EB617}" PersistMode="Standalone">
+			<ChildrenList>
+				<SoundBank Name="Test" ID="{2EF603DA-84D3-4A02-867F-D6828EA0B7BB}">
+					<ObjectInclusionList>
+						<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{61DB7342-716B-4ADA-8E0E-AD113FC0CB4B}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Sound Effects Bus" ID="{BF4DE112-CF8D-4915-8F78-F85A212A6C6C}" WorkUnitID="{61DB7342-716B-4ADA-8E0E-AD113FC0CB4B}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Ambience Bus" ID="{B3A893D6-F712-4A33-A80F-924C71CBDBE1}" WorkUnitID="{61DB7342-716B-4ADA-8E0E-AD113FC0CB4B}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Music Bus" ID="{F12CB783-18A9-4AA7-8099-938276FEA67E}" WorkUnitID="{61DB7342-716B-4ADA-8E0E-AD113FC0CB4B}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Branches_8" ID="{AEFAB0B0-54BD-4C05-850D-57CDFF518EA5}" WorkUnitID="{90AC13BD-24B4-4141-9BEF-0F4B77B371EB}" Origin="Manual" Filter="7"/>
+					</ObjectInclusionList>
+					<ObjectExclusionList/>
+					<GameSyncExclusionList/>
+				</SoundBank>
+			</ChildrenList>
+		</WorkUnit>
+	</SoundBanks>
+</WwiseDocument>
