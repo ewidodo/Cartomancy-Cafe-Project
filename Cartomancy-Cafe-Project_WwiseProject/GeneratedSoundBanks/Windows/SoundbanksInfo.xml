@@ -31,7 +31,7 @@
 				<GameParameter Id="3402092638" Name="SoundEffectsVolume"/>
 			</GameParameters>
 		</SoundBank>
-		<SoundBank Id="3157003241" Type="User" Language="SFX" Hash="{BB49AEE1-4BD5-B50B-CC90-F191B6332820}">
+		<SoundBank Id="3157003241" Type="User" Language="SFX" Hash="{F7CA8810-1C2C-B84A-9513-F778F5842538}">
 			<ShortName>Test</ShortName>
 			<Path>Test.bnk</Path>
 			<Media>
@@ -60,6 +60,10 @@
 				<GameParameter Id="3402092638" Name="SoundEffectsVolume"/>
 			</GameParameters>
 		</SoundBank>
+		<SoundBank Id="3604647259" Type="User" Language="SFX" Hash="{C4EB9B5C-FB01-C5FD-66E4-5169289F2165}">
+			<ShortName>MainMenu</ShortName>
+			<Path>MainMenu.bnk</Path>
+		</SoundBank>
 	</SoundBanks>
-	<FileHash>{A2B6C1A5-6133-6E95-7C1C-217081F7630E}</FileHash>
+	<FileHash>{4B348B38-8BAE-6B1B-4FE5-5CEAA3BB6453}</FileHash>
 </SoundBanksInfo>

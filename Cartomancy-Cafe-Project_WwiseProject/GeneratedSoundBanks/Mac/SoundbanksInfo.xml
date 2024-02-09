@@ -9,7 +9,7 @@
 	</RootPaths>
 	<DialogueEvents/>
 	<SoundBanks>
-		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{D326F752-7CA2-0A14-FDB1-63ECE89D0199}">
+		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{7DA84C8D-C0FE-37DE-59AA-BBDA29D17D5A}">
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 			<Plugins>
@@ -19,10 +19,19 @@
 				</AudioDevices>
 			</Plugins>
 			<Busses>
+				<Bus Id="57144414" Name="Sound Effects Bus"/>
+				<Bus Id="3127962312" Name="Music Bus"/>
 				<Bus Id="3803692087" Name="Master Audio Bus"/>
+				<Bus Id="4202237879" Name="Ambience Bus"/>
 			</Busses>
+			<GameParameters>
+				<GameParameter Id="1204480359" Name="AmbienceVolume"/>
+				<GameParameter Id="2346531308" Name="MusicVolume"/>
+				<GameParameter Id="2918011349" Name="MasterVolume"/>
+				<GameParameter Id="3402092638" Name="SoundEffectsVolume"/>
+			</GameParameters>
 		</SoundBank>
-		<SoundBank Id="3157003241" Type="User" Language="SFX" Hash="{72C64076-7CBE-B95A-EEBC-5FB569825849}">
+		<SoundBank Id="3157003241" Type="User" Language="SFX" Hash="{F7CA8810-1C2C-B84A-9513-F778F5842538}">
 			<ShortName>Test</ShortName>
 			<Path>Test.bnk</Path>
 			<Media>
@@ -38,7 +47,23 @@
 					</MediaRefs>
 				</Event>
 			</Events>
+			<Busses>
+				<Bus Id="57144414" Name="Sound Effects Bus"/>
+				<Bus Id="3127962312" Name="Music Bus"/>
+				<Bus Id="3803692087" Name="Master Audio Bus"/>
+				<Bus Id="4202237879" Name="Ambience Bus"/>
+			</Busses>
+			<GameParameters>
+				<GameParameter Id="1204480359" Name="AmbienceVolume"/>
+				<GameParameter Id="2346531308" Name="MusicVolume"/>
+				<GameParameter Id="2918011349" Name="MasterVolume"/>
+				<GameParameter Id="3402092638" Name="SoundEffectsVolume"/>
+			</GameParameters>
+		</SoundBank>
+		<SoundBank Id="3604647259" Type="User" Language="SFX" Hash="{C4EB9B5C-FB01-C5FD-66E4-5169289F2165}">
+			<ShortName>MainMenu</ShortName>
+			<Path>MainMenu.bnk</Path>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{8399BC91-6FC9-F034-5FE9-2F98BE3D9FF5}</FileHash>
+	<FileHash>{2BDDC172-A680-C23C-C7FB-A8D87BA1E125}</FileHash>
 </SoundBanksInfo>
