@@ -12,7 +12,7 @@ public class SceneLoader : Singleton<SceneLoader>
     // Start is called before the first frame update
     void Start()
     {
-        LoadScene("Test");
+        StartScene();
     }
 
     void StartScene()
@@ -25,7 +25,7 @@ public class SceneLoader : Singleton<SceneLoader>
         sceneTransitionManager.FadeToBlack(fadeDuration);
     }
 
-    void LoadScene(string sceneName)
+    public void LoadScene(string sceneName)
     {
         sceneTransitionManager.FadeToBlack(fadeDuration).setOnComplete(() =>
             { 
