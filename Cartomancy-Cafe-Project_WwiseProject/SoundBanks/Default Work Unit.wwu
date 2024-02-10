@@ -3,13 +3,13 @@
 	<SoundBanks>
 		<WorkUnit Name="Default Work Unit" ID="{0EAFB001-ADC7-4660-9638-3E25C56EB617}" PersistMode="Standalone">
 			<ChildrenList>
-				<SoundBank Name="Test" ID="{2EF603DA-84D3-4A02-867F-D6828EA0B7BB}">
+				<SoundBank Name="Settings" ID="{2EF603DA-84D3-4A02-867F-D6828EA0B7BB}">
 					<ObjectInclusionList>
 						<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{61DB7342-716B-4ADA-8E0E-AD113FC0CB4B}" Origin="Manual" Filter="7"/>
-						<ObjectRef Name="Sound Effects Bus" ID="{BF4DE112-CF8D-4915-8F78-F85A212A6C6C}" WorkUnitID="{61DB7342-716B-4ADA-8E0E-AD113FC0CB4B}" Origin="Manual" Filter="7"/>
-						<ObjectRef Name="Ambience Bus" ID="{B3A893D6-F712-4A33-A80F-924C71CBDBE1}" WorkUnitID="{61DB7342-716B-4ADA-8E0E-AD113FC0CB4B}" Origin="Manual" Filter="7"/>
-						<ObjectRef Name="Music Bus" ID="{F12CB783-18A9-4AA7-8099-938276FEA67E}" WorkUnitID="{61DB7342-716B-4ADA-8E0E-AD113FC0CB4B}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Music Bus" ID="{B51A601F-2122-4145-802A-23986353FEE8}" WorkUnitID="{61DB7342-716B-4ADA-8E0E-AD113FC0CB4B}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Sound Effects Bus" ID="{6D4533B3-8451-4429-88DB-DC37E3146677}" WorkUnitID="{61DB7342-716B-4ADA-8E0E-AD113FC0CB4B}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Branches_8" ID="{AEFAB0B0-54BD-4C05-850D-57CDFF518EA5}" WorkUnitID="{90AC13BD-24B4-4141-9BEF-0F4B77B371EB}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Ambience Bus" ID="{058383F5-C724-4E15-881B-7509FCFFFCB1}" WorkUnitID="{61DB7342-716B-4ADA-8E0E-AD113FC0CB4B}" Origin="Manual" Filter="7"/>
 					</ObjectInclusionList>
 					<ObjectExclusionList/>
 					<GameSyncExclusionList/>
@@ -17,19 +17,25 @@
 				<SoundBank Name="MainMenu" ID="{82361FCB-9E2A-4DD5-B191-A67E5C8EE2BB}">
 					<ObjectInclusionList>
 						<ObjectRef Name="MainMenu" ID="{F5201FB6-EDAB-4B10-B0C4-5E5700ECBF2E}" WorkUnitID="{90AC13BD-24B4-4141-9BEF-0F4B77B371EB}" Origin="Manual" Filter="7"/>
-						<ObjectRef Name="MainMenuLoad" ID="{91D797C3-E0DC-4F3D-AA65-DCFCB87101BF}" WorkUnitID="{FB033B42-0DE8-4191-B98A-BFEB44C02C12}" Origin="Manual" Filter="7"/>
-						<ObjectRef Name="MainMenuUnload" ID="{BC42F10E-4D70-4F5A-909C-961C0F8143C7}" WorkUnitID="{FB033B42-0DE8-4191-B98A-BFEB44C02C12}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="MainMenuSceneLoaded" ID="{91D797C3-E0DC-4F3D-AA65-DCFCB87101BF}" WorkUnitID="{FB033B42-0DE8-4191-B98A-BFEB44C02C12}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="MainMenuSceneUnloaded" ID="{BC42F10E-4D70-4F5A-909C-961C0F8143C7}" WorkUnitID="{FB033B42-0DE8-4191-B98A-BFEB44C02C12}" Origin="Manual" Filter="7"/>
 					</ObjectInclusionList>
 					<ObjectExclusionList/>
 					<GameSyncExclusionList/>
 				</SoundBank>
 				<SoundBank Name="Gameplay" ID="{65A121FD-7327-40DC-A1C5-D7B952E41484}">
-					<ObjectInclusionList/>
+					<ObjectInclusionList>
+						<ObjectRef Name="GameplaySceneUnloaded" ID="{159726D5-57B1-4717-A80D-3D58A5C03CC4}" WorkUnitID="{FB033B42-0DE8-4191-B98A-BFEB44C02C12}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="GameplaySceneLoaded" ID="{A7272602-FFCA-4FFF-B361-8C7A25167944}" WorkUnitID="{FB033B42-0DE8-4191-B98A-BFEB44C02C12}" Origin="Manual" Filter="7"/>
+					</ObjectInclusionList>
 					<ObjectExclusionList/>
 					<GameSyncExclusionList/>
 				</SoundBank>
 				<SoundBank Name="Credits" ID="{D298108C-51A3-4948-ACC0-1F0A12A1C70E}">
-					<ObjectInclusionList/>
+					<ObjectInclusionList>
+						<ObjectRef Name="CreditsSceneUnloaded" ID="{59108DF1-5A39-4449-B3BC-A05CB7C4174C}" WorkUnitID="{FB033B42-0DE8-4191-B98A-BFEB44C02C12}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="CreditsSceneLoaded" ID="{5E6D1DD2-A9B8-4994-ACBB-D24F7ED9247C}" WorkUnitID="{FB033B42-0DE8-4191-B98A-BFEB44C02C12}" Origin="Manual" Filter="7"/>
+					</ObjectInclusionList>
 					<ObjectExclusionList/>
 					<GameSyncExclusionList/>
 				</SoundBank>

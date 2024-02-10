@@ -108,7 +108,7 @@ MonoBehaviour:
     ParentPath: SoundBanks\Default Work Unit
     guid: 01b0af0ec7ad604696383e25c56eb617
     GuidInternal: 
-    m_lastTime: -8584940775506911674
+    m_lastTime: -8584940736613119449
     List:
     - name: Credits
       guid: 8c1098d2a3514849acc01f0a12a1c70e
@@ -152,9 +152,9 @@ MonoBehaviour:
         ObjectType: 7
         guid: cb1f36822a9ed54db191a67e5c8ee2bb
       Path: SoundBanks\Default Work Unit\MainMenu
-    - name: Test
+    - name: Settings
       guid: da03f62ed384024a867fd6828ea0b7bb
-      id: 3157003241
+      id: 2910527622
       PathAndIcons:
       - ElementName: SoundBanks
         ObjectType: 5
@@ -162,10 +162,10 @@ MonoBehaviour:
       - ElementName: Default Work Unit
         ObjectType: 12
         guid: 01b0af0ec7ad604696383e25c56eb617
-      - ElementName: Test
+      - ElementName: Settings
         ObjectType: 7
         guid: da03f62ed384024a867fd6828ea0b7bb
-      Path: SoundBanks\Default Work Unit\Test
+      Path: SoundBanks\Default Work Unit\Settings
   EventWwu:
   - PhysicalPath: Events\Default Work Unit.wwu
     PathAndIcons:
@@ -178,11 +178,11 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: 423b03fbe80d9141b98abfeb44c02c12
     GuidInternal: 
-    m_lastTime: -8584940772479448824
+    m_lastTime: -8584940736984649712
     List:
-    - name: MainMenuLoad
-      guid: c397d791dce03d4faa65dcfcb87101bf
-      id: 1704863503
+    - name: CreditsSceneLoaded
+      guid: d21d6d5eb8a99449acbbd24f7ed9247c
+      id: 3815450896
       PathAndIcons:
       - ElementName: Events
         ObjectType: 5
@@ -190,30 +190,115 @@ MonoBehaviour:
       - ElementName: Default Work Unit
         ObjectType: 12
         guid: 423b03fbe80d9141b98abfeb44c02c12
-      - ElementName: MainMenuLoad
+      - ElementName: CreditsSceneLoaded
         ObjectType: 3
-        guid: c397d791dce03d4faa65dcfcb87101bf
-      Path: Events\Default Work Unit\MainMenuLoad
-      maxAttenuation: 0
-      maxDuration: 92.86898
-      minDuration: 92.86898
-    - name: MainMenuUnload
-      guid: 0ef142bc704d5a4f909c961c0f8143c7
-      id: 671901010
-      PathAndIcons:
-      - ElementName: Events
-        ObjectType: 5
-        guid: 00000000000000000000000000000000
-      - ElementName: Default Work Unit
-        ObjectType: 12
-        guid: 423b03fbe80d9141b98abfeb44c02c12
-      - ElementName: MainMenuUnload
-        ObjectType: 3
-        guid: 0ef142bc704d5a4f909c961c0f8143c7
-      Path: Events\Default Work Unit\MainMenuUnload
+        guid: d21d6d5eb8a99449acbbd24f7ed9247c
+      Path: Events\Default Work Unit\CreditsSceneLoaded
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
+    - name: CreditsSceneUnloaded
+      guid: f18d1059395a4944b3bca05cb7c4174c
+      id: 1547344929
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 423b03fbe80d9141b98abfeb44c02c12
+      - ElementName: CreditsSceneUnloaded
+        ObjectType: 3
+        guid: f18d1059395a4944b3bca05cb7c4174c
+      Path: Events\Default Work Unit\CreditsSceneUnloaded
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: GameplaySceneLoaded
+      guid: 022627a7caffff4fb3618c7a25167944
+      id: 2191945436
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 423b03fbe80d9141b98abfeb44c02c12
+      - ElementName: GameplaySceneLoaded
+        ObjectType: 3
+        guid: 022627a7caffff4fb3618c7a25167944
+      Path: Events\Default Work Unit\GameplaySceneLoaded
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: GameplaySceneUnloaded
+      guid: d5269715b1571747a80d3d58a5c03cc4
+      id: 1518434845
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 423b03fbe80d9141b98abfeb44c02c12
+      - ElementName: GameplaySceneUnloaded
+        ObjectType: 3
+        guid: d5269715b1571747a80d3d58a5c03cc4
+      Path: Events\Default Work Unit\GameplaySceneUnloaded
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: MainMenuSceneLoaded
+      guid: c397d791dce03d4faa65dcfcb87101bf
+      id: 2497386818
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 423b03fbe80d9141b98abfeb44c02c12
+      - ElementName: MainMenuSceneLoaded
+        ObjectType: 3
+        guid: c397d791dce03d4faa65dcfcb87101bf
+      Path: Events\Default Work Unit\MainMenuSceneLoaded
+      maxAttenuation: 0
+      maxDuration: 92.86898
+      minDuration: 92.86898
+    - name: MainMenuSceneUnloaded
+      guid: 0ef142bc704d5a4f909c961c0f8143c7
+      id: 1917959679
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 423b03fbe80d9141b98abfeb44c02c12
+      - ElementName: MainMenuSceneUnloaded
+        ObjectType: 3
+        guid: 0ef142bc704d5a4f909c961c0f8143c7
+      Path: Events\Default Work Unit\MainMenuSceneUnloaded
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: New_Event
+      guid: da4f4f803f9b52429bd3d9eb02f29c98
+      id: 3050945240
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 423b03fbe80d9141b98abfeb44c02c12
+      - ElementName: New_Event
+        ObjectType: 3
+        guid: da4f4f803f9b52429bd3d9eb02f29c98
+      Path: Events\Default Work Unit\New_Event
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
     - name: Test
       guid: c64a0b115e300f439719258023aa043d
       id: 3157003241

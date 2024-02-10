@@ -13,8 +13,12 @@ namespace AK
 {
     namespace EVENTS
     {
-        static const AkUniqueID MAINMENULOAD = 1704863503U;
-        static const AkUniqueID MAINMENUUNLOAD = 671901010U;
+        static const AkUniqueID CREDITSSCENELOADED = 3815450896U;
+        static const AkUniqueID CREDITSSCENEUNLOADED = 1547344929U;
+        static const AkUniqueID GAMEPLAYSCENELOADED = 2191945436U;
+        static const AkUniqueID GAMEPLAYSCENEUNLOADED = 1518434845U;
+        static const AkUniqueID MAINMENUSCENELOADED = 2497386818U;
+        static const AkUniqueID MAINMENUSCENEUNLOADED = 1917959679U;
         static const AkUniqueID TEST = 3157003241U;
     } // namespace EVENTS
 
@@ -32,7 +36,7 @@ namespace AK
         static const AkUniqueID CREDITS = 2201105581U;
         static const AkUniqueID GAMEPLAY = 89505537U;
         static const AkUniqueID MAINMENU = 3604647259U;
-        static const AkUniqueID TEST = 3157003241U;
+        static const AkUniqueID SETTINGS = 2910527622U;
     } // namespace BANKS
 
     namespace BUSSES

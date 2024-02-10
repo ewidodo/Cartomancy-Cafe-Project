@@ -268,17 +268,17 @@ MonoBehaviour:
     sceneStartEvent:
       idInternal: 0
       valueGuidInternal: 
-      WwiseObjectReference: {fileID: 0}
+      WwiseObjectReference: {fileID: 11400000, guid: b6e0b3e6135d0884abc8c6fa18ffcf08, type: 2}
     sceneEndEvent:
       idInternal: 0
       valueGuidInternal: 
-      WwiseObjectReference: {fileID: 0}
+      WwiseObjectReference: {fileID: 11400000, guid: e18b84997ffa19943ad150157ffcb1c9, type: 2}
   - sceneName: Credits
     sceneStartEvent:
       idInternal: 0
       valueGuidInternal: 
-      WwiseObjectReference: {fileID: 0}
+      WwiseObjectReference: {fileID: 11400000, guid: be02b36efca36e4468bdefb02ea759b6, type: 2}
     sceneEndEvent:
       idInternal: 0
       valueGuidInternal: 
-      WwiseObjectReference: {fileID: 0}
+      WwiseObjectReference: {fileID: 11400000, guid: 91f1fb41ce8d59b4d8bd3ee93e64cd29, type: 2}

@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 14b3660e82f41b54199d0c86e4c157c5, type: 3}
   m_Name: 2EF603DA-84D3-4A02-867F-D6828EA0B7BB
   m_EditorClassIdentifier: 
-  objectName: Test
-  id: 3157003241
+  objectName: Settings
+  id: 2910527622
   guid: 2EF603DA-84D3-4A02-867F-D6828EA0B7BB

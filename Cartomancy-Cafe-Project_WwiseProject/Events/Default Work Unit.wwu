@@ -14,7 +14,7 @@
 						</Action>
 					</ChildrenList>
 				</Event>
-				<Event Name="MainMenuLoad" ID="{91D797C3-E0DC-4F3D-AA65-DCFCB87101BF}">
+				<Event Name="MainMenuSceneLoaded" ID="{91D797C3-E0DC-4F3D-AA65-DCFCB87101BF}">
 					<ChildrenList>
 						<Action Name="" ID="{CA7B872D-402A-44A7-A87E-6CFADBD6F6F2}" ShortID="687266994">
 							<PropertyList>
@@ -35,7 +35,7 @@
 						</Action>
 					</ChildrenList>
 				</Event>
-				<Event Name="MainMenuUnload" ID="{BC42F10E-4D70-4F5A-909C-961C0F8143C7}">
+				<Event Name="MainMenuSceneUnloaded" ID="{BC42F10E-4D70-4F5A-909C-961C0F8143C7}">
 					<ChildrenList>
 						<Action Name="" ID="{0475C493-660F-4009-8837-8DF43E47EE19}" ShortID="669094816">
 							<PropertyList>
@@ -50,6 +50,11 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="GameplaySceneLoaded" ID="{A7272602-FFCA-4FFF-B361-8C7A25167944}"/>
+				<Event Name="GameplaySceneUnloaded" ID="{159726D5-57B1-4717-A80D-3D58A5C03CC4}"/>
+				<Event Name="New_Event" ID="{804F4FDA-9B3F-4252-9BD3-D9EB02F29C98}"/>
+				<Event Name="CreditsSceneLoaded" ID="{5E6D1DD2-A9B8-4994-ACBB-D24F7ED9247C}"/>
+				<Event Name="CreditsSceneUnloaded" ID="{59108DF1-5A39-4449-B3BC-A05CB7C4174C}"/>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

@@ -9,11 +9,15 @@
 	</RootPaths>
 	<DialogueEvents/>
 	<SoundBanks>
-		<SoundBank Id="89505537" Type="User" Language="SFX" Hash="{60E87AD2-40E9-EA6A-FFB1-7B8AFBE1FEEC}">
+		<SoundBank Id="89505537" Type="User" Language="SFX" Hash="{5EFFFC70-34EF-D365-B289-070973AA4156}">
 			<ShortName>Gameplay</ShortName>
 			<Path>Gameplay.bnk</Path>
+			<Events>
+				<Event Id="2191945436" Name="GameplaySceneLoaded" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="1518434845" Name="GameplaySceneUnloaded" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+			</Events>
 		</SoundBank>
-		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{3025E2BC-D5FE-1984-486F-7BD09039C2B9}">
+		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{6DAD8FCD-3DC0-5A6B-36E4-25F457453FCD}">
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 			<Plugins>
@@ -35,13 +39,17 @@
 				<GameParameter Id="3402092638" Name="SoundEffectsVolume"/>
 			</GameParameters>
 		</SoundBank>
-		<SoundBank Id="2201105581" Type="User" Language="SFX" Hash="{A9919EE1-214B-E5E6-46BB-4497C8CF913E}">
+		<SoundBank Id="2201105581" Type="User" Language="SFX" Hash="{62576DC2-0504-A8AD-0ABB-C4B622083736}">
 			<ShortName>Credits</ShortName>
 			<Path>Credits.bnk</Path>
+			<Events>
+				<Event Id="3815450896" Name="CreditsSceneLoaded" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="1547344929" Name="CreditsSceneUnloaded" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+			</Events>
 		</SoundBank>
-		<SoundBank Id="3157003241" Type="User" Language="SFX" Hash="{BB49AEE1-4BD5-B50B-CC90-F191B6332820}">
-			<ShortName>Test</ShortName>
-			<Path>Test.bnk</Path>
+		<SoundBank Id="2910527622" Type="User" Language="SFX" Hash="{A8CC58D9-BFA5-982F-61CB-8D7348E4871B}">
+			<ShortName>Settings</ShortName>
+			<Path>Settings.bnk</Path>
 			<Media>
 				<File Id="607739207" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Branches_8.wav</ShortName>
@@ -68,7 +76,7 @@
 				<GameParameter Id="3402092638" Name="SoundEffectsVolume"/>
 			</GameParameters>
 		</SoundBank>
-		<SoundBank Id="3604647259" Type="User" Language="SFX" Hash="{C534E702-3748-376A-ACB3-09BAEF1BED39}">
+		<SoundBank Id="3604647259" Type="User" Language="SFX" Hash="{081D283F-006A-FF72-BC03-92471AABE3EF}">
 			<ShortName>MainMenu</ShortName>
 			<Path>MainMenu.bnk</Path>
 			<Media>
@@ -78,12 +86,12 @@
 				</File>
 			</Media>
 			<Events>
-				<Event Id="1704863503" Name="MainMenuLoad" DurationType="OneShot" DurationMin="92.86898" DurationMax="92.86898">
+				<Event Id="2497386818" Name="MainMenuSceneLoaded" DurationType="OneShot" DurationMin="92.86898" DurationMax="92.86898">
 					<MediaRefs>
 						<MediaRef Id="376715746"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="671901010" Name="MainMenuUnload" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0">
+				<Event Id="1917959679" Name="MainMenuSceneUnloaded" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0">
 					<MediaRefs>
 						<MediaRef Id="376715746"/>
 					</MediaRefs>
@@ -91,5 +99,5 @@
 			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{87FCF4BD-BA62-C38D-D037-59DD65C602A0}</FileHash>
+	<FileHash>{C9F78F0B-2298-08AB-7BF6-2C0575B42A85}</FileHash>
 </SoundBanksInfo>

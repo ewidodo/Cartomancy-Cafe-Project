@@ -5,10 +5,10 @@ Game Parameter	ID	Name			Wwise Object Path	Notes
 	3402092638	SoundEffectsVolume			\Default Work Unit\SoundEffectsVolume	
 
 Audio Bus	ID	Name			Wwise Object Path	Notes
-	57144414	Sound Effects Bus			\Default Work Unit\Sound Effects Bus	
-	3127962312	Music Bus			\Default Work Unit\Music Bus	
+	57144414	Sound Effects Bus			\Default Work Unit\Master Audio Bus\Sound Effects Bus	
+	3127962312	Music Bus			\Default Work Unit\Master Audio Bus\Music Bus	
 	3803692087	Master Audio Bus			\Default Work Unit\Master Audio Bus	
-	4202237879	Ambience Bus			\Default Work Unit\Ambience Bus	
+	4202237879	Ambience Bus			\Default Work Unit\Master Audio Bus\Ambience Bus	
 
 Audio Devices	ID	Name	Type				Notes
 	2317455096	No_Output	No Output			

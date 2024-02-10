@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56015bdf9f865bb439713eb70b7cf22f, type: 3}
+  m_Name: 5E6D1DD2-A9B8-4994-ACBB-D24F7ED9247C
+  m_EditorClassIdentifier: 
+  objectName: CreditsSceneLoaded
+  id: 3815450896
+  guid: 5E6D1DD2-A9B8-4994-ACBB-D24F7ED9247C

@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 56015bdf9f865bb439713eb70b7cf22f, type: 3}
   m_Name: BC42F10E-4D70-4F5A-909C-961C0F8143C7
   m_EditorClassIdentifier: 
-  objectName: MainMenuUnload
-  id: 671901010
+  objectName: MainMenuSceneUnloaded
+  id: 1917959679
   guid: BC42F10E-4D70-4F5A-909C-961C0F8143C7
