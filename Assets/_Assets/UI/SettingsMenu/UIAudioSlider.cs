@@ -61,7 +61,7 @@ public class UIAudioSlider : MonoBehaviour
             volume *= 2 / 100; // transform to range 0-2
         }
 
-        //Debug.Log("Loading " + rtpcName + " Slider: " + volume);
+        Debug.Log("Loading " + rtpcName + " Slider: " + volume);
         GetComponent<Slider>().value = volume;
     }
 

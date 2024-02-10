@@ -16,7 +16,32 @@
 				</Event>
 				<Event Name="MainMenuLoad" ID="{91D797C3-E0DC-4F3D-AA65-DCFCB87101BF}">
 					<ChildrenList>
+						<Action Name="" ID="{CA7B872D-402A-44A7-A87E-6CFADBD6F6F2}" ShortID="687266994">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="MainMenu" ID="{F5201FB6-EDAB-4B10-B0C4-5E5700ECBF2E}" WorkUnitID="{90AC13BD-24B4-4141-9BEF-0F4B77B371EB}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
 						<Action Name="" ID="{9D57FA94-FADD-48E3-9ADC-F72ED86E4946}" ShortID="275263731">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="MainMenu" ID="{F5201FB6-EDAB-4B10-B0C4-5E5700ECBF2E}" WorkUnitID="{90AC13BD-24B4-4141-9BEF-0F4B77B371EB}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="MainMenuUnload" ID="{BC42F10E-4D70-4F5A-909C-961C0F8143C7}">
+					<ChildrenList>
+						<Action Name="" ID="{0475C493-660F-4009-8837-8DF43E47EE19}" ShortID="669094816">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+								<Property Name="FadeTime" Type="Real64" Value="1"/>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Target">
 									<ObjectRef Name="MainMenu" ID="{F5201FB6-EDAB-4B10-B0C4-5E5700ECBF2E}" WorkUnitID="{90AC13BD-24B4-4141-9BEF-0F4B77B371EB}"/>

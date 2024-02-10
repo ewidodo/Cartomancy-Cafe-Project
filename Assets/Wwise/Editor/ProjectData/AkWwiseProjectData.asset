@@ -108,8 +108,36 @@ MonoBehaviour:
     ParentPath: SoundBanks\Default Work Unit
     guid: 01b0af0ec7ad604696383e25c56eb617
     GuidInternal: 
-    m_lastTime: -8584940788420848368
+    m_lastTime: -8584940775506911674
     List:
+    - name: Credits
+      guid: 8c1098d2a3514849acc01f0a12a1c70e
+      id: 2201105581
+      PathAndIcons:
+      - ElementName: SoundBanks
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 01b0af0ec7ad604696383e25c56eb617
+      - ElementName: Credits
+        ObjectType: 7
+        guid: 8c1098d2a3514849acc01f0a12a1c70e
+      Path: SoundBanks\Default Work Unit\Credits
+    - name: Gameplay
+      guid: fd21a1652773dc40a1c5d7b952e41484
+      id: 89505537
+      PathAndIcons:
+      - ElementName: SoundBanks
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 01b0af0ec7ad604696383e25c56eb617
+      - ElementName: Gameplay
+        ObjectType: 7
+        guid: fd21a1652773dc40a1c5d7b952e41484
+      Path: SoundBanks\Default Work Unit\Gameplay
     - name: MainMenu
       guid: cb1f36822a9ed54db191a67e5c8ee2bb
       id: 3604647259
@@ -150,7 +178,7 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: 423b03fbe80d9141b98abfeb44c02c12
     GuidInternal: 
-    m_lastTime: -8584940788420968485
+    m_lastTime: -8584940772479448824
     List:
     - name: MainMenuLoad
       guid: c397d791dce03d4faa65dcfcb87101bf
@@ -169,6 +197,23 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 92.86898
       minDuration: 92.86898
+    - name: MainMenuUnload
+      guid: 0ef142bc704d5a4f909c961c0f8143c7
+      id: 671901010
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 423b03fbe80d9141b98abfeb44c02c12
+      - ElementName: MainMenuUnload
+        ObjectType: 3
+        guid: 0ef142bc704d5a4f909c961c0f8143c7
+      Path: Events\Default Work Unit\MainMenuUnload
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
     - name: Test
       guid: c64a0b115e300f439719258023aa043d
       id: 3157003241
@@ -299,7 +344,7 @@ MonoBehaviour:
     m_lastTime: -8584943366851152794
     List: []
   ExpandedFileSystemItemIds: 
-  ExpandedWaapiItemIds: 050000000600000008000000090000000a0000000b0000000d0000000e000000160000001700000018000000
+  ExpandedWaapiItemIds: 050000000600000008000000090000000a0000000b0000000d0000000e0000000f000000160000001700000018000000
   AutoSyncSelection: 0
   autoPopulateEnabled: 1
   currentDataSource: 0

@@ -9,6 +9,10 @@
 	</RootPaths>
 	<DialogueEvents/>
 	<SoundBanks>
+		<SoundBank Id="89505537" Type="User" Language="SFX" Hash="{60E87AD2-40E9-EA6A-FFB1-7B8AFBE1FEEC}">
+			<ShortName>Gameplay</ShortName>
+			<Path>Gameplay.bnk</Path>
+		</SoundBank>
 		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{7DA84C8D-C0FE-37DE-59AA-BBDA29D17D5A}">
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
@@ -30,6 +34,10 @@
 				<GameParameter Id="2918011349" Name="MasterVolume"/>
 				<GameParameter Id="3402092638" Name="SoundEffectsVolume"/>
 			</GameParameters>
+		</SoundBank>
+		<SoundBank Id="2201105581" Type="User" Language="SFX" Hash="{A9919EE1-214B-E5E6-46BB-4497C8CF913E}">
+			<ShortName>Credits</ShortName>
+			<Path>Credits.bnk</Path>
 		</SoundBank>
 		<SoundBank Id="3157003241" Type="User" Language="SFX" Hash="{BB49AEE1-4BD5-B50B-CC90-F191B6332820}">
 			<ShortName>Test</ShortName>
@@ -60,7 +68,7 @@
 				<GameParameter Id="3402092638" Name="SoundEffectsVolume"/>
 			</GameParameters>
 		</SoundBank>
-		<SoundBank Id="3604647259" Type="User" Language="SFX" Hash="{5622412F-5510-6167-6E95-88E24DB6CBB1}">
+		<SoundBank Id="3604647259" Type="User" Language="SFX" Hash="{C534E702-3748-376A-ACB3-09BAEF1BED39}">
 			<ShortName>MainMenu</ShortName>
 			<Path>MainMenu.bnk</Path>
 			<Media>
@@ -75,8 +83,13 @@
 						<MediaRef Id="376715746"/>
 					</MediaRefs>
 				</Event>
+				<Event Id="671901010" Name="MainMenuUnload" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0">
+					<MediaRefs>
+						<MediaRef Id="376715746"/>
+					</MediaRefs>
+				</Event>
 			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{DB83472D-B95E-278C-A618-017C9B464524}</FileHash>
+	<FileHash>{99CF193F-A3EF-0373-9609-D062090DBCD2}</FileHash>
 </SoundBanksInfo>

@@ -1,4 +1,5 @@
 Event	ID	Name			Wwise Object Path	Notes
+	671901010	MainMenuUnload			\Default Work Unit\MainMenuUnload	
 	1704863503	MainMenuLoad			\Default Work Unit\MainMenuLoad	
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size

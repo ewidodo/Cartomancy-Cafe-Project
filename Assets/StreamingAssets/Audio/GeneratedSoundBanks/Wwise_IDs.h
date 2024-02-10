@@ -14,6 +14,7 @@ namespace AK
     namespace EVENTS
     {
         static const AkUniqueID MAINMENULOAD = 1704863503U;
+        static const AkUniqueID MAINMENUUNLOAD = 671901010U;
         static const AkUniqueID TEST = 3157003241U;
     } // namespace EVENTS
 
@@ -28,6 +29,8 @@ namespace AK
     namespace BANKS
     {
         static const AkUniqueID INIT = 1355168291U;
+        static const AkUniqueID CREDITS = 2201105581U;
+        static const AkUniqueID GAMEPLAY = 89505537U;
         static const AkUniqueID MAINMENU = 3604647259U;
         static const AkUniqueID TEST = 3157003241U;
     } // namespace BANKS

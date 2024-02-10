@@ -18,7 +18,18 @@
 					<ObjectInclusionList>
 						<ObjectRef Name="MainMenu" ID="{F5201FB6-EDAB-4B10-B0C4-5E5700ECBF2E}" WorkUnitID="{90AC13BD-24B4-4141-9BEF-0F4B77B371EB}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="MainMenuLoad" ID="{91D797C3-E0DC-4F3D-AA65-DCFCB87101BF}" WorkUnitID="{FB033B42-0DE8-4191-B98A-BFEB44C02C12}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="MainMenuUnload" ID="{BC42F10E-4D70-4F5A-909C-961C0F8143C7}" WorkUnitID="{FB033B42-0DE8-4191-B98A-BFEB44C02C12}" Origin="Manual" Filter="7"/>
 					</ObjectInclusionList>
+					<ObjectExclusionList/>
+					<GameSyncExclusionList/>
+				</SoundBank>
+				<SoundBank Name="Gameplay" ID="{65A121FD-7327-40DC-A1C5-D7B952E41484}">
+					<ObjectInclusionList/>
+					<ObjectExclusionList/>
+					<GameSyncExclusionList/>
+				</SoundBank>
+				<SoundBank Name="Credits" ID="{D298108C-51A3-4948-ACC0-1F0A12A1C70E}">
+					<ObjectInclusionList/>
 					<ObjectExclusionList/>
 					<GameSyncExclusionList/>
 				</SoundBank>

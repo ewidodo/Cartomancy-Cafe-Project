@@ -14,9 +14,12 @@ public class SceneLoader : Singleton<SceneLoader>
     {
         public string sceneName;
         public AK.Wwise.Event sceneStartEvent;
+        public AK.Wwise.Event sceneEndEvent;
     }
     [SerializeField] private List<SceneData> scenes = new();
     private Dictionary<string, SceneData> _sceneDict = new();
+
+    private string currentScene = "Init";
 
 
     // Start is called before the first frame update
@@ -47,12 +50,11 @@ public class SceneLoader : Singleton<SceneLoader>
 
     public void LoadScene(string sceneName)
     {
+        if (_sceneDict.TryGetValue(currentScene, out SceneData sceneData)) sceneData.sceneEndEvent.Post(this.gameObject);
         sceneTransitionManager.FadeToBlack(fadeDuration).setOnComplete(() =>
             { 
                 SceneManager.LoadScene(sceneName);
                 SceneManager.sceneLoaded += OnSceneLoaded;
-                
-                
             });
     }
 
@@ -60,5 +62,6 @@ public class SceneLoader : Singleton<SceneLoader>
     {
         if (_sceneDict.TryGetValue(scene.name, out SceneData sceneData)) sceneData.sceneStartEvent.Post(this.gameObject);
         sceneTransitionManager.FadeFromBlack(fadeDuration);
+        currentScene = scene.name;
     }
 }
