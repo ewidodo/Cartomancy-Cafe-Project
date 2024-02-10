@@ -1,0 +1,6 @@
+Event	ID	Name			Wwise Object Path	Notes
+	1704863503	MainMenuLoad			\Default Work Unit\MainMenuLoad	
+
+In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	376715746	MainMenu	S:\2_Games\Projects\Unity\DaniJam\Cartomancy-Cafe-Project\Cartomancy-Cafe-Project_WwiseProject\.cache\Mac\SFX\c_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Music\MainMenu		17830940
+

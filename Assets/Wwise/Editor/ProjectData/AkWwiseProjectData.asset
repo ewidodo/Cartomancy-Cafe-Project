@@ -108,7 +108,7 @@ MonoBehaviour:
     ParentPath: SoundBanks\Default Work Unit
     guid: 01b0af0ec7ad604696383e25c56eb617
     GuidInternal: 
-    m_lastTime: -8584942694210591083
+    m_lastTime: -8584940788420848368
     List:
     - name: MainMenu
       guid: cb1f36822a9ed54db191a67e5c8ee2bb
@@ -150,8 +150,25 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: 423b03fbe80d9141b98abfeb44c02c12
     GuidInternal: 
-    m_lastTime: -8584943366851713137
+    m_lastTime: -8584940788420968485
     List:
+    - name: MainMenuLoad
+      guid: c397d791dce03d4faa65dcfcb87101bf
+      id: 1704863503
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 423b03fbe80d9141b98abfeb44c02c12
+      - ElementName: MainMenuLoad
+        ObjectType: 3
+        guid: c397d791dce03d4faa65dcfcb87101bf
+      Path: Events\Default Work Unit\MainMenuLoad
+      maxAttenuation: 0
+      maxDuration: 92.86898
+      minDuration: 92.86898
     - name: Test
       guid: c64a0b115e300f439719258023aa043d
       id: 3157003241
@@ -282,7 +299,7 @@ MonoBehaviour:
     m_lastTime: -8584943366851152794
     List: []
   ExpandedFileSystemItemIds: 
-  ExpandedWaapiItemIds: 050000000600000008000000090000000a0000000b0000000d0000000e0000001600000017000000
+  ExpandedWaapiItemIds: 050000000600000008000000090000000a0000000b0000000d0000000e000000160000001700000018000000
   AutoSyncSelection: 0
   autoPopulateEnabled: 1
   currentDataSource: 0

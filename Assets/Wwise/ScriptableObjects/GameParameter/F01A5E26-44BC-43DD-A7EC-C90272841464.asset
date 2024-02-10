@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 93c44949db404714b8d42265a491cc04, type: 3}
+  m_Name: F01A5E26-44BC-43DD-A7EC-C90272841464
+  m_EditorClassIdentifier: 
+  objectName: SoundEffectsVolume
+  id: 3402092638
+  guid: F01A5E26-44BC-43DD-A7EC-C90272841464
