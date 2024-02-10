@@ -21,13 +21,14 @@ public class SceneLoader : Singleton<SceneLoader>
 
     private string currentScene = "Init";
 
-
     // Start is called before the first frame update
     void Start()
     {
+        SceneManager.sceneLoaded += OnSceneLoaded;
         InitSceneDictionary();
         //StartScene();
         LoadScene("MainMenu");
+        
     }
 
     void InitSceneDictionary()
@@ -54,7 +55,6 @@ public class SceneLoader : Singleton<SceneLoader>
         sceneTransitionManager.FadeToBlack(fadeDuration).setOnComplete(() =>
             { 
                 SceneManager.LoadScene(sceneName);
-                SceneManager.sceneLoaded += OnSceneLoaded;
             });
     }
 
