@@ -38,10 +38,10 @@ MonoBehaviour:
     ParentPath: Master-Mixer Hierarchy\Default Work Unit
     guid: 4273db616b71da4a8e0ead113fc0cb4b
     GuidInternal: 
-    m_lastTime: -8584943366851372828
+    m_lastTime: -8584940732040656277
     List:
     - name: Ambience Bus
-      guid: d693a8b312f7334aa80f924c71cbdbe1
+      guid: f583830524c7154e881b7509fcfffcb1
       id: 4202237879
       PathAndIcons:
       - ElementName: Master-Mixer Hierarchy
@@ -50,10 +50,13 @@ MonoBehaviour:
       - ElementName: Default Work Unit
         ObjectType: 12
         guid: 4273db616b71da4a8e0ead113fc0cb4b
+      - ElementName: Master Audio Bus
+        ObjectType: 2
+        guid: d8a41415a61d2a41a17e75ca0c2149f3
       - ElementName: Ambience Bus
         ObjectType: 2
-        guid: d693a8b312f7334aa80f924c71cbdbe1
-      Path: Master-Mixer Hierarchy\Default Work Unit\Ambience Bus
+        guid: f583830524c7154e881b7509fcfffcb1
+      Path: Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Ambience Bus
     - name: Master Audio Bus
       guid: d8a41415a61d2a41a17e75ca0c2149f3
       id: 3803692087
@@ -69,7 +72,7 @@ MonoBehaviour:
         guid: d8a41415a61d2a41a17e75ca0c2149f3
       Path: Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus
     - name: Music Bus
-      guid: 83b72cf1a918a74a8099938276fea67e
+      guid: 1f601ab522214541802a23986353fee8
       id: 3127962312
       PathAndIcons:
       - ElementName: Master-Mixer Hierarchy
@@ -78,12 +81,15 @@ MonoBehaviour:
       - ElementName: Default Work Unit
         ObjectType: 12
         guid: 4273db616b71da4a8e0ead113fc0cb4b
+      - ElementName: Master Audio Bus
+        ObjectType: 2
+        guid: d8a41415a61d2a41a17e75ca0c2149f3
       - ElementName: Music Bus
         ObjectType: 2
-        guid: 83b72cf1a918a74a8099938276fea67e
-      Path: Master-Mixer Hierarchy\Default Work Unit\Music Bus
+        guid: 1f601ab522214541802a23986353fee8
+      Path: Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Music Bus
     - name: Sound Effects Bus
-      guid: 12e14dbf8dcf15498f78f85a212a6c6c
+      guid: b333456d5184294488dbdc37e3146677
       id: 57144414
       PathAndIcons:
       - ElementName: Master-Mixer Hierarchy
@@ -92,10 +98,14 @@ MonoBehaviour:
       - ElementName: Default Work Unit
         ObjectType: 12
         guid: 4273db616b71da4a8e0ead113fc0cb4b
+      - ElementName: Master Audio Bus
+        ObjectType: 2
+        guid: d8a41415a61d2a41a17e75ca0c2149f3
       - ElementName: Sound Effects Bus
         ObjectType: 2
-        guid: 12e14dbf8dcf15498f78f85a212a6c6c
-      Path: Master-Mixer Hierarchy\Default Work Unit\Sound Effects Bus
+        guid: b333456d5184294488dbdc37e3146677
+      Path: Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Sound Effects
+        Bus
   BankWwu:
   - PhysicalPath: SoundBanks\Default Work Unit.wwu
     PathAndIcons:
@@ -108,7 +118,7 @@ MonoBehaviour:
     ParentPath: SoundBanks\Default Work Unit
     guid: 01b0af0ec7ad604696383e25c56eb617
     GuidInternal: 
-    m_lastTime: -8584940736613119449
+    m_lastTime: -8584940731579535877
     List:
     - name: Credits
       guid: 8c1098d2a3514849acc01f0a12a1c70e
@@ -429,7 +439,7 @@ MonoBehaviour:
     m_lastTime: -8584943366851152794
     List: []
   ExpandedFileSystemItemIds: 
-  ExpandedWaapiItemIds: 050000000600000008000000090000000a0000000b0000000d0000000e0000000f000000160000001700000018000000
+  ExpandedWaapiItemIds: 050000000600000008000000090000000a0000000b0000000d0000000e0000000f0000001400000015000000160000001700000018000000
   AutoSyncSelection: 0
   autoPopulateEnabled: 1
   currentDataSource: 0
