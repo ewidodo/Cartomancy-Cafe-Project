@@ -19,6 +19,7 @@ public class Barista : Singleton<Barista>
     public void GiveCustomerDrink()
     {
         currentCustomer.GiveIngredients(currentDrinkIngredients);
+        currentDrinkIngredients.Clear();
     }
 
     public void UseIngredient(Ingredient ingredient)

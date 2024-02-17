@@ -45,6 +45,7 @@ public class Customer : MonoBehaviour
         Fortune fortune = ReadFortune(ingredients);
         FortunePreference preference =  ReactToFortune(fortune);
         SayDialogue(preference);
+        CustomerManager.Instance.SwapCustomers();
     }
 
     public Fortune ReadFortune(List<Ingredient> ingredients)
@@ -80,5 +81,15 @@ public class Customer : MonoBehaviour
     private void SayDialogue(FortunePreference reaction)
     {
         dialogueDisplay.text = reaction.dialogue;
+    }
+
+    public void Spawn()
+    {
+
+    }
+
+    public void Despawn()
+    {
+        Destroy(gameObject);
     }
 }
