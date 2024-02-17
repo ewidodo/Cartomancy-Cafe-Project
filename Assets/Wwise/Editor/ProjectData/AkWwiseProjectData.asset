@@ -38,7 +38,7 @@ MonoBehaviour:
     ParentPath: Master-Mixer Hierarchy\Default Work Unit
     guid: 4273db616b71da4a8e0ead113fc0cb4b
     GuidInternal: 
-    m_lastTime: -8584940732040656277
+    m_lastTime: -8584934117155157727
     List:
     - name: Ambience Bus
       guid: f583830524c7154e881b7509fcfffcb1
@@ -118,7 +118,7 @@ MonoBehaviour:
     ParentPath: SoundBanks\Default Work Unit
     guid: 01b0af0ec7ad604696383e25c56eb617
     GuidInternal: 
-    m_lastTime: -8584940731579535877
+    m_lastTime: -8584934117152999261
     List:
     - name: Credits
       guid: 8c1098d2a3514849acc01f0a12a1c70e
@@ -188,7 +188,7 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: 423b03fbe80d9141b98abfeb44c02c12
     GuidInternal: 
-    m_lastTime: -8584940736984649712
+    m_lastTime: -8584934117161133806
     List:
     - name: CreditsSceneLoaded
       guid: d21d6d5eb8a99449acbbd24f7ed9247c
@@ -439,7 +439,7 @@ MonoBehaviour:
     m_lastTime: -8584943366851152794
     List: []
   ExpandedFileSystemItemIds: 
-  ExpandedWaapiItemIds: 050000000600000008000000090000000a0000000b0000000d0000000e0000000f0000001400000015000000160000001700000018000000
+  ExpandedWaapiItemIds: 
   AutoSyncSelection: 0
   autoPopulateEnabled: 1
   currentDataSource: 0

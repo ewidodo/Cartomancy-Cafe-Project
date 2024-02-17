@@ -650,6 +650,95 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 2700453702840007992, guid: 15c0765cdf2b89f4f9b74580641e8bd2, type: 3}
   m_PrefabInstance: {fileID: 1779510053}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &8899445752370994756
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 6179828082427121988, guid: 545d2c456b872564ea419b4c92f9c437, type: 3}
+      propertyPath: m_Name
+      value: FortuneManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 7496413074376565762, guid: 545d2c456b872564ea419b4c92f9c437, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 483.76984
+      objectReference: {fileID: 0}
+    - target: {fileID: 7496413074376565762, guid: 545d2c456b872564ea419b4c92f9c437, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 272.3537
+      objectReference: {fileID: 0}
+    - target: {fileID: 7496413074376565762, guid: 545d2c456b872564ea419b4c92f9c437, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 2.5901892
+      objectReference: {fileID: 0}
+    - target: {fileID: 7496413074376565762, guid: 545d2c456b872564ea419b4c92f9c437, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7496413074376565762, guid: 545d2c456b872564ea419b4c92f9c437, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7496413074376565762, guid: 545d2c456b872564ea419b4c92f9c437, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7496413074376565762, guid: 545d2c456b872564ea419b4c92f9c437, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7496413074376565762, guid: 545d2c456b872564ea419b4c92f9c437, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7496413074376565762, guid: 545d2c456b872564ea419b4c92f9c437, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7496413074376565762, guid: 545d2c456b872564ea419b4c92f9c437, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9189523045519218496, guid: 545d2c456b872564ea419b4c92f9c437, type: 3}
+      propertyPath: fortuneRegions.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 9189523045519218496, guid: 545d2c456b872564ea419b4c92f9c437, type: 3}
+      propertyPath: fortuneRegions.Array.data[1].fortuneType
+      value: The Lovers
+      objectReference: {fileID: 0}
+    - target: {fileID: 9189523045519218496, guid: 545d2c456b872564ea419b4c92f9c437, type: 3}
+      propertyPath: fortuneRegions.Array.data[1].topLeftBorder.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9189523045519218496, guid: 545d2c456b872564ea419b4c92f9c437, type: 3}
+      propertyPath: fortuneRegions.Array.data[1].topLeftBorder.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9189523045519218496, guid: 545d2c456b872564ea419b4c92f9c437, type: 3}
+      propertyPath: fortuneRegions.Array.data[0].bottomRightBorder.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9189523045519218496, guid: 545d2c456b872564ea419b4c92f9c437, type: 3}
+      propertyPath: fortuneRegions.Array.data[0].bottomRightBorder.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9189523045519218496, guid: 545d2c456b872564ea419b4c92f9c437, type: 3}
+      propertyPath: fortuneRegions.Array.data[1].bottomRightBorder.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 9189523045519218496, guid: 545d2c456b872564ea419b4c92f9c437, type: 3}
+      propertyPath: fortuneRegions.Array.data[1].bottomRightBorder.y
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 545d2c456b872564ea419b4c92f9c437, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -659,3 +748,4 @@ SceneRoots:
   - {fileID: 16240018}
   - {fileID: 246719573}
   - {fileID: 1588749599}
+  - {fileID: 8899445752370994756}
