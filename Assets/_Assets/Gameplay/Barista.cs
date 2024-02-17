@@ -22,6 +22,10 @@ public class Barista : Singleton<Barista>
     public void GiveCustomerDrink()
     {
         currentCustomer.GiveIngredients(currentDrinkIngredients);
+        foreach(Ingredient ingredient in currentDrinkIngredients)
+        {
+            Destroy(ingredient.gameObject);
+        }
         currentDrinkIngredients.Clear();
     }
 

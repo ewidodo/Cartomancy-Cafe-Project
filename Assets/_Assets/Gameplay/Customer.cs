@@ -59,8 +59,8 @@ public class Customer : MonoBehaviour
             position += ingredient.fortuneOffset;
         }
         Fortune fortune = fortuneTable.ReadFortune(position);
-        fortuneName.text = fortune.name;
-        fortunePosition.text = position.ToString();
+        FortuneDisplay.Instance.fortuneName.text = fortune.name;
+        FortuneDisplay.Instance.fortunePosition.text = position.ToString();
 
         return fortune;
     }
