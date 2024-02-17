@@ -43,6 +43,8 @@ public class Customer : MonoBehaviour
     {
         drinkIngredients = ingredients;
         Fortune fortune = ReadFortune(ingredients);
+        FortunePreference preference =  ReactToFortune(fortune);
+        SayDialogue(preference);
     }
 
     public Fortune ReadFortune(List<Ingredient> ingredients)
@@ -52,28 +54,27 @@ public class Customer : MonoBehaviour
         {
             position += ingredient.fortuneOffset;
         }
-        Debug.Log($"Current position: {position}");
         Fortune fortune = fortuneTable.ReadFortune(position);
         fortuneName.text = fortune.name;
         fortunePosition.text = position.ToString();
-        Debug.Log(fortune.fortuneName);
-        Debug.Log(ReactToFortune(fortune));
 
         return fortune;
     }
 
-    private FORTUNEPREFERENCEENUM ReactToFortune(Fortune fortune)
+    private FortunePreference ReactToFortune(Fortune fortune)
     {
         foreach (FortunePreference fortunePreference in fortunePreferences)
         {
             if (fortunePreference.fortune == fortune)
             {
-                SayDialogue(fortunePreference);
-                return fortunePreference.preference;
+                return fortunePreference;
             }
         }
 
-        return FORTUNEPREFERENCEENUM.NEUTRAL;
+        Debug.LogWarning("Customer does not have a preference for the given fortune! Defaulting to neutral...");
+        FortunePreference defaultPreference = new FortunePreference();
+        defaultPreference.preference = FORTUNEPREFERENCEENUM.NEUTRAL;
+        return defaultPreference;
     }
 
     private void SayDialogue(FortunePreference reaction)
