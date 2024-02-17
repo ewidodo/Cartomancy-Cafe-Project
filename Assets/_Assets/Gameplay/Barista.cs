@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Barista : MonoBehaviour
+public class Barista : Singleton<Barista>
 {
     [HideInInspector] public List<Ingredient> currentDrinkIngredients = new();
     public List<Ingredient> reserveIngredients = new();
@@ -10,9 +10,9 @@ public class Barista : MonoBehaviour
 
     private void Start()
     {
-        UseIngredient(reserveIngredients[0]);
-        UseIngredient(reserveIngredients[1]);
-        UseIngredient(reserveIngredients[2]);
+        //UseIngredient(reserveIngredients[0]);
+        //UseIngredient(reserveIngredients[1]);
+        //UseIngredient(reserveIngredients[2]);
         //GiveCustomerDrink();
     }
 
