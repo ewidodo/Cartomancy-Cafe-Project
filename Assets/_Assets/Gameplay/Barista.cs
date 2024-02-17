@@ -13,7 +13,7 @@ public class Barista : MonoBehaviour
         UseIngredient(reserveIngredients[0]);
         UseIngredient(reserveIngredients[1]);
         UseIngredient(reserveIngredients[2]);
-        GiveCustomerDrink();
+        //GiveCustomerDrink();
     }
 
     public void GiveCustomerDrink()
@@ -24,7 +24,7 @@ public class Barista : MonoBehaviour
     public void UseIngredient(Ingredient ingredient)
     {
         currentDrinkIngredients.Add(ingredient);
-        Debug.Log(currentCustomer.ReadFortune(currentDrinkIngredients));
+        currentCustomer.ReadFortune(currentDrinkIngredients);
     }
 
     public void RemoveIngredient(Ingredient ingredient)
@@ -32,7 +32,7 @@ public class Barista : MonoBehaviour
         if (currentDrinkIngredients.Contains(ingredient))
         {
             currentDrinkIngredients.Remove(ingredient);
-            Debug.Log(currentCustomer.ReadFortune(currentDrinkIngredients));
+            currentCustomer.ReadFortune(currentDrinkIngredients);
         }
         else
         {

@@ -8,11 +8,4 @@ public class Ingredient : MonoBehaviour
     public string name;
     public string description;
     public Vector2 fortuneOffset = new();
-
-
-
-    private void ApplyFortuneOffset()
-    {
-        //Barista.Instance.currentCustomer.ApplyFortuneOffset(fortuneOffset);
-    }
 }
