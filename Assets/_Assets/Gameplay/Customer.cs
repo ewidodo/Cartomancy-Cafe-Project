@@ -29,6 +29,9 @@ public class Customer : MonoBehaviour
 
     [SerializeField] private List<FortunePreference> fortunePreferences = new();
 
+    [Header("Dialogue")]
+    [TextArea(1, 5)] public string greetingDialogue;
+
     [Header("Display References")]
     public TextMeshProUGUI dialogueDisplay;
     public TextMeshProUGUI fortuneName;
@@ -85,7 +88,7 @@ public class Customer : MonoBehaviour
 
     public void Spawn()
     {
-
+        dialogueDisplay.text = greetingDialogue;
     }
 
     public void Despawn()

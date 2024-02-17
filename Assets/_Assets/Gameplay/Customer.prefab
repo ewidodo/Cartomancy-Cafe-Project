@@ -407,6 +407,7 @@ MonoBehaviour:
   - fortune: {fileID: 11400000, guid: 30d5feea4eb061045a9c7dd0d60316f7, type: 2}
     preference: 4
     dialogue: OMG I'M IN LOVE!!!!!!!
+  introDialogue: hiiiiiiii
   dialogueDisplay: {fileID: 3274310176185969696}
   fortuneName: {fileID: 55564378903929401}
   fortunePosition: {fileID: 73836230599206159}
