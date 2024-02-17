@@ -31,6 +31,8 @@ public class Customer : MonoBehaviour
 
     [Header("Display References")]
     public TextMeshProUGUI dialogueDisplay;
+    public TextMeshProUGUI fortuneName;
+    public TextMeshProUGUI fortunePosition;
 
     private void Awake()
     {
@@ -52,6 +54,8 @@ public class Customer : MonoBehaviour
         }
         Debug.Log($"Current position: {position}");
         Fortune fortune = fortuneTable.ReadFortune(position);
+        fortuneName.text = fortune.name;
+        fortunePosition.text = position.ToString();
         Debug.Log(fortune.fortuneName);
         Debug.Log(ReactToFortune(fortune));
 
