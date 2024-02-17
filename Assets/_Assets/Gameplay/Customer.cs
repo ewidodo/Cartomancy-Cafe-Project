@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class Customer : MonoBehaviour
 {
@@ -23,9 +24,13 @@ public class Customer : MonoBehaviour
     {
         public Fortune fortune;
         public FORTUNEPREFERENCEENUM preference;
+        public string dialogue;
     }
 
     [SerializeField] private List<FortunePreference> fortunePreferences = new();
+
+    [Header("Display References")]
+    public TextMeshProUGUI dialogueDisplay;
 
     private void Awake()
     {
@@ -59,10 +64,16 @@ public class Customer : MonoBehaviour
         {
             if (fortunePreference.fortune == fortune)
             {
+                SayDialogue(fortunePreference);
                 return fortunePreference.preference;
             }
         }
 
         return FORTUNEPREFERENCEENUM.NEUTRAL;
+    }
+
+    private void SayDialogue(FortunePreference reaction)
+    {
+        dialogueDisplay.text = reaction.dialogue;
     }
 }
