@@ -8,6 +8,9 @@ public class Barista : Singleton<Barista>
     public List<Ingredient> reserveIngredients = new();
     public Customer currentCustomer;
 
+    [Header("Display References")]
+    public GameObject currentIngredientDisplay;
+
     private void Start()
     {
         //UseIngredient(reserveIngredients[0]);
@@ -24,7 +27,11 @@ public class Barista : Singleton<Barista>
 
     public void UseIngredient(Ingredient ingredient)
     {
-        currentDrinkIngredients.Add(ingredient);
+        // Instantiate ingredient in current ingredient display
+        Ingredient addedIngredient = Instantiate(ingredient.gameObject, currentIngredientDisplay.transform).GetComponent<Ingredient>();
+        addedIngredient.inDrink = true;
+
+        currentDrinkIngredients.Add(addedIngredient);
         currentCustomer.ReadFortune(currentDrinkIngredients);
     }
 
@@ -33,6 +40,7 @@ public class Barista : Singleton<Barista>
         if (currentDrinkIngredients.Contains(ingredient))
         {
             currentDrinkIngredients.Remove(ingredient);
+            Destroy(ingredient.gameObject);
             currentCustomer.ReadFortune(currentDrinkIngredients);
         }
         else
