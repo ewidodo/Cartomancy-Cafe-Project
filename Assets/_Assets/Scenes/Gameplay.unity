@@ -957,11 +957,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0.0024004, y: 227}
   m_SizeDelta: {x: 1920.1, y: 516.97}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!224 &767378061 stripped
-RectTransform:
-  m_CorrespondingSourceObject: {fileID: 2448675934830094754, guid: cfb18c9b2b865c949a9536663e04a256, type: 3}
-  m_PrefabInstance: {fileID: 1189515343106350856}
-  m_PrefabAsset: {fileID: 0}
 --- !u!224 &1354736182 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 2470906756053863628, guid: 51216506bc45a6945af2161acda8ac36, type: 3}
@@ -977,6 +972,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1418664690}
   - component: {fileID: 1418664691}
+  - component: {fileID: 1418664693}
   m_Layer: 5
   m_Name: FortuneDisplay
   m_TagString: Untagged
@@ -1018,10 +1014,39 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   displayedFortunes: []
+  mouseInDisplay: 0
   fortuneName: {fileID: 1840515537}
   fortunePosition: {fileID: 444944248}
   fortuneGrid: {fileID: 1690372064}
   fortuneRegionUIPrefab: {fileID: 5869855705774082355, guid: cfb18c9b2b865c949a9536663e04a256, type: 3}
+  camera: {fileID: 457287335}
+--- !u!50 &1418664693
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1418664689}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &1425991139
 GameObject:
   m_ObjectHideFlags: 0
@@ -1284,8 +1309,7 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 4.8902993}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 767378061}
+  m_Children: []
   m_Father: {fileID: 1418664690}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -2058,6 +2082,42 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2125231061260015082, guid: 413f3417a98a4c6419cc516d4343530e, type: 3}
+      propertyPath: fortuneRegions.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2125231061260015082, guid: 413f3417a98a4c6419cc516d4343530e, type: 3}
+      propertyPath: fortuneRegions.Array.data[2].displayName
+      value: The Lovers
+      objectReference: {fileID: 0}
+    - target: {fileID: 2125231061260015082, guid: 413f3417a98a4c6419cc516d4343530e, type: 3}
+      propertyPath: fortuneRegions.Array.data[2].fortuneType
+      value: 
+      objectReference: {fileID: 11400000, guid: 30d5feea4eb061045a9c7dd0d60316f7, type: 2}
+    - target: {fileID: 2125231061260015082, guid: 413f3417a98a4c6419cc516d4343530e, type: 3}
+      propertyPath: fortuneRegions.Array.data[1].topLeftBorder.x
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2125231061260015082, guid: 413f3417a98a4c6419cc516d4343530e, type: 3}
+      propertyPath: fortuneRegions.Array.data[1].topLeftBorder.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2125231061260015082, guid: 413f3417a98a4c6419cc516d4343530e, type: 3}
+      propertyPath: fortuneRegions.Array.data[2].topLeftBorder.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2125231061260015082, guid: 413f3417a98a4c6419cc516d4343530e, type: 3}
+      propertyPath: fortuneRegions.Array.data[1].bottomRightBorder.y
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 2125231061260015082, guid: 413f3417a98a4c6419cc516d4343530e, type: 3}
+      propertyPath: fortuneRegions.Array.data[2].bottomRightBorder.x
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 2125231061260015082, guid: 413f3417a98a4c6419cc516d4343530e, type: 3}
+      propertyPath: fortuneRegions.Array.data[2].bottomRightBorder.y
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 2308029742680792113, guid: 413f3417a98a4c6419cc516d4343530e, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
@@ -2079,103 +2139,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 413f3417a98a4c6419cc516d4343530e, type: 3}
---- !u!1001 &1189515343106350856
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 1690372065}
-    m_Modifications:
-    - target: {fileID: 2448675934830094754, guid: cfb18c9b2b865c949a9536663e04a256, type: 3}
-      propertyPath: m_Pivot.x
-      value: 0.00000026325006
-      objectReference: {fileID: 0}
-    - target: {fileID: 2448675934830094754, guid: cfb18c9b2b865c949a9536663e04a256, type: 3}
-      propertyPath: m_Pivot.y
-      value: 0.9999997
-      objectReference: {fileID: 0}
-    - target: {fileID: 2448675934830094754, guid: cfb18c9b2b865c949a9536663e04a256, type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2448675934830094754, guid: cfb18c9b2b865c949a9536663e04a256, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2448675934830094754, guid: cfb18c9b2b865c949a9536663e04a256, type: 3}
-      propertyPath: m_AnchorMin.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2448675934830094754, guid: cfb18c9b2b865c949a9536663e04a256, type: 3}
-      propertyPath: m_AnchorMin.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2448675934830094754, guid: cfb18c9b2b865c949a9536663e04a256, type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 100
-      objectReference: {fileID: 0}
-    - target: {fileID: 2448675934830094754, guid: cfb18c9b2b865c949a9536663e04a256, type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 100
-      objectReference: {fileID: 0}
-    - target: {fileID: 2448675934830094754, guid: cfb18c9b2b865c949a9536663e04a256, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2448675934830094754, guid: cfb18c9b2b865c949a9536663e04a256, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2448675934830094754, guid: cfb18c9b2b865c949a9536663e04a256, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -4.8902993
-      objectReference: {fileID: 0}
-    - target: {fileID: 2448675934830094754, guid: cfb18c9b2b865c949a9536663e04a256, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2448675934830094754, guid: cfb18c9b2b865c949a9536663e04a256, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2448675934830094754, guid: cfb18c9b2b865c949a9536663e04a256, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2448675934830094754, guid: cfb18c9b2b865c949a9536663e04a256, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2448675934830094754, guid: cfb18c9b2b865c949a9536663e04a256, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 0.000024796
-      objectReference: {fileID: 0}
-    - target: {fileID: 2448675934830094754, guid: cfb18c9b2b865c949a9536663e04a256, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -0.000041962
-      objectReference: {fileID: 0}
-    - target: {fileID: 2448675934830094754, guid: cfb18c9b2b865c949a9536663e04a256, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2448675934830094754, guid: cfb18c9b2b865c949a9536663e04a256, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2448675934830094754, guid: cfb18c9b2b865c949a9536663e04a256, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5869855705774082355, guid: cfb18c9b2b865c949a9536663e04a256, type: 3}
-      propertyPath: m_Name
-      value: FortuneRegionUI
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: cfb18c9b2b865c949a9536663e04a256, type: 3}
 --- !u!1001 &6649210235907584972
 PrefabInstance:
   m_ObjectHideFlags: 0

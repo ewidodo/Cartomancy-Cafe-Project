@@ -14,3 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fortuneName: The Lovers
   fortuneDescription: 
+  fortuneSprite: {fileID: 0}
+  fortuneColor: {r: 1, g: 0.3254717, b: 0.3254717, a: 1}

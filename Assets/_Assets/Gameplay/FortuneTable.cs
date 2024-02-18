@@ -15,10 +15,10 @@ public class FortuneTable : MonoBehaviour
     }
 
     [Header("Fortune table starts at (0, 0)")]
-    [SerializeField] public Vector2 fortuneTableSize = new();
+    public Vector2 fortuneTableSize = new();
     public Vector2 startingPosition = new();
     public List<FortuneRegion> fortuneRegions = new();
-    [SerializeField] private Fortune defaultFortune;
+    public Fortune defaultFortune;
 
     private void Start()
     {

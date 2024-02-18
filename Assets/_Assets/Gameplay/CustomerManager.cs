@@ -17,6 +17,10 @@ public class CustomerManager : Singleton<CustomerManager>
 
     public void DespawnCurrentCustomer()
     {
+        if (Barista.Instance.currentCustomer == null)
+        {
+            return;
+        }
         Barista.Instance.currentCustomer.Despawn();
     }
 
@@ -32,7 +36,7 @@ public class CustomerManager : Singleton<CustomerManager>
         GameObject customer = Instantiate(customers[0], customerParent);
         Barista.Instance.currentCustomer = customer.GetComponent<Customer>();
         Barista.Instance.currentCustomer.Spawn();
-        Barista.Instance.customerChangeEvent.Invoke(Barista.Instance.currentCustomer);
+        FortuneDisplay.Instance.GenerateFortuneRegionDisplay(Barista.Instance.currentCustomer);
 
         customers.RemoveAt(0);
     }
