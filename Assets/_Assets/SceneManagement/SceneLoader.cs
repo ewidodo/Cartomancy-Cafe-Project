@@ -4,10 +4,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class SceneLoader : Singleton<SceneLoader>
+public class SceneLoader : SingletonDontDestroy<SceneLoader>
 {
     [SerializeField] private SceneTransitionManager sceneTransitionManager;
     public float fadeDuration;
+    public int dayNumber = 0;
+    public int totalDays = 3;
 
     [Serializable]
     struct SceneData
@@ -27,8 +29,19 @@ public class SceneLoader : Singleton<SceneLoader>
         SceneManager.sceneLoaded += OnSceneLoaded;
         InitSceneDictionary();
         //StartScene();
-        LoadScene("MainMenu");
-        
+        if (SceneManager.GetActiveScene().name == "Init")
+        {
+            LoadScene("MainMenu");
+        }
+        else
+        {
+            StartScene();
+        }
+    }
+
+    private void OnDestroy()
+    {
+        SceneManager.sceneLoaded -= OnSceneLoaded;
     }
 
     void InitSceneDictionary()
@@ -47,6 +60,21 @@ public class SceneLoader : Singleton<SceneLoader>
     void EndScene()
     {
         sceneTransitionManager.FadeToBlack(fadeDuration);
+    }
+
+    // Need to set up scenes for this to work
+    public void LoadNextDay()
+    {
+        ++dayNumber;
+
+        if (dayNumber > totalDays)
+        {
+            LoadScene("Credits");
+            dayNumber = 0;
+            return;
+        }
+
+        LoadScene("Day" + dayNumber);
     }
 
     public void LoadScene(string sceneName)

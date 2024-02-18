@@ -30,6 +30,7 @@ public class CustomerManager : Singleton<CustomerManager>
         {
             Debug.Log("All customers have been given drinks!");
             // access sceneloader.cs and load next day/credits
+            SceneLoader.Instance.LoadScene("Credits");
             return;
         }
 
