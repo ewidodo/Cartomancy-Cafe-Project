@@ -32,6 +32,7 @@ public class CustomerManager : Singleton<CustomerManager>
         GameObject customer = Instantiate(customers[0], customerParent);
         Barista.Instance.currentCustomer = customer.GetComponent<Customer>();
         Barista.Instance.currentCustomer.Spawn();
+        Barista.Instance.customerChangeEvent.Invoke(Barista.Instance.currentCustomer);
 
         customers.RemoveAt(0);
     }
