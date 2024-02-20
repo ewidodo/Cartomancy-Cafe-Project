@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public abstract class Singleton<T> : MonoBehaviour where T : MonoBehaviour
+public abstract class SingletonDontDestroy<T> : MonoBehaviour where T : MonoBehaviour
 {
     public static T Instance;
 
@@ -15,5 +15,6 @@ public abstract class Singleton<T> : MonoBehaviour where T : MonoBehaviour
         }
 
         Instance = this as T;
+        if (transform.parent == null) DontDestroyOnLoad(gameObject);
     }
 }

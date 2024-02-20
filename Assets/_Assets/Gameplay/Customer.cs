@@ -12,11 +12,9 @@ public class Customer : MonoBehaviour
     [Serializable]
     private enum FORTUNEPREFERENCEENUM
     {
-        STRONGLYDISLIKE = 0,
-        DISLIKE = 1,
-        NEUTRAL = 2,
-        LIKE = 3,
-        LOVE = 4,
+        NEGATIVE = 0,
+        NEUTRAL = 1,
+        POSITIVE = 2,
     }
 
     [Serializable]
@@ -57,6 +55,8 @@ public class Customer : MonoBehaviour
         foreach(Ingredient ingredient in ingredients)
         {
             position += ingredient.fortuneOffset;
+            position = new Vector2(Mathf.Clamp(position.x, 0f, fortuneTable.fortuneTableSize.x),
+                                   Mathf.Clamp(position.y, 0f, fortuneTable.fortuneTableSize.y));
         }
         Fortune fortune = fortuneTable.ReadFortune(position);
         FortuneDisplay.Instance.fortuneName.text = fortune.name;

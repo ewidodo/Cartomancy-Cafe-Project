@@ -7,4 +7,6 @@ public class Fortune : ScriptableObject
 {
     public string fortuneName;
     [TextArea(3, 5)] public string fortuneDescription;
+    public Sprite fortuneSprite;
+    public Color fortuneColor;
 }

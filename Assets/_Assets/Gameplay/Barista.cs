@@ -1,12 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class Barista : Singleton<Barista>
 {
     [HideInInspector] public List<Ingredient> currentDrinkIngredients = new();
     public List<Ingredient> reserveIngredients = new();
     public Customer currentCustomer;
+    public UnityEvent<Customer> customerChangeEvent;
 
     [Header("Display References")]
     public GameObject currentIngredientDisplay;

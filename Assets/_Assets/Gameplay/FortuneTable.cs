@@ -6,7 +6,7 @@ using UnityEngine;
 public class FortuneTable : MonoBehaviour
 {
     [Serializable]
-    public struct fortuneRegion
+    public struct FortuneRegion
     {
         public string displayName;
         public Fortune fortuneType;
@@ -15,10 +15,10 @@ public class FortuneTable : MonoBehaviour
     }
 
     [Header("Fortune table starts at (0, 0)")]
-    [SerializeField] private Vector2 fortuneTableSize = new();
+    public Vector2 fortuneTableSize = new();
     public Vector2 startingPosition = new();
-    public List<fortuneRegion> fortuneRegions = new();
-    [SerializeField] private Fortune defaultFortune;
+    public List<FortuneRegion> fortuneRegions = new();
+    public Fortune defaultFortune;
 
     private void Start()
     {
@@ -33,7 +33,7 @@ public class FortuneTable : MonoBehaviour
             Debug.LogError("Fortune table size undefined or 0!");
         }
 
-        foreach (fortuneRegion region in fortuneRegions)
+        foreach (FortuneRegion region in fortuneRegions)
         {
             if (region.topLeftBorder.x < 0 || region.topLeftBorder.y < 0 || 
                 region.topLeftBorder.x > fortuneTableSize.x || region.topLeftBorder.y > fortuneTableSize.y ||
@@ -57,7 +57,7 @@ public class FortuneTable : MonoBehaviour
         }
 
         // Match position to relevant fortune. Note that this prioritizes fortunes higher in the list if multiple overlap
-        foreach (fortuneRegion region in fortuneRegions)
+        foreach (FortuneRegion region in fortuneRegions)
         {
             if (position.x >= region.topLeftBorder.x && position.y >= region.topLeftBorder.y && 
                 position.x <= region.bottomRightBorder.x && position.y <= region.bottomRightBorder.y)
