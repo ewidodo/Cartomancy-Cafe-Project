@@ -22,22 +22,38 @@ public class Customer : MonoBehaviour
     {
         public Fortune fortune;
         public FORTUNEPREFERENCEENUM preference;
-        public string dialogue;
+        //public string dialogue;
     }
 
     [SerializeField] private List<FortunePreference> fortunePreferences = new();
 
     [Header("Dialogue")]
     [TextArea(1, 5)] public string greetingDialogue;
+    [TextArea(1, 5)] public string positiveDialogue;
+    [TextArea(1, 5)] public string neutralDialogue;
+    [TextArea(1, 5)] public string negativeDialogue;
+    private Dictionary<FORTUNEPREFERENCEENUM, string> preferenceResponses = new();
 
     [Header("Display References")]
+    public TextMeshProUGUI nameDisplay;
     public TextMeshProUGUI dialogueDisplay;
-    public TextMeshProUGUI fortuneName;
-    public TextMeshProUGUI fortunePosition;
 
     private void Awake()
     {
         fortuneTable = GetComponent<FortuneTable>();
+        GeneratePreferenceDictionary();
+    }
+
+    private void GeneratePreferenceDictionary()
+    {
+        preferenceResponses.Add(FORTUNEPREFERENCEENUM.POSITIVE, positiveDialogue);
+        preferenceResponses.Add(FORTUNEPREFERENCEENUM.NEUTRAL, neutralDialogue);
+        preferenceResponses.Add(FORTUNEPREFERENCEENUM.NEGATIVE, negativeDialogue);
+    }
+
+    private void GenerateDesires()
+    {
+
     }
 
     public void GiveIngredients(List<Ingredient> ingredients)
@@ -86,7 +102,7 @@ public class Customer : MonoBehaviour
 
     private void SayDialogue(FortunePreference reaction)
     {
-        dialogueDisplay.text = reaction.dialogue;
+        dialogueDisplay.text = preferenceResponses[reaction.preference];
     }
 
     public void Spawn()

@@ -2095,6 +2095,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 212999648713222714, guid: 413f3417a98a4c6419cc516d4343530e, type: 3}
+      propertyPath: m_Name
+      value: Pablo
+      objectReference: {fileID: 0}
     - target: {fileID: 960436074321554581, guid: 413f3417a98a4c6419cc516d4343530e, type: 3}
       propertyPath: customerParent
       value: 
@@ -2179,41 +2183,23 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2125231061260015082, guid: 413f3417a98a4c6419cc516d4343530e, type: 3}
-      propertyPath: fortuneRegions.Array.size
-      value: 2
+    - target: {fileID: 1584996685777238453, guid: 413f3417a98a4c6419cc516d4343530e, type: 3}
+      propertyPath: neutralDialogue
+      value: "I guess I can see that. Maybe the vibes are a little off today?\r"
       objectReference: {fileID: 0}
-    - target: {fileID: 2125231061260015082, guid: 413f3417a98a4c6419cc516d4343530e, type: 3}
-      propertyPath: fortuneRegions.Array.data[2].displayName
-      value: The Lovers
+    - target: {fileID: 1584996685777238453, guid: 413f3417a98a4c6419cc516d4343530e, type: 3}
+      propertyPath: greetingDialogue
+      value: ' Hi hi! How are you today?'
       objectReference: {fileID: 0}
-    - target: {fileID: 2125231061260015082, guid: 413f3417a98a4c6419cc516d4343530e, type: 3}
-      propertyPath: fortuneRegions.Array.data[2].fortuneType
-      value: 
-      objectReference: {fileID: 11400000, guid: 30d5feea4eb061045a9c7dd0d60316f7, type: 2}
-    - target: {fileID: 2125231061260015082, guid: 413f3417a98a4c6419cc516d4343530e, type: 3}
-      propertyPath: fortuneRegions.Array.data[1].topLeftBorder.x
-      value: 5
+    - target: {fileID: 1584996685777238453, guid: 413f3417a98a4c6419cc516d4343530e, type: 3}
+      propertyPath: negativeDialogue
+      value: "What? No way. That doesn\u2019t track at all."
       objectReference: {fileID: 0}
-    - target: {fileID: 2125231061260015082, guid: 413f3417a98a4c6419cc516d4343530e, type: 3}
-      propertyPath: fortuneRegions.Array.data[1].topLeftBorder.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2125231061260015082, guid: 413f3417a98a4c6419cc516d4343530e, type: 3}
-      propertyPath: fortuneRegions.Array.data[2].topLeftBorder.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2125231061260015082, guid: 413f3417a98a4c6419cc516d4343530e, type: 3}
-      propertyPath: fortuneRegions.Array.data[1].bottomRightBorder.y
-      value: 9
-      objectReference: {fileID: 0}
-    - target: {fileID: 2125231061260015082, guid: 413f3417a98a4c6419cc516d4343530e, type: 3}
-      propertyPath: fortuneRegions.Array.data[2].bottomRightBorder.x
-      value: 9
-      objectReference: {fileID: 0}
-    - target: {fileID: 2125231061260015082, guid: 413f3417a98a4c6419cc516d4343530e, type: 3}
-      propertyPath: fortuneRegions.Array.data[2].bottomRightBorder.y
-      value: 2
+    - target: {fileID: 1584996685777238453, guid: 413f3417a98a4c6419cc516d4343530e, type: 3}
+      propertyPath: positiveDialogue
+      value: "Dude, that\u2019s like, scary accurate\u2026thank you so much! I\u2019ll
+        like, absolutely keep this in mind. Can I interview you later about your
+        technique?"
       objectReference: {fileID: 0}
     - target: {fileID: 2308029742680792113, guid: 413f3417a98a4c6419cc516d4343530e, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -2223,9 +2209,37 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4957211125829364632, guid: 413f3417a98a4c6419cc516d4343530e, type: 3}
+      propertyPath: greetingDialogue
+      value: "Yo. I\u2019m here for my daily cup."
+      objectReference: {fileID: 0}
+    - target: {fileID: 4957211125829364632, guid: 413f3417a98a4c6419cc516d4343530e, type: 3}
+      propertyPath: negativeDialogue
+      value: Not too sure about that one. Better luck next time, I guess.
+      objectReference: {fileID: 0}
+    - target: {fileID: 5649420678716342883, guid: 413f3417a98a4c6419cc516d4343530e, type: 3}
+      propertyPath: neutralDialogue
+      value: "Huh, alright. I\u2019ll take that into consideration."
+      objectReference: {fileID: 0}
+    - target: {fileID: 5649420678716342883, guid: 413f3417a98a4c6419cc516d4343530e, type: 3}
+      propertyPath: greetingDialogue
+      value: "Afternoon. Let\u2019s skip the chit-chat."
+      objectReference: {fileID: 0}
+    - target: {fileID: 5649420678716342883, guid: 413f3417a98a4c6419cc516d4343530e, type: 3}
+      propertyPath: negativeDialogue
+      value: What the hell are you talking about?
+      objectReference: {fileID: 0}
+    - target: {fileID: 5649420678716342883, guid: 413f3417a98a4c6419cc516d4343530e, type: 3}
+      propertyPath: positiveDialogue
+      value: "Surprisingly insightful. Here\u2019s a tip."
+      objectReference: {fileID: 0}
     - target: {fileID: 6441273633716868318, guid: 413f3417a98a4c6419cc516d4343530e, type: 3}
       propertyPath: m_Name
       value: CustomerManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 6443936621012947436, guid: 413f3417a98a4c6419cc516d4343530e, type: 3}
+      propertyPath: m_Name
+      value: Janice
       objectReference: {fileID: 0}
     - target: {fileID: 8907566909332416487, guid: 413f3417a98a4c6419cc516d4343530e, type: 3}
       propertyPath: m_AnchoredPosition.y

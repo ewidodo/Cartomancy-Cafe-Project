@@ -262,17 +262,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e203eff0289bd1b449538dcb658752f8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fortunePreferences:
-  - fortune: {fileID: 11400000, guid: d0c111b81b7078d4a81de5f9539beaaf, type: 2}
-    preference: 0
-    dialogue: Wow I hate this! Thanks!
-  - fortune: {fileID: 11400000, guid: 06aaa5c4142c90344b5710c3644e2078, type: 2}
-    preference: 1
-    dialogue: This is pretty bad. Two stars.
-  - fortune: {fileID: 11400000, guid: 30d5feea4eb061045a9c7dd0d60316f7, type: 2}
-    preference: 4
-    dialogue: OMG I'M IN LOVE!!!!!!!
+  fortunePreferences: []
   greetingDialogue: 
+  positiveDialogue: 
+  neutralDialogue: 
+  negativeDialogue: 
   dialogueDisplay: {fileID: 3274310176185969696}
   fortuneName: {fileID: 0}
   fortunePosition: {fileID: 0}
