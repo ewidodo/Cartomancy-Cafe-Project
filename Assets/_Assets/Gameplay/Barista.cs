@@ -36,6 +36,8 @@ public class Barista : Singleton<Barista>
         // Instantiate ingredient in current ingredient display
         Ingredient addedIngredient = Instantiate(ingredient.gameObject, currentIngredientDisplay.transform).GetComponent<Ingredient>();
         addedIngredient.inDrink = true;
+        addedIngredient.defaultScale = new Vector3(0.5f, 0.5f, 0.5f);
+        addedIngredient.card.transform.localScale = addedIngredient.defaultScale;
 
         currentDrinkIngredients.Add(addedIngredient);
         currentCustomer.ReadFortune(currentDrinkIngredients);

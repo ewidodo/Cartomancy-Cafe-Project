@@ -21,6 +21,7 @@ public class Ingredient : MonoBehaviour
     [Header("Display Parameters")]
     [SerializeField] private float hoverScaleMultiplier;
     [SerializeField] private float hoverScaleTime;
+    public Vector3 defaultScale = Vector3.one;
 
 
     private void Awake()
@@ -38,24 +39,26 @@ public class Ingredient : MonoBehaviour
     public void Enlarge()
     {
         // Display in front
-        this.transform.SetAsLastSibling();
+        GetComponent<Canvas>().sortingOrder = 1;
         // Cancel any other ongoing scale tweens
         LeanTween.cancel(this.gameObject);
-        LeanTween.value(this.gameObject, 
-                        callOnUpdate: (color) => { card.transform.localScale = new Vector3(color.r, color.g, color.b); }, 
-                        new Color(1, 1, 1), 
-                        new Color(hoverScaleMultiplier, hoverScaleMultiplier, hoverScaleMultiplier), 
+        LeanTween.value(this.gameObject,
+                        callOnUpdate: (color) => { card.transform.localScale = new Vector3(color.r, color.g, color.b); },
+                        new Color(defaultScale.x, defaultScale.y, defaultScale.z, 1),
+                        new Color(hoverScaleMultiplier, hoverScaleMultiplier, hoverScaleMultiplier),
                         hoverScaleTime);
     }
 
     public void ResetSize()
     {
+        // Display normally
+        GetComponent<Canvas>().sortingOrder = 0;
         // Cancel any other ongoing scale tweens
         LeanTween.cancel(this.gameObject);
         LeanTween.value(this.gameObject, 
                         callOnUpdate: (color) => { card.transform.localScale = new Vector3(color.r, color.g, color.b); }, 
-                        new Color(card.transform.localScale.x, card.transform.localScale.y, card.transform.localScale.z), 
-                        new Color(1, 1, 1), 
+                        new Color(card.transform.localScale.x, card.transform.localScale.y, card.transform.localScale.z),
+                        new Color(defaultScale.x, defaultScale.y, defaultScale.z, 1),
                         hoverScaleTime);
     }
 
