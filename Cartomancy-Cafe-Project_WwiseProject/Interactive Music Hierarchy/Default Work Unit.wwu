@@ -856,7 +856,7 @@
 						<ObjectList Name="Entries">
 							<Reference>
 								<Local>
-									<MultiSwitchEntry Name="" ID="{0083C974-BE33-4846-85A8-A005AAAAAF41}">
+									<MultiSwitchEntry Name="" ID="{2E9C019C-0CF7-4136-8463-A82741A49AA2}">
 										<ReferenceList>
 											<Reference Name="AudioNode">
 												<ObjectRef Name="MainMenu" ID="{7C2728C2-79F6-4CB3-9451-AC476B409E8D}" WorkUnitID="{E629E0D6-BF65-4559-A03A-C67A109DE164}"/>
@@ -874,7 +874,7 @@
 							</Reference>
 							<Reference>
 								<Local>
-									<MultiSwitchEntry Name="" ID="{33FC2B4B-6C11-4D59-98BD-0F47B10987A3}">
+									<MultiSwitchEntry Name="" ID="{C7275325-A6C0-41B6-AE03-F4CF7944CEC7}">
 										<ReferenceList>
 											<Reference Name="AudioNode">
 												<ObjectRef Name="InGame" ID="{6AC1E664-1409-4C29-94AA-A4DF8D24C77F}" WorkUnitID="{E629E0D6-BF65-4559-A03A-C67A109DE164}"/>
@@ -892,7 +892,7 @@
 							</Reference>
 							<Reference>
 								<Local>
-									<MultiSwitchEntry Name="" ID="{CE33C379-1C12-41EC-9A59-0D027C1F5FD1}">
+									<MultiSwitchEntry Name="" ID="{8D392EB3-7C8F-42AA-A461-F3D1D8CC67F9}">
 										<ReferenceList>
 											<Reference Name="AudioNode">
 												<ObjectRef Name="MainMenu" ID="{7C2728C2-79F6-4CB3-9451-AC476B409E8D}" WorkUnitID="{E629E0D6-BF65-4559-A03A-C67A109DE164}"/>
@@ -910,7 +910,7 @@
 							</Reference>
 							<Reference>
 								<Local>
-									<MultiSwitchEntry Name="" ID="{1C7E987F-5E22-4260-BAD9-CB0773FA7E75}">
+									<MultiSwitchEntry Name="" ID="{8242942B-5D23-4F84-A0FE-692C005457D4}">
 										<ReferenceList>
 											<Reference Name="AudioNode">
 												<ObjectRef Name="MainMenu" ID="{7C2728C2-79F6-4CB3-9451-AC476B409E8D}" WorkUnitID="{E629E0D6-BF65-4559-A03A-C67A109DE164}"/>

@@ -13,9 +13,14 @@ public class Ingredient : MonoBehaviour
     [HideInInspector] public bool inDrink = false;
 
     [Header("Display References")]
+    public GameObject card;
     public TextMeshProUGUI nameDisplay;
     public TextMeshProUGUI descriptionDisplay;
     public TextMeshProUGUI fortuneOffsetDisplay;
+
+    [Header("Display Parameters")]
+    [SerializeField] private float hoverScaleMultiplier;
+    [SerializeField] private float hoverScaleTime;
 
 
     private void Awake()
@@ -28,6 +33,30 @@ public class Ingredient : MonoBehaviour
         nameDisplay.text = name;
         descriptionDisplay.text = description;
         fortuneOffsetDisplay.text = fortuneOffset.ToString();
+    }
+
+    public void Enlarge()
+    {
+        // Display in front
+        this.transform.SetAsLastSibling();
+        // Cancel any other ongoing scale tweens
+        LeanTween.cancel(this.gameObject);
+        LeanTween.value(this.gameObject, 
+                        callOnUpdate: (color) => { card.transform.localScale = new Vector3(color.r, color.g, color.b); }, 
+                        new Color(1, 1, 1), 
+                        new Color(hoverScaleMultiplier, hoverScaleMultiplier, hoverScaleMultiplier), 
+                        hoverScaleTime);
+    }
+
+    public void ResetSize()
+    {
+        // Cancel any other ongoing scale tweens
+        LeanTween.cancel(this.gameObject);
+        LeanTween.value(this.gameObject, 
+                        callOnUpdate: (color) => { card.transform.localScale = new Vector3(color.r, color.g, color.b); }, 
+                        new Color(card.transform.localScale.x, card.transform.localScale.y, card.transform.localScale.z), 
+                        new Color(1, 1, 1), 
+                        hoverScaleTime);
     }
 
     public void SelectIngredient()

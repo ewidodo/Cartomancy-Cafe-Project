@@ -52,15 +52,18 @@ public class Customer : MonoBehaviour
     public Fortune ReadFortune(List<Ingredient> ingredients)
     {
         Vector2 position = new Vector2();
+
         foreach(Ingredient ingredient in ingredients)
         {
+            Vector2 oldPosition = position;
             position += ingredient.fortuneOffset;
             position = new Vector2(Mathf.Clamp(position.x, 0f, fortuneTable.fortuneTableSize.x),
                                    Mathf.Clamp(position.y, 0f, fortuneTable.fortuneTableSize.y));
+            FortuneDisplay.Instance.DisplayVector(oldPosition, position);
         }
+
         Fortune fortune = fortuneTable.ReadFortune(position);
-        FortuneDisplay.Instance.fortuneName.text = fortune.name;
-        FortuneDisplay.Instance.fortunePosition.text = position.ToString();
+        FortuneDisplay.Instance.DisplayFortune(fortune);
 
         return fortune;
     }

@@ -9,14 +9,14 @@ public class FortuneRegionUI : EventTrigger
 
     public override void OnPointerEnter(PointerEventData eventData)
     {
-        FortuneDisplay.Instance.AddFortune(fortune);
+        FortuneDisplay.Instance.AddHoveredFortune(fortune);
 
         Debug.Log("Mouse inside object!!!");
     }
 
     public override void OnPointerExit(PointerEventData eventData)
     {
-        FortuneDisplay.Instance.RemoveFortune(fortune);
+        FortuneDisplay.Instance.RemoveHoveredFortune(fortune);
 
         Debug.Log("Mouse left object!!!");
     }

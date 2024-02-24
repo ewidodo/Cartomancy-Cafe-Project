@@ -24,7 +24,7 @@ MonoBehaviour:
     ParentPath: Virtual Acoustics\Default Work Unit
     guid: 671241a550fa114da2765aaf9d711ec6
     GuidInternal: 
-    m_lastTime: -8584939408630836279
+    m_lastTime: -8584943366851132767
     List: []
   AuxBusWwu:
   - PhysicalPath: Master-Mixer Hierarchy\Default Work Unit.wwu
@@ -118,7 +118,7 @@ MonoBehaviour:
     ParentPath: SoundBanks\Default Work Unit
     guid: 01b0af0ec7ad604696383e25c56eb617
     GuidInternal: 
-    m_lastTime: -8584931184187681287
+    m_lastTime: -8584927968451289245
     List:
     - name: Credits
       guid: 8c1098d2a3514849acc01f0a12a1c70e
@@ -202,7 +202,7 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: 423b03fbe80d9141b98abfeb44c02c12
     GuidInternal: 
-    m_lastTime: -8584931180632410749
+    m_lastTime: -8584927968486048050
     List:
     - name: CreditsSceneLoaded
       guid: d21d6d5eb8a99449acbbd24f7ed9247c
@@ -407,7 +407,7 @@ MonoBehaviour:
     ParentPath: Game Parameters\Default Work Unit
     guid: 4b251ce0a8240d4989b8d824e2474d7f
     GuidInternal: 
-    m_lastTime: -8584939408631289867
+    m_lastTime: -8584943366851703130
     List:
     - name: AmbienceVolume
       guid: e020e2fc6cc7ae45bdf595d24d411c0f
@@ -477,7 +477,7 @@ MonoBehaviour:
     ParentPath: States\Default Work Unit
     guid: cb78db393d3eba4086fb77b7414b9269
     GuidInternal: 
-    m_lastTime: -8584931202042663379
+    m_lastTime: -8584927968451279229
     List:
     - name: MusicStates
       guid: d2be909e5548714d884849fa61325110
@@ -557,7 +557,7 @@ MonoBehaviour:
     ParentPath: Switches\Default Work Unit
     guid: 8a6e34dfeb34b04eaea2af58e5555ebb
     GuidInternal: 
-    m_lastTime: -8584939408630846255
+    m_lastTime: -8584943366851172811
     List: []
   TriggerWwu:
   - PhysicalPath: Triggers\Default Work Unit.wwu
@@ -571,10 +571,10 @@ MonoBehaviour:
     ParentPath: Triggers\Default Work Unit
     guid: ca622dce262db842bb56bad6d1e932d7
     GuidInternal: 
-    m_lastTime: -8584939408630836279
+    m_lastTime: -8584943366851152794
     List: []
   ExpandedFileSystemItemIds: 
-  ExpandedWaapiItemIds: 010000000500000006000000080000000d0000000e000000
+  ExpandedWaapiItemIds: 
   AutoSyncSelection: 0
   autoPopulateEnabled: 1
   currentDataSource: 0

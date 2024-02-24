@@ -18,13 +18,14 @@ public class FortuneDisplay : Singleton<FortuneDisplay>
     public Camera camera;
 
 
-    private void Awake()
+    private new void Awake()
     {
         base.Awake();
     }
 
     private void Start()
     {
+        // Regenerate display whenever a new customer appears
         Barista.Instance.customerChangeEvent.AddListener(GenerateFortuneRegionDisplay);
     }
 
@@ -33,7 +34,28 @@ public class FortuneDisplay : Singleton<FortuneDisplay>
         //DisplayMouseCoordinates();
     }
 
+    public void DisplayFortune(Fortune fortune)
+    {
+        fortuneName.text = fortune.name;
+    }
 
+    public void DisplayVector(Vector2 oldPos, Vector2 newPos)
+    {
+        //LineRenderer.
+    }
+
+    private Vector3 FortuneDisplayToWorldCoordinates(Vector3 worldPos)
+    {
+        RectTransform fortuneGridRect = fortuneGrid.GetComponent<RectTransform>();
+
+        // There's no way this just works right
+        float gridScalarX = fortuneGridRect.sizeDelta.x / currentFortuneTable.fortuneTableSize.x;
+        float gridScalarY = fortuneGridRect.sizeDelta.y / currentFortuneTable.fortuneTableSize.y;
+
+        return new Vector3();
+    }
+
+    #region Initial Display Generation
     public void GenerateFortuneRegionDisplay(Customer customer)
     {
         Debug.Log("Generating Fortune Region Display...");
@@ -74,23 +96,25 @@ public class FortuneDisplay : Singleton<FortuneDisplay>
         fortuneRegionUI.fortune = region.fortuneType;
         newFortuneRegion.GetComponent<Image>().color = fortuneRegionUI.fortune.fortuneColor;
     }
+    #endregion
 
-    public void AddFortune(Fortune fortune)
+    #region Hover Behavior
+    public void AddHoveredFortune(Fortune fortune)
     {
         displayedFortunes.Add(fortune);
-        DisplayCurrentFortune();
+        DisplayHoveredFortune();
     }
 
-    public void RemoveFortune(Fortune fortune)
+    public void RemoveHoveredFortune(Fortune fortune)
     {
         if (displayedFortunes.Contains(fortune))
         {
             displayedFortunes.Remove(fortune);
         }
-        DisplayCurrentFortune();
+        DisplayHoveredFortune();
     }
 
-    public void DisplayCurrentFortune()
+    public void DisplayHoveredFortune()
     {
         if (displayedFortunes.Count <= 0)
         {
@@ -125,4 +149,5 @@ public class FortuneDisplay : Singleton<FortuneDisplay>
 
         fortunePosition.text = localPoint.ToString();
     }
+    #endregion
 }
