@@ -38,7 +38,7 @@ MonoBehaviour:
     ParentPath: Master-Mixer Hierarchy\Default Work Unit
     guid: 4273db616b71da4a8e0ead113fc0cb4b
     GuidInternal: 
-    m_lastTime: -8584933950959385795
+    m_lastTime: -8584932241635454765
     List:
     - name: Ambience Bus
       guid: f583830524c7154e881b7509fcfffcb1
@@ -118,7 +118,7 @@ MonoBehaviour:
     ParentPath: SoundBanks\Default Work Unit
     guid: 01b0af0ec7ad604696383e25c56eb617
     GuidInternal: 
-    m_lastTime: -8584933950957661554
+    m_lastTime: -8584931184187681287
     List:
     - name: Credits
       guid: 8c1098d2a3514849acc01f0a12a1c70e
@@ -148,6 +148,20 @@ MonoBehaviour:
         ObjectType: 7
         guid: fd21a1652773dc40a1c5d7b952e41484
       Path: SoundBanks\Default Work Unit\Gameplay
+    - name: Global
+      guid: 59020ef4e16cd94e8e10e95dcdf860b9
+      id: 1465331116
+      PathAndIcons:
+      - ElementName: SoundBanks
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 01b0af0ec7ad604696383e25c56eb617
+      - ElementName: Global
+        ObjectType: 7
+        guid: 59020ef4e16cd94e8e10e95dcdf860b9
+      Path: SoundBanks\Default Work Unit\Global
     - name: MainMenu
       guid: cb1f36822a9ed54db191a67e5c8ee2bb
       id: 3604647259
@@ -188,7 +202,7 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: 423b03fbe80d9141b98abfeb44c02c12
     GuidInternal: 
-    m_lastTime: -8584933950965571954
+    m_lastTime: -8584931180632410749
     List:
     - name: CreditsSceneLoaded
       guid: d21d6d5eb8a99449acbbd24f7ed9247c
@@ -200,10 +214,13 @@ MonoBehaviour:
       - ElementName: Default Work Unit
         ObjectType: 12
         guid: 423b03fbe80d9141b98abfeb44c02c12
+      - ElementName: SceneManagement
+        ObjectType: 4
+        guid: 4ad41ca3a79ce445a2ddaf2d748699ab
       - ElementName: CreditsSceneLoaded
         ObjectType: 3
         guid: d21d6d5eb8a99449acbbd24f7ed9247c
-      Path: Events\Default Work Unit\CreditsSceneLoaded
+      Path: Events\Default Work Unit\SceneManagement\CreditsSceneLoaded
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
@@ -217,10 +234,13 @@ MonoBehaviour:
       - ElementName: Default Work Unit
         ObjectType: 12
         guid: 423b03fbe80d9141b98abfeb44c02c12
+      - ElementName: SceneManagement
+        ObjectType: 4
+        guid: 4ad41ca3a79ce445a2ddaf2d748699ab
       - ElementName: CreditsSceneUnloaded
         ObjectType: 3
         guid: f18d1059395a4944b3bca05cb7c4174c
-      Path: Events\Default Work Unit\CreditsSceneUnloaded
+      Path: Events\Default Work Unit\SceneManagement\CreditsSceneUnloaded
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
@@ -234,10 +254,13 @@ MonoBehaviour:
       - ElementName: Default Work Unit
         ObjectType: 12
         guid: 423b03fbe80d9141b98abfeb44c02c12
+      - ElementName: SceneManagement
+        ObjectType: 4
+        guid: 4ad41ca3a79ce445a2ddaf2d748699ab
       - ElementName: GameplaySceneLoaded
         ObjectType: 3
         guid: 022627a7caffff4fb3618c7a25167944
-      Path: Events\Default Work Unit\GameplaySceneLoaded
+      Path: Events\Default Work Unit\SceneManagement\GameplaySceneLoaded
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
@@ -251,13 +274,36 @@ MonoBehaviour:
       - ElementName: Default Work Unit
         ObjectType: 12
         guid: 423b03fbe80d9141b98abfeb44c02c12
+      - ElementName: SceneManagement
+        ObjectType: 4
+        guid: 4ad41ca3a79ce445a2ddaf2d748699ab
       - ElementName: GameplaySceneUnloaded
         ObjectType: 3
         guid: d5269715b1571747a80d3d58a5c03cc4
-      Path: Events\Default Work Unit\GameplaySceneUnloaded
+      Path: Events\Default Work Unit\SceneManagement\GameplaySceneUnloaded
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
+    - name: Init
+      guid: 777b3a992790704c941f0f9d2d83100a
+      id: 1355168291
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 423b03fbe80d9141b98abfeb44c02c12
+      - ElementName: SceneManagement
+        ObjectType: 4
+        guid: 4ad41ca3a79ce445a2ddaf2d748699ab
+      - ElementName: Init
+        ObjectType: 3
+        guid: 777b3a992790704c941f0f9d2d83100a
+      Path: Events\Default Work Unit\SceneManagement\Init
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
     - name: MainMenuSceneLoaded
       guid: c397d791dce03d4faa65dcfcb87101bf
       id: 2497386818
@@ -268,13 +314,16 @@ MonoBehaviour:
       - ElementName: Default Work Unit
         ObjectType: 12
         guid: 423b03fbe80d9141b98abfeb44c02c12
+      - ElementName: SceneManagement
+        ObjectType: 4
+        guid: 4ad41ca3a79ce445a2ddaf2d748699ab
       - ElementName: MainMenuSceneLoaded
         ObjectType: 3
         guid: c397d791dce03d4faa65dcfcb87101bf
-      Path: Events\Default Work Unit\MainMenuSceneLoaded
+      Path: Events\Default Work Unit\SceneManagement\MainMenuSceneLoaded
       maxAttenuation: 0
-      maxDuration: 92.86898
-      minDuration: 92.86898
+      maxDuration: 0
+      minDuration: 0
     - name: MainMenuSceneUnloaded
       guid: 0ef142bc704d5a4f909c961c0f8143c7
       id: 1917959679
@@ -285,10 +334,13 @@ MonoBehaviour:
       - ElementName: Default Work Unit
         ObjectType: 12
         guid: 423b03fbe80d9141b98abfeb44c02c12
+      - ElementName: SceneManagement
+        ObjectType: 4
+        guid: 4ad41ca3a79ce445a2ddaf2d748699ab
       - ElementName: MainMenuSceneUnloaded
         ObjectType: 3
         guid: 0ef142bc704d5a4f909c961c0f8143c7
-      Path: Events\Default Work Unit\MainMenuSceneUnloaded
+      Path: Events\Default Work Unit\SceneManagement\MainMenuSceneUnloaded
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
@@ -306,6 +358,23 @@ MonoBehaviour:
         ObjectType: 3
         guid: da4f4f803f9b52429bd3d9eb02f29c98
       Path: Events\Default Work Unit\New_Event
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: SceneManagement
+      guid: 4ad41ca3a79ce445a2ddaf2d748699ab
+      id: 3009364058
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 423b03fbe80d9141b98abfeb44c02c12
+      - ElementName: SceneManagement
+        ObjectType: 4
+        guid: 4ad41ca3a79ce445a2ddaf2d748699ab
+      Path: Events\Default Work Unit\SceneManagement
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
@@ -408,8 +477,74 @@ MonoBehaviour:
     ParentPath: States\Default Work Unit
     guid: cb78db393d3eba4086fb77b7414b9269
     GuidInternal: 
-    m_lastTime: -8584939408630856224
-    List: []
+    m_lastTime: -8584931202042663379
+    List:
+    - name: MusicStates
+      guid: d2be909e5548714d884849fa61325110
+      id: 3103015060
+      PathAndIcons:
+      - ElementName: States
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: cb78db393d3eba4086fb77b7414b9269
+      - ElementName: MusicStates
+        ObjectType: 9
+        guid: d2be909e5548714d884849fa61325110
+      Path: States\Default Work Unit\MusicStates
+      values:
+      - name: InGame
+        guid: c607eda033ec174a99dd511bc4f9bb96
+        id: 984691642
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: cb78db393d3eba4086fb77b7414b9269
+        - ElementName: MusicStates
+          ObjectType: 9
+          guid: d2be909e5548714d884849fa61325110
+        - ElementName: InGame
+          ObjectType: 8
+          guid: c607eda033ec174a99dd511bc4f9bb96
+      - name: MainMenu
+        guid: 2638caca1339eb47b10dc3e05259cc8c
+        id: 3604647259
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: cb78db393d3eba4086fb77b7414b9269
+        - ElementName: MusicStates
+          ObjectType: 9
+          guid: d2be909e5548714d884849fa61325110
+        - ElementName: MainMenu
+          ObjectType: 8
+          guid: 2638caca1339eb47b10dc3e05259cc8c
+      - name: None
+        guid: b2281ea2f0291b41a83719307393c341
+        id: 748895195
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: cb78db393d3eba4086fb77b7414b9269
+        - ElementName: MusicStates
+          ObjectType: 9
+          guid: d2be909e5548714d884849fa61325110
+        - ElementName: None
+          ObjectType: 8
+          guid: b2281ea2f0291b41a83719307393c341
+      ValueGuids: []
+      ValueIcons: []
+      valuesInternal: []
   SwitchWwu:
   - PhysicalPath: Switches\Default Work Unit.wwu
     PathAndIcons:
@@ -439,7 +574,7 @@ MonoBehaviour:
     m_lastTime: -8584939408630836279
     List: []
   ExpandedFileSystemItemIds: 
-  ExpandedWaapiItemIds: 
+  ExpandedWaapiItemIds: 010000000500000006000000080000000d0000000e000000
   AutoSyncSelection: 0
   autoPopulateEnabled: 1
   currentDataSource: 0

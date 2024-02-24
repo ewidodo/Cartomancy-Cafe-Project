@@ -5,6 +5,7 @@ using UnityEngine;
 public class SceneTransitionManager : MonoBehaviour
 {
     private CanvasGroup _canvasGroup;
+    private bool isTransitionActive = true;
 
     private void Awake()
     {
@@ -19,11 +20,18 @@ public class SceneTransitionManager : MonoBehaviour
 
     public LTDescr FadeFromBlack(float duration)
     {
+        isTransitionActive = false;
         return LeanTween.alphaCanvas(_canvasGroup, 0, duration);
     }
 
     public LTDescr FadeToBlack(float duration)
     {
+        isTransitionActive = true;
         return LeanTween.alphaCanvas(_canvasGroup, 1, duration);
+    }
+
+    public bool IsTransitionActive()
+    {
+        return isTransitionActive;
     }
 }

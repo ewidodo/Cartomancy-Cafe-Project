@@ -1,6 +1,6 @@
 Event	ID	Name			Wwise Object Path	Notes
-	1917959679	MainMenuSceneUnloaded			\Default Work Unit\MainMenuSceneUnloaded	
-	2497386818	MainMenuSceneLoaded			\Default Work Unit\MainMenuSceneLoaded	
+	1917959679	MainMenuSceneUnloaded			\Default Work Unit\SceneManagement\MainMenuSceneUnloaded	
+	2497386818	MainMenuSceneLoaded			\Default Work Unit\SceneManagement\MainMenuSceneLoaded	
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	376715746	MainMenu	S:\2_Games\Projects\Unity\DaniJam\Cartomancy-Cafe-Project\Cartomancy-Cafe-Project_WwiseProject\.cache\Mac\SFX\c_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Music\MainMenu		17830940

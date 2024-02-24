@@ -1,3 +1,11 @@
+State Group	ID	Name			Wwise Object Path	Notes
+	3103015060	MusicStates			\Default Work Unit\MusicStates	
+
+State	ID	Name	State Group			Notes
+	748895195	None	MusicStates			
+	984691642	InGame	MusicStates			
+	3604647259	MainMenu	MusicStates			
+
 Game Parameter	ID	Name			Wwise Object Path	Notes
 	1204480359	AmbienceVolume			\Default Work Unit\AmbienceVolume	
 	2346531308	MusicVolume			\Default Work Unit\MusicVolume	

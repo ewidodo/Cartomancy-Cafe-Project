@@ -1,0 +1,19 @@
+Event	ID	Name			Wwise Object Path	Notes
+	1355168291	Init			\Default Work Unit\SceneManagement\Init	
+
+State Group	ID	Name			Wwise Object Path	Notes
+	3103015060	MusicStates			\Default Work Unit\MusicStates	
+
+State	ID	Name	State Group			Notes
+	748895195	None	MusicStates			
+	984691642	InGame	MusicStates			
+	3604647259	MainMenu	MusicStates			
+
+In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	191583604	3 - Saxophone 1bar Pickup	S:\2_Games\Projects\Unity\DaniJam\Cartomancy-Cafe-Project\Cartomancy-Cafe-Project_WwiseProject\.cache\Mac\SFX\CartomancyInGame_SaxMelody_FBC78EF0.wem		\Interactive Music Hierarchy\Default Work Unit\MusicMain\InGame\SaxMelody\3 - Saxophone 1bar Pickup		10472824
+	353524156	4 - Piano	S:\2_Games\Projects\Unity\DaniJam\Cartomancy-Cafe-Project\Cartomancy-Cafe-Project_WwiseProject\.cache\Mac\SFX\CartomancyToMainMenu_PianoMelody_FBC78EF0.wem		\Interactive Music Hierarchy\Default Work Unit\MusicMain\MainMenuTransition\4 - Piano		1701916
+	625777191	1 - Piano without Melody	S:\2_Games\Projects\Unity\DaniJam\Cartomancy-Cafe-Project\Cartomancy-Cafe-Project_WwiseProject\.cache\Mac\SFX\CartomancyMainMenu_NoMelody_FBC78EF0.wem		\Interactive Music Hierarchy\Default Work Unit\MusicMain\MainMenu\NoMelody\1 - Piano without Melody		9949188
+	646974316	1 - Piano with Melody	S:\2_Games\Projects\Unity\DaniJam\Cartomancy-Cafe-Project\Cartomancy-Cafe-Project_WwiseProject\.cache\Mac\SFX\CartomancyMainMenu_PianoMelody_FBC78EF0.wem		\Interactive Music Hierarchy\Default Work Unit\MusicMain\MainMenu\Melody\1 - Piano with Melody		9949188
+	852145671	3 - Piano with Melody 1bar Pickup	S:\2_Games\Projects\Unity\DaniJam\Cartomancy-Cafe-Project\Cartomancy-Cafe-Project_WwiseProject\.cache\Mac\SFX\CartomancyInGame_PianoMelody_FBC78EF0.wem		\Interactive Music Hierarchy\Default Work Unit\MusicMain\InGame\PianoMelody\3 - Piano with Melody 1bar Pickup		10472824
+	1063039539	2 - Piano	S:\2_Games\Projects\Unity\DaniJam\Cartomancy-Cafe-Project\Cartomancy-Cafe-Project_WwiseProject\.cache\Mac\SFX\CartomancyToInGame_PianoMelody_FBC78EF0.wem		\Interactive Music Hierarchy\Default Work Unit\MusicMain\InGameTransition\2 - Piano		1178276
+
