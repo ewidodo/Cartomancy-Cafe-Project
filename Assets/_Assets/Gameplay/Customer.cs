@@ -181,21 +181,21 @@ public class Customer : MonoBehaviour
 
     private void RespondToFortune(FortunePreference reaction)
     {
-        if (currentDialogueRoutine != null) StopCoroutine(currentDialogueRoutine);
+        if (currentDialogueRoutine != null) StopCoroutine(currentDialogueRoutine); currentDialogueRoutine = null;
         ScoreManager.Instance.score += (int) reaction.preference;
         StartCoroutine(TextScroll(preferenceResponses[reaction.preference], CustomerManager.Instance.SwapCustomers));
     }
 
     private void DisplayDrinkDialogue()
     {
-        if (currentDialogueRoutine != null) StopCoroutine(currentDialogueRoutine);
+        if (currentDialogueRoutine != null) StopCoroutine(currentDialogueRoutine); currentDialogueRoutine = null;
         currentDialogueRoutine = StartCoroutine(TextScroll(drinkDialogue, null));
     }
 
     public IEnumerator Spawn()
     {
         if (currentDialogueRoutine != null) StopCoroutine(currentDialogueRoutine);
-        yield return currentDialogueRoutine = StartCoroutine(TextScroll(greetingDialogue, null));
+        yield return StartCoroutine(TextScroll(greetingDialogue, null));
         yield return new WaitForSeconds(nextDialogueDelay);
         if (currentDialogueRoutine == null) yield return currentDialogueRoutine = StartCoroutine(TextScroll(drinkDialogue, null));
     }
