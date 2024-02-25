@@ -9,10 +9,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ebe968d0797adb2489e31f4131753999, type: 3}
-  m_Name: The Lovers
+  m_Script: {fileID: 11500000, guid: b44fd479c3fcb0a4b93778f2d8c63a59, type: 3}
+  m_Name: Serve in a Goblet
   m_EditorClassIdentifier: 
-  fortuneName: The Lovers
-  fortuneDescription: 
-  fortuneSprite: {fileID: 0}
-  fortuneColor: {r: 1, g: 0.3254717, b: 0.3254717, a: 1}
+  ingredientName: Serve in a Goblet
+  ingredientKeyword: in a cup
+  ingredientDescription: 
+  ingredientSprite: {fileID: 0}
+  ingredientNumber: 

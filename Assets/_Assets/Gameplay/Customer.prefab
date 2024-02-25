@@ -267,9 +267,8 @@ MonoBehaviour:
   positiveDialogue: 
   neutralDialogue: 
   negativeDialogue: 
+  nameDisplay: {fileID: 0}
   dialogueDisplay: {fileID: 3274310176185969696}
-  fortuneName: {fileID: 0}
-  fortunePosition: {fileID: 0}
 --- !u!114 &3230768083283520689
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -289,11 +288,11 @@ MonoBehaviour:
     fortuneType: {fileID: 11400000, guid: 06aaa5c4142c90344b5710c3644e2078, type: 2}
     topLeftBorder: {x: 0, y: 0}
     bottomRightBorder: {x: 9, y: 1}
-  - displayName: The Lovers
-    fortuneType: {fileID: 11400000, guid: 30d5feea4eb061045a9c7dd0d60316f7, type: 2}
+  - displayName: Phone a Friend
+    fortuneType: {fileID: 11400000, guid: cd6fe16fd1bbeec48991616e2d037f23, type: 2}
     topLeftBorder: {x: 0, y: 1}
     bottomRightBorder: {x: 9, y: 2}
-  defaultFortune: {fileID: 11400000, guid: d0c111b81b7078d4a81de5f9539beaaf, type: 2}
+  defaultFortune: {fileID: 11400000, guid: bdc45c27d5657154bb7cd96cb86dbe63, type: 2}
 --- !u!222 &5143300188737219370
 CanvasRenderer:
   m_ObjectHideFlags: 0

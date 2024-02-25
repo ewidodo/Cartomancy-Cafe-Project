@@ -2099,6 +2099,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Pablo
       objectReference: {fileID: 0}
+    - target: {fileID: 601777422213022657, guid: 413f3417a98a4c6419cc516d4343530e, type: 3}
+      propertyPath: m_Name
+      value: Sam
+      objectReference: {fileID: 0}
     - target: {fileID: 960436074321554581, guid: 413f3417a98a4c6419cc516d4343530e, type: 3}
       propertyPath: customerParent
       value: 

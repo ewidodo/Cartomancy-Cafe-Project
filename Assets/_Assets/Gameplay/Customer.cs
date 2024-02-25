@@ -6,7 +6,7 @@ using TMPro;
 
 public class Customer : MonoBehaviour
 {
-    private List<Ingredient> drinkIngredients = new();
+    private List<IngredientCard> drinkIngredients = new();
     private FortuneTable fortuneTable;
 
     [Serializable]
@@ -51,12 +51,25 @@ public class Customer : MonoBehaviour
         preferenceResponses.Add(FORTUNEPREFERENCEENUM.NEGATIVE, negativeDialogue);
     }
 
+    // Generate base drink, modifier ingredients, mystery ingredients
     private void GenerateDesires()
     {
+        // Generate base drink
 
+        // Generate specific ingredient
+
+        // Generate mystery ingredient
+
+        // Generate fortune preferences
+        foreach (FortuneTable.FortuneRegion fortuneRegion in fortuneTable.fortuneRegions)
+        {
+
+        }
+
+        // Double check everything
     }
 
-    public void GiveIngredients(List<Ingredient> ingredients)
+    public void GiveIngredients(List<IngredientCard> ingredients)
     {
         drinkIngredients = ingredients;
         Fortune fortune = ReadFortune(ingredients);
@@ -65,11 +78,11 @@ public class Customer : MonoBehaviour
         CustomerManager.Instance.SwapCustomers();
     }
 
-    public Fortune ReadFortune(List<Ingredient> ingredients)
+    public Fortune ReadFortune(List<IngredientCard> ingredients)
     {
         Vector2 position = new Vector2();
 
-        foreach(Ingredient ingredient in ingredients)
+        foreach(IngredientCard ingredient in ingredients)
         {
             Vector2 oldPosition = position;
             position += ingredient.fortuneOffset;

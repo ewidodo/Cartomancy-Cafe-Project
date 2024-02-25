@@ -4,7 +4,7 @@ using UnityEngine;
 using TMPro;
 
 // The data component of anything that will affect the final fortune
-public class Ingredient : MonoBehaviour
+public class IngredientCard : MonoBehaviour
 {
     [Header("Ingredient Information")]
     public string name;

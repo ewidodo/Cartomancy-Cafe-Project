@@ -10,9 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ebe968d0797adb2489e31f4131753999, type: 3}
-  m_Name: The Tower
+  m_Name: Family Relations
   m_EditorClassIdentifier: 
-  fortuneName: The Tower
-  fortuneDescription: Oh, yikes!
+  fortuneName: Family Relations
+  fortuneDescription: "It\u2019s time to stop pretending you like your mother\u2019s
+    tuna salad. She can take the heartbreak."
   fortuneSprite: {fileID: 0}
-  fortuneColor: {r: 0.6415094, g: 0.30428442, b: 0.099857606, a: 1}
+  fortuneColor: {r: 0.8396226, g: 0.7251459, b: 0.52674437, a: 1}
