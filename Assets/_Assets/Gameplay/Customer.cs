@@ -197,7 +197,7 @@ public class Customer : MonoBehaviour
         if (currentDialogueRoutine != null) StopCoroutine(currentDialogueRoutine);
         yield return currentDialogueRoutine = StartCoroutine(TextScroll(greetingDialogue, null));
         yield return new WaitForSeconds(nextDialogueDelay);
-        yield return currentDialogueRoutine = StartCoroutine(TextScroll(drinkDialogue, null));
+        if (currentDialogueRoutine == null) yield return currentDialogueRoutine = StartCoroutine(TextScroll(drinkDialogue, null));
     }
 
     public void Despawn()

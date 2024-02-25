@@ -23,6 +23,11 @@ public class Barista : Singleton<Barista>
 
     public void GiveCustomerDrink()
     {
+        if (currentCustomer == null)
+        {
+            return;
+        }
+
         currentCustomer.GiveIngredients(currentDrinkIngredients);
         foreach(IngredientCard ingredient in currentDrinkIngredients)
         {
