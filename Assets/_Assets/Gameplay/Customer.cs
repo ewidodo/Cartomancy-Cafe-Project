@@ -41,6 +41,7 @@ public class Customer : MonoBehaviour
     private Dictionary<FORTUNEPREFERENCEENUM, string> preferenceResponses = new();
     public float textScrollRate = 20;
     public float nextDialogueDelay = 2;
+    private Coroutine currentDialogueRoutine;
 
     [Header("Display References")]
     public TextMeshProUGUI nameDisplay;
@@ -127,10 +128,10 @@ public class Customer : MonoBehaviour
     {
         Vector2 position = new Vector2();
 
-        foreach(IngredientCard ingredient in ingredients)
+        foreach(IngredientCard ingredientCard in ingredients)
         {
             Vector2 oldPosition = position;
-            position += ingredient.fortuneOffset;
+            position += ingredientCard.ingredient.fortuneOffset;
             position = new Vector2(Mathf.Clamp(position.x, 0f, fortuneTable.fortuneTableSize.x),
                                    Mathf.Clamp(position.y, 0f, fortuneTable.fortuneTableSize.y));
             FortuneDisplay.Instance.DisplayVector(oldPosition, position);
@@ -180,20 +181,23 @@ public class Customer : MonoBehaviour
 
     private void RespondToFortune(FortunePreference reaction)
     {
+        if (currentDialogueRoutine != null) StopCoroutine(currentDialogueRoutine);
         ScoreManager.Instance.score += (int) reaction.preference;
         StartCoroutine(TextScroll(preferenceResponses[reaction.preference], CustomerManager.Instance.SwapCustomers));
     }
 
     private void DisplayDrinkDialogue()
     {
-        StartCoroutine(TextScroll(drinkDialogue, null));
+        if (currentDialogueRoutine != null) StopCoroutine(currentDialogueRoutine);
+        currentDialogueRoutine = StartCoroutine(TextScroll(drinkDialogue, null));
     }
 
     public IEnumerator Spawn()
     {
-        yield return StartCoroutine(TextScroll(greetingDialogue, null));
+        if (currentDialogueRoutine != null) StopCoroutine(currentDialogueRoutine);
+        yield return currentDialogueRoutine = StartCoroutine(TextScroll(greetingDialogue, null));
         yield return new WaitForSeconds(nextDialogueDelay);
-        yield return StartCoroutine(TextScroll(drinkDialogue, null));
+        yield return currentDialogueRoutine = StartCoroutine(TextScroll(drinkDialogue, null));
     }
 
     public void Despawn()

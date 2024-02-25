@@ -7,9 +7,7 @@ using TMPro;
 public class IngredientCard : MonoBehaviour
 {
     [Header("Ingredient Information")]
-    public string name;
-    public string description;
-    public Vector2 fortuneOffset = new();
+    public Ingredient ingredient;
     [HideInInspector] public bool inDrink = false;
 
     [Header("Display References")]
@@ -31,9 +29,9 @@ public class IngredientCard : MonoBehaviour
 
     private void InitDisplay()
     {
-        nameDisplay.text = name;
-        descriptionDisplay.text = description;
-        fortuneOffsetDisplay.text = fortuneOffset.ToString();
+        nameDisplay.text = ingredient.ingredientName;
+        descriptionDisplay.text = ingredient.ingredientDescription;
+        fortuneOffsetDisplay.text = ingredient.fortuneOffset.ToString();
     }
 
     public void Enlarge()
