@@ -13,7 +13,10 @@ MonoBehaviour:
   m_Name: The Hermit London Fog
   m_EditorClassIdentifier: 
   drinkName: The Hermit London Fog
-  drinkDescription: 
+  drinkDescription: Mellow, ethically sourced black tea flavored with bergamot. Served
+    with lavender syrup and essence of cloud.
   drinkSprite: {fileID: 0}
-  ingredients: []
+  ingredients:
+  - {fileID: 11400000, guid: 17688cbce2ab1f34eb78af53f6e29874, type: 2}
+  - {fileID: 11400000, guid: a80b7d94424b363458439af085fe2754, type: 2}
   drinkColor: {r: 0, g: 0, b: 0, a: 0}

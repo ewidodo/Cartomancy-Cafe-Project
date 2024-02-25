@@ -13,6 +13,10 @@ MonoBehaviour:
   m_Name: Ace of Cups Signature Coffee
   m_EditorClassIdentifier: 
   drinkName: Ace of Cups Signature Coffee
-  drinkDescription: 
+  drinkDescription: "Our signature bean. Nutty, with chocolate undertones. Infused
+    with our secret ingredient \u2014 eye of newt! Provided in a goblet."
   drinkSprite: {fileID: 0}
+  ingredients:
+  - {fileID: 11400000, guid: f7d7faff774b9e240a8bbb6d6211f542, type: 2}
+  - {fileID: 11400000, guid: c8145c85d7627e744a265061b1877274, type: 2}
   drinkColor: {r: 0, g: 0, b: 0, a: 0}

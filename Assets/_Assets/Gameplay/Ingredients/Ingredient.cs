@@ -7,6 +7,7 @@ public class Ingredient : ScriptableObject
 {
     public string ingredientName;
     public string ingredientKeyword;
+    public Vector2 fortuneOffset;
     [TextArea(3, 5)] public string ingredientDescription;
     public Sprite ingredientSprite;
     public string ingredientNumber;

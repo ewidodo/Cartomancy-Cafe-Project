@@ -40,7 +40,7 @@ public class Barista : Singleton<Barista>
         addedIngredient.card.transform.localScale = addedIngredient.defaultScale;
 
         currentDrinkIngredients.Add(addedIngredient);
-        currentCustomer.ReadFortune(currentDrinkIngredients);
+        currentCustomer.DisplayFortune(currentDrinkIngredients);
     }
 
     public void RemoveIngredient(IngredientCard ingredient)
@@ -49,7 +49,7 @@ public class Barista : Singleton<Barista>
         {
             currentDrinkIngredients.Remove(ingredient);
             Destroy(ingredient.gameObject);
-            currentCustomer.ReadFortune(currentDrinkIngredients);
+            currentCustomer.DisplayFortune(currentDrinkIngredients);
         }
         else
         {

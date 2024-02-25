@@ -13,7 +13,10 @@ MonoBehaviour:
   m_Name: Queen of Pentacles English Breakfast Tea
   m_EditorClassIdentifier: 
   drinkName: Queen of Pentacles English Breakfast Tea
-  drinkDescription: 
+  drinkDescription: The perfect morning cup. Malty, full-bodied, with floral notes.
+    Stirred with a wand and served with a lit candle.
   drinkSprite: {fileID: 0}
-  ingredients: []
+  ingredients:
+  - {fileID: 11400000, guid: 3fcc9f1316df4d34c99dc088188f9212, type: 2}
+  - {fileID: 11400000, guid: 60c2a0d2268dfdb48b46165dd2e07035, type: 2}
   drinkColor: {r: 0, g: 0, b: 0, a: 0}
