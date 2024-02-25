@@ -126,6 +126,7 @@ public class FortuneDisplay : Singleton<FortuneDisplay>
     {
         if (hoveredFortunes.Count <= 0)
         {
+            if (currentDrinkFortune == null) return;
             fortuneName.text = currentDrinkFortune.fortuneName;
             return;
         }
