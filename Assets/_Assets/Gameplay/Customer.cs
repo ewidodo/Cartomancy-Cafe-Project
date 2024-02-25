@@ -178,6 +178,7 @@ public class Customer : MonoBehaviour
 
     private void RespondToFortune(FortunePreference reaction)
     {
+        ScoreManager.Instance.score += (int) reaction.preference;
         StartCoroutine(TextScroll(preferenceResponses[reaction.preference], CustomerManager.Instance.SwapCustomers));
     }
 
