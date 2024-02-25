@@ -16,4 +16,4 @@ MonoBehaviour:
   fortuneDescription: "Call your friend tonight. They\u2019re going through a rough
     time."
   fortuneSprite: {fileID: 0}
-  fortuneColor: {r: 0.8396226, g: 0.7251459, b: 0.52674437, a: 1}
+  fortuneColor: {r: 0.7179308, g: 0.8392157, b: 0.5254902, a: 1}

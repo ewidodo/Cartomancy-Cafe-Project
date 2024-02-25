@@ -15,4 +15,4 @@ MonoBehaviour:
   fortuneName: Artsy!
   fortuneDescription: Now is a good time to get into paper mache.
   fortuneSprite: {fileID: 0}
-  fortuneColor: {r: 0.8396226, g: 0.7251459, b: 0.52674437, a: 1}
+  fortuneColor: {r: 0.8392157, g: 0.5254902, b: 0.78917676, a: 1}

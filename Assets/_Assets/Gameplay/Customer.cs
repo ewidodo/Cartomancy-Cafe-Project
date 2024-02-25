@@ -39,7 +39,8 @@ public class Customer : MonoBehaviour
     [TextArea(1, 5)] public string neutralDialogue;
     [TextArea(1, 5)] public string negativeDialogue;
     private Dictionary<FORTUNEPREFERENCEENUM, string> preferenceResponses = new();
-    public float textScrollInterval = 0.05f;
+    public float textScrollRate = 20;
+    public float nextDialogueDelay = 2;
 
     [Header("Display References")]
     public TextMeshProUGUI nameDisplay;
@@ -136,6 +137,7 @@ public class Customer : MonoBehaviour
         }
 
         Fortune fortune = fortuneTable.ReadFortune(position);
+        FortuneDisplay.Instance.currentDrinkFortune = fortune;
         FortuneDisplay.Instance.DisplayFortune(fortune);
 
         return fortune;
@@ -164,7 +166,7 @@ public class Customer : MonoBehaviour
         foreach (char c in finalText)
         {
             dialogueDisplay.text += c;
-            yield return new WaitForSeconds(textScrollInterval);
+            yield return new WaitForSeconds(1 / textScrollRate);
         }
 
         if (callback != null) callback.Invoke();
@@ -182,9 +184,16 @@ public class Customer : MonoBehaviour
         StartCoroutine(TextScroll(preferenceResponses[reaction.preference], CustomerManager.Instance.SwapCustomers));
     }
 
-    public void Spawn()
+    private void DisplayDrinkDialogue()
     {
-        StartCoroutine(TextScroll(greetingDialogue, null));
+        StartCoroutine(TextScroll(drinkDialogue, null));
+    }
+
+    public IEnumerator Spawn()
+    {
+        yield return StartCoroutine(TextScroll(greetingDialogue, null));
+        yield return new WaitForSeconds(nextDialogueDelay);
+        yield return StartCoroutine(TextScroll(drinkDialogue, null));
     }
 
     public void Despawn()

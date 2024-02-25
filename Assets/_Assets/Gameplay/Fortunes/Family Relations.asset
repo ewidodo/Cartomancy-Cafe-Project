@@ -16,4 +16,4 @@ MonoBehaviour:
   fortuneDescription: "It\u2019s time to stop pretending you like your mother\u2019s
     tuna salad. She can take the heartbreak."
   fortuneSprite: {fileID: 0}
-  fortuneColor: {r: 0.8396226, g: 0.7251459, b: 0.52674437, a: 1}
+  fortuneColor: {r: 0.5254902, g: 0.5291489, b: 0.8392157, a: 1}

@@ -15,4 +15,4 @@ MonoBehaviour:
   fortuneName: The Tower
   fortuneDescription: Oh, yikes!
   fortuneSprite: {fileID: 0}
-  fortuneColor: {r: 0.6415094, g: 0.30428442, b: 0.099857606, a: 1}
+  fortuneColor: {r: 0.6431373, g: 0.09803931, b: 0.0980392, a: 1}

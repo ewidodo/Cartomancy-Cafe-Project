@@ -17,4 +17,4 @@ MonoBehaviour:
     at the gas station. Someone will be waiting for you. Also you\u2019re almost
     out of gas."
   fortuneSprite: {fileID: 0}
-  fortuneColor: {r: 0.8396226, g: 0.7251459, b: 0.52674437, a: 1}
+  fortuneColor: {r: 0.5254902, g: 0.8392157, b: 0.5903609, a: 1}

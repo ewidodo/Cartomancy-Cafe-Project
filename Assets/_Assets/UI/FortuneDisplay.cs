@@ -6,7 +6,8 @@ using UnityEngine.UI;
 
 public class FortuneDisplay : Singleton<FortuneDisplay>
 {
-    public List<Fortune> displayedFortunes = new();
+    public List<Fortune> hoveredFortunes = new();
+    public Fortune currentDrinkFortune;
     private FortuneTable currentFortuneTable;
     public bool mouseInDisplay = false;
 
@@ -59,6 +60,13 @@ public class FortuneDisplay : Singleton<FortuneDisplay>
     public void GenerateFortuneRegionDisplay(Customer customer)
     {
         Debug.Log("Generating Fortune Region Display...");
+
+        // Clear current grid
+        while (fortuneGrid.transform.childCount > 0)
+        {
+            DestroyImmediate(fortuneGrid.transform.GetChild(0).gameObject);
+        }
+
         currentFortuneTable = customer.GetComponent<FortuneTable>();
 
         FortuneTable.FortuneRegion defaultRegion = new();
@@ -101,34 +109,34 @@ public class FortuneDisplay : Singleton<FortuneDisplay>
     #region Hover Behavior
     public void AddHoveredFortune(Fortune fortune)
     {
-        displayedFortunes.Add(fortune);
+        hoveredFortunes.Add(fortune);
         DisplayHoveredFortune();
     }
 
     public void RemoveHoveredFortune(Fortune fortune)
     {
-        if (displayedFortunes.Contains(fortune))
+        if (hoveredFortunes.Contains(fortune))
         {
-            displayedFortunes.Remove(fortune);
+            hoveredFortunes.Remove(fortune);
         }
         DisplayHoveredFortune();
     }
 
     public void DisplayHoveredFortune()
     {
-        if (displayedFortunes.Count <= 0)
+        if (hoveredFortunes.Count <= 0)
         {
-            fortuneName.text = "";
+            fortuneName.text = currentDrinkFortune.fortuneName;
             return;
         }
 
-        Fortune displayedFortune = displayedFortunes[displayedFortunes.Count - 1];
+        Fortune displayedFortune = hoveredFortunes[hoveredFortunes.Count - 1];
         fortuneName.text = displayedFortune.name;
     }
 
     public void DisplayMouseCoordinates()
     {
-        if (displayedFortunes.Count <= 0)
+        if (hoveredFortunes.Count <= 0)
         {
             return;
         }
