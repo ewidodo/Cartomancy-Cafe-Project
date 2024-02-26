@@ -5,11 +5,17 @@ using UnityEngine.UI;
 
 public class Arrow : MonoBehaviour
 {
+    private Canvas canvas;
+
+    [Header("Display References")]
     public RectTransform tail;
+    [ReadOnly] public IngredientCard linkedIngredientCard;
+
+    [Header("Colors")]
     public Color defaultColor;
     public Color highlightColor;
 
-    private Canvas canvas;
+    
 
     private void Start()
     {
@@ -34,5 +40,15 @@ public class Arrow : MonoBehaviour
     {
         canvas.sortingOrder -= 1;
         ChangeColor(defaultColor);
+    }
+
+    public void EnlargeLinkedCard()
+    {
+        linkedIngredientCard.Enlarge();
+    }
+
+    public void ResetLinkedCardSize()
+    {
+        linkedIngredientCard.ResetSize();
     }
 }

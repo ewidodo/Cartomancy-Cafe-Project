@@ -16,7 +16,7 @@ public class IngredientCard : MonoBehaviour
     public TextMeshProUGUI nameDisplay;
     public TextMeshProUGUI descriptionDisplay;
     public TextMeshProUGUI fortuneOffsetDisplay;
-    [ReadOnly] public GameObject linkedArrow;
+    [ReadOnly] public Arrow linkedArrow;
 
     [Header("Display Parameters")]
     [SerializeField] private float hoverScaleMultiplier;
@@ -55,7 +55,7 @@ public class IngredientCard : MonoBehaviour
                         hoverScaleTime);
 
         // Highlight linked arrow on fortune display
-        if (linkedArrow != null) linkedArrow.GetComponent<Arrow>().Highlight();
+        if (linkedArrow != null) linkedArrow.Highlight();
     }
 
     public void ResetSize()
@@ -71,7 +71,7 @@ public class IngredientCard : MonoBehaviour
                         hoverScaleTime);
 
         // Reset linked arrow color on fortune display
-        if (linkedArrow != null) linkedArrow.GetComponent<Arrow>().ResetColor();
+        if (linkedArrow != null) linkedArrow.ResetColor();
     }
 
     public void SelectIngredient()

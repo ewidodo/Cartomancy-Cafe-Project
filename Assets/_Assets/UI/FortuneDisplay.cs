@@ -42,7 +42,7 @@ public class FortuneDisplay : Singleton<FortuneDisplay>
         fortuneName.text = fortune.name;
     }
 
-    public GameObject DisplayVector(Vector2 oldPos, Vector2 newPos)
+    public Arrow DisplayVector(Vector2 oldPos, Vector2 newPos)
     {
         Vector3 one = FortuneDisplayToScreenCoordinates(Vector3.one);
 
@@ -65,7 +65,7 @@ public class FortuneDisplay : Singleton<FortuneDisplay>
         // Move arrow to newPos (anchor is at tip)
         arrow.localPosition = FortuneDisplayToScreenCoordinates(newPos);
 
-        return arrow.gameObject;
+        return arrow.GetComponent<Arrow>();
     }
 
     public void ClearArrows()

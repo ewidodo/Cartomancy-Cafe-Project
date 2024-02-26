@@ -137,6 +137,7 @@ public class Customer : MonoBehaviour
             position = new Vector2(Mathf.Clamp(position.x, 0f, fortuneTable.fortuneTableSize.x),
                                    Mathf.Clamp(position.y, 0f, fortuneTable.fortuneTableSize.y));
             ingredientCard.linkedArrow = FortuneDisplay.Instance.DisplayVector(oldPosition, position);
+            ingredientCard.linkedArrow.GetComponent<Arrow>().linkedIngredientCard = ingredientCard;
         }
 
         Fortune fortune = fortuneTable.ReadFortune(position);
