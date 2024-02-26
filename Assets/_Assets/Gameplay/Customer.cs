@@ -112,7 +112,7 @@ public class Customer : MonoBehaviour
 
     public Fortune ReadFortune(List<Ingredient> ingredients)
     {
-        Vector2 position = new Vector2();
+        Vector2 position = fortuneTable.startingPosition;
 
         foreach (Ingredient ingredient in ingredients)
         {
@@ -126,7 +126,7 @@ public class Customer : MonoBehaviour
 
     public Fortune DisplayFortune(List<IngredientCard> ingredients)
     {
-        Vector2 position = new Vector2();
+        Vector2 position = fortuneTable.startingPosition;
 
         foreach(IngredientCard ingredientCard in ingredients)
         {

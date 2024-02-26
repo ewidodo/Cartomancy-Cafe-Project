@@ -14,6 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ingredientName: Light a Candle
   ingredientKeyword: with warmth
+  fortuneOffset: {x: 1, y: 2}
   ingredientDescription: 
   ingredientSprite: {fileID: 0}
   ingredientNumber: 

@@ -271,6 +271,7 @@ MonoBehaviour:
   neutralDialogue: NO NEUTRAL DIALOGUE
   negativeDialogue: NO NEGATIVE DIALOGUE
   textScrollRate: 30
+  nextDialogueDelay: 2
   nameDisplay: {fileID: 0}
   dialogueDisplay: {fileID: 3274310176185969696}
   fortunes:
@@ -311,7 +312,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fortuneTableSize: {x: 9, y: 9}
-  startingPosition: {x: 0, y: 0}
+  startingPosition: {x: 4.5, y: 4.5}
   fortuneRegions:
   - displayName: The Tower
     fortuneType: {fileID: 11400000, guid: 06aaa5c4142c90344b5710c3644e2078, type: 2}

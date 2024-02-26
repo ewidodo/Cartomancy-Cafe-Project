@@ -14,6 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ingredientName: Lavender Syrup
   ingredientKeyword: floral
+  fortuneOffset: {x: 2, y: 1}
   ingredientDescription: 
   ingredientSprite: {fileID: 0}
   ingredientNumber: 

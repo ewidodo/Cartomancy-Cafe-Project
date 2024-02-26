@@ -14,6 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ingredientName: Essence of Cloud
   ingredientKeyword: light
+  fortuneOffset: {x: 0, y: 1}
   ingredientDescription: 
   ingredientSprite: {fileID: 0}
   ingredientNumber: 

@@ -17,6 +17,7 @@ public class FortuneDisplay : Singleton<FortuneDisplay>
     public GameObject fortuneGrid;
     public GameObject fortuneRegionUIPrefab;
     public Camera camera;
+    public Transform arrowPrefab;
 
 
     private new void Awake()
@@ -42,10 +43,28 @@ public class FortuneDisplay : Singleton<FortuneDisplay>
 
     public void DisplayVector(Vector2 oldPos, Vector2 newPos)
     {
-        //LineRenderer.
+        Vector3 one = FortuneDisplayToScreenCoordinates(Vector3.one);
+
+        Debug.Log($"Vector points: {oldPos} and {newPos}");
+        // Instantiate new arrow prefab
+        Transform arrow = Instantiate(arrowPrefab, fortuneGrid.transform);
+
+        // Scale tail to distance between the two points
+        float dist = Vector2.Distance(oldPos, newPos);
+        Debug.Log($"Vector distance: {dist}");
+        RectTransform arrowRect = arrow.GetChild(2).GetComponent<RectTransform>();
+        arrowRect.sizeDelta = new Vector2(dist * one.x, arrowRect.sizeDelta.y);
+
+        // Rotate to the angle between the two points
+        float rot = Vector2.Angle(new Vector2(1, 0), newPos - oldPos);
+        Debug.Log($"Vector rotation: {rot}");
+        arrow.localRotation = Quaternion.Euler(0, 0, -rot);
+
+        // Move arrow to newPos (anchor is at tip)
+        arrow.localPosition = FortuneDisplayToScreenCoordinates(newPos);
     }
 
-    private Vector3 FortuneDisplayToWorldCoordinates(Vector3 worldPos)
+    private Vector3 FortuneDisplayToScreenCoordinates(Vector3 worldPos)
     {
         RectTransform fortuneGridRect = fortuneGrid.GetComponent<RectTransform>();
 
@@ -53,7 +72,7 @@ public class FortuneDisplay : Singleton<FortuneDisplay>
         float gridScalarX = fortuneGridRect.sizeDelta.x / currentFortuneTable.fortuneTableSize.x;
         float gridScalarY = fortuneGridRect.sizeDelta.y / currentFortuneTable.fortuneTableSize.y;
 
-        return new Vector3();
+        return new Vector3(worldPos.x * gridScalarX, -1 * worldPos.y * gridScalarY, 1);
     }
 
     #region Initial Display Generation
