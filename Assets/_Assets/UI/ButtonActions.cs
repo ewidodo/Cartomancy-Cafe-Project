@@ -19,6 +19,11 @@ public class ButtonActions : MonoBehaviour
         menu.SetActive(false);
     }
 
+    public void ToggleMenu(GameObject menu)
+    {
+        menu.SetActive(!menu.activeInHierarchy);
+    }
+
     public void QuitGame()
     {
 #if UNITY_EDITOR
