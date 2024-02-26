@@ -16,5 +16,5 @@ MonoBehaviour:
   fortuneDescription: "You\u2019ll find yourself caught in a rainstorm this month,
     but a stranger will offer their umbrella. Make eye contact when you say thank
     you."
-  fortuneSprite: {fileID: 0}
+  fortuneSprite: {fileID: 21300000, guid: 3f2d1774f41bccf4599356b4a29bf657, type: 3}
   fortuneColor: {r: 0.5254902, g: 0.7996911, b: 0.8392157, a: 1}

@@ -16,5 +16,5 @@ MonoBehaviour:
   fortuneDescription: "When you\u2019re driving home tomorrow, stop for five minutes
     at the gas station. Someone will be waiting for you. Also you\u2019re almost
     out of gas."
-  fortuneSprite: {fileID: 0}
+  fortuneSprite: {fileID: 21300000, guid: 542b8f063644da745aef6e3b530b4558, type: 3}
   fortuneColor: {r: 0.5254902, g: 0.8392157, b: 0.5903609, a: 1}

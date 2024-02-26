@@ -13,7 +13,8 @@ public class FortuneDisplay : Singleton<FortuneDisplay>
 
     [Header("Display References")]
     public TextMeshProUGUI fortuneName;
-    public TextMeshProUGUI fortunePosition;
+    public TextMeshProUGUI fortuneDescription;
+    public Image fortuneSprite;
     public GameObject fortuneGrid;
     public GameObject fortuneRegionUIPrefab;
     public Camera camera;
@@ -39,9 +40,19 @@ public class FortuneDisplay : Singleton<FortuneDisplay>
 
     public void DisplayFortune(Fortune fortune)
     {
+        if (fortune == null)
+        {
+            fortuneName.text = "";
+            fortuneDescription.text = "";
+            fortuneSprite.sprite = null;
+        }
+
         fortuneName.text = fortune.name;
+        fortuneDescription.text = fortune.fortuneDescription;
+        fortuneSprite.sprite = fortune.fortuneSprite;
     }
 
+    #region Arrow Calculations
     public Arrow DisplayVector(Vector2 oldPos, Vector2 newPos)
     {
         Vector3 one = FortuneDisplayToScreenCoordinates(Vector3.one);
@@ -86,6 +97,7 @@ public class FortuneDisplay : Singleton<FortuneDisplay>
 
         return new Vector3(worldPos.x * gridScalarX, -1 * worldPos.y * gridScalarY, 1);
     }
+    #endregion
 
     #region Initial Display Generation
     public void GenerateFortuneRegionDisplay(Customer customer)
@@ -159,13 +171,13 @@ public class FortuneDisplay : Singleton<FortuneDisplay>
     {
         if (hoveredFortunes.Count <= 0)
         {
-            if (currentDrinkFortune == null) return;
-            fortuneName.text = currentDrinkFortune.fortuneName;
+            if (currentDrinkFortune == null) DisplayFortune(null);
+            else DisplayFortune(currentDrinkFortune);
             return;
         }
 
         Fortune displayedFortune = hoveredFortunes[hoveredFortunes.Count - 1];
-        fortuneName.text = displayedFortune.name;
+        DisplayFortune(displayedFortune);
     }
 
     public void DisplayMouseCoordinates()
@@ -189,7 +201,7 @@ public class FortuneDisplay : Singleton<FortuneDisplay>
         Debug.Log($"Scaled mouse position: {scaledMousePos}");
         */
 
-        fortunePosition.text = localPoint.ToString();
+        //fortunePosition.text = localPoint.ToString();
     }
     #endregion
 }
