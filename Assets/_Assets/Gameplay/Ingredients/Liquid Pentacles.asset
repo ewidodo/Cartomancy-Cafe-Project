@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ingredientName: Liquid Pentacles
   ingredientKeyword: golden
-  fortuneOffset: {x: 3, y: 2}
+  fortuneOffset: {x: -1, y: -1}
   ingredientDescription: 
   ingredientSprite: {fileID: 0}
   ingredientNumber: 

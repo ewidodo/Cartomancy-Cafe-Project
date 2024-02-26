@@ -1519,6 +1519,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1690372065}
+  - {fileID: 1905105969}
   - {fileID: 1571988404}
   - {fileID: 1911172588}
   m_Father: {fileID: 16240018}
@@ -1549,6 +1550,7 @@ MonoBehaviour:
   fortuneRegionUIPrefab: {fileID: 5869855705774082355, guid: cfb18c9b2b865c949a9536663e04a256, type: 3}
   camera: {fileID: 457287335}
   arrowPrefab: {fileID: 6136035262973378080, guid: 2fb876ee83f0879488b7185a073d7695, type: 3}
+  arrowParent: {fileID: 1905105969}
 --- !u!50 &1418664693
 Rigidbody2D:
   serializedVersion: 4
@@ -2699,6 +2701,41 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 2470906756053863628, guid: 51216506bc45a6945af2161acda8ac36, type: 3}
   m_PrefabInstance: {fileID: 1877542021}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1905105968
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1905105969}
+  m_Layer: 5
+  m_Name: Arrows
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1905105969
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1905105968}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1418664690}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -870.53784, y: 452.55032}
+  m_SizeDelta: {x: 451.1, y: 451.1}
+  m_Pivot: {x: 0.000000013156765, y: 1.0000001}
 --- !u!1 &1911172587
 GameObject:
   m_ObjectHideFlags: 0

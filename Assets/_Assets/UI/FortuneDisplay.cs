@@ -18,6 +18,7 @@ public class FortuneDisplay : Singleton<FortuneDisplay>
     public GameObject fortuneRegionUIPrefab;
     public Camera camera;
     public Transform arrowPrefab;
+    public Transform arrowParent;
 
 
     private new void Awake()
@@ -41,13 +42,13 @@ public class FortuneDisplay : Singleton<FortuneDisplay>
         fortuneName.text = fortune.name;
     }
 
-    public void DisplayVector(Vector2 oldPos, Vector2 newPos)
+    public GameObject DisplayVector(Vector2 oldPos, Vector2 newPos)
     {
         Vector3 one = FortuneDisplayToScreenCoordinates(Vector3.one);
 
         Debug.Log($"Vector points: {oldPos} and {newPos}");
         // Instantiate new arrow prefab
-        Transform arrow = Instantiate(arrowPrefab, fortuneGrid.transform);
+        Transform arrow = Instantiate(arrowPrefab, arrowParent);
 
         // Scale tail to distance between the two points
         float dist = Vector2.Distance(oldPos, newPos);
@@ -56,12 +57,23 @@ public class FortuneDisplay : Singleton<FortuneDisplay>
         arrowRect.sizeDelta = new Vector2(dist * one.x, arrowRect.sizeDelta.y);
 
         // Rotate to the angle between the two points
-        float rot = Vector2.Angle(new Vector2(1, 0), newPos - oldPos);
+        float rot = Vector2.Angle(new Vector2(1, 0), newPos - oldPos); // y axis is flipped
+        if (newPos.y > oldPos.y) rot *= -1;
         Debug.Log($"Vector rotation: {rot}");
-        arrow.localRotation = Quaternion.Euler(0, 0, -rot);
+        arrow.localRotation = Quaternion.Euler(0, 0, rot);
 
         // Move arrow to newPos (anchor is at tip)
         arrow.localPosition = FortuneDisplayToScreenCoordinates(newPos);
+
+        return arrow.gameObject;
+    }
+
+    public void ClearArrows()
+    {
+        while (arrowParent.childCount > 0)
+        {
+            DestroyImmediate(arrowParent.GetChild(0).gameObject);
+        }
     }
 
     private Vector3 FortuneDisplayToScreenCoordinates(Vector3 worldPos)

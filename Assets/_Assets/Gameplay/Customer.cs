@@ -128,13 +128,15 @@ public class Customer : MonoBehaviour
     {
         Vector2 position = fortuneTable.startingPosition;
 
+        FortuneDisplay.Instance.ClearArrows();
+
         foreach(IngredientCard ingredientCard in ingredients)
         {
             Vector2 oldPosition = position;
             position += ingredientCard.ingredient.fortuneOffset;
             position = new Vector2(Mathf.Clamp(position.x, 0f, fortuneTable.fortuneTableSize.x),
                                    Mathf.Clamp(position.y, 0f, fortuneTable.fortuneTableSize.y));
-            FortuneDisplay.Instance.DisplayVector(oldPosition, position);
+            ingredientCard.linkedArrow = FortuneDisplay.Instance.DisplayVector(oldPosition, position);
         }
 
         Fortune fortune = fortuneTable.ReadFortune(position);

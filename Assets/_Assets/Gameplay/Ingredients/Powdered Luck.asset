@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ingredientName: Powdered Luck
   ingredientKeyword: lucky
-  fortuneOffset: {x: 1, y: 3}
+  fortuneOffset: {x: -1, y: 1}
   ingredientDescription: 
   ingredientSprite: {fileID: 0}
   ingredientNumber: 

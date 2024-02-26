@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ingredientName: Eye of Newt
   ingredientKeyword: historical
-  fortuneOffset: {x: 1, y: 0}
+  fortuneOffset: {x: -1, y: -2}
   ingredientDescription: 
   ingredientSprite: {fileID: 0}
   ingredientNumber: 

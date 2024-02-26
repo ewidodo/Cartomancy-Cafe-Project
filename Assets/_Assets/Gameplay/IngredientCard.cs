@@ -15,6 +15,7 @@ public class IngredientCard : MonoBehaviour
     public TextMeshProUGUI nameDisplay;
     public TextMeshProUGUI descriptionDisplay;
     public TextMeshProUGUI fortuneOffsetDisplay;
+    [ReadOnly] public GameObject linkedArrow;
 
     [Header("Display Parameters")]
     [SerializeField] private float hoverScaleMultiplier;
@@ -25,6 +26,11 @@ public class IngredientCard : MonoBehaviour
     private void Awake()
     {
         InitDisplay();
+    }
+
+    private void OnDestroy()
+    {
+        //Destroy(linkedArrow.gameObject);
     }
 
     private void InitDisplay()
