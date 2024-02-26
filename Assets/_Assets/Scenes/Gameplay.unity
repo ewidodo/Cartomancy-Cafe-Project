@@ -2186,6 +2186,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentDrinkIngredients: []
+  maxIngredients: 9
   reserveIngredients:
   - {fileID: 0}
   - {fileID: 0}
@@ -4065,11 +4066,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1584996685777238453, guid: 413f3417a98a4c6419cc516d4343530e, type: 3}
       propertyPath: greetingDialogue
-      value: ' Hi hi! How are you today?'
+      value: Hi hi! How are you today? Class was BRUTAL.
       objectReference: {fileID: 0}
     - target: {fileID: 1584996685777238453, guid: 413f3417a98a4c6419cc516d4343530e, type: 3}
       propertyPath: negativeDialogue
-      value: "What? No way. That doesn\u2019t track at all."
+      value: "What? No way. That doesn\u2019t track at all. Maybe you should come
+        to class with me sometime?"
       objectReference: {fileID: 0}
     - target: {fileID: 1584996685777238453, guid: 413f3417a98a4c6419cc516d4343530e, type: 3}
       propertyPath: positiveDialogue
@@ -4086,16 +4088,28 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4957211125829364632, guid: 413f3417a98a4c6419cc516d4343530e, type: 3}
+      propertyPath: neutralDialogue
+      value: "Huh. Well, thanks for the coffee, anyway. And if you ever need your
+        vehicle looked at, I\u2019m here."
+      objectReference: {fileID: 0}
+    - target: {fileID: 4957211125829364632, guid: 413f3417a98a4c6419cc516d4343530e, type: 3}
       propertyPath: greetingDialogue
-      value: "Yo. I\u2019m here for my daily cup."
+      value: "Yo. I\u2019m here for my daily cup. Someone brought in a real junker
+        today and I\u2019m beat."
       objectReference: {fileID: 0}
     - target: {fileID: 4957211125829364632, guid: 413f3417a98a4c6419cc516d4343530e, type: 3}
       propertyPath: negativeDialogue
-      value: Not too sure about that one. Better luck next time, I guess.
+      value: Not too sure about that one. Engine not firing on all cylinders today?
+      objectReference: {fileID: 0}
+    - target: {fileID: 4957211125829364632, guid: 413f3417a98a4c6419cc516d4343530e, type: 3}
+      propertyPath: positiveDialogue
+      value: "Hah! That\u2019s wild! I\u2019ll be on the lookout, then. Maybe there\u2019s
+        a new Mercedes in my future too?"
       objectReference: {fileID: 0}
     - target: {fileID: 5649420678716342883, guid: 413f3417a98a4c6419cc516d4343530e, type: 3}
       propertyPath: neutralDialogue
-      value: "Huh, alright. I\u2019ll take that into consideration."
+      value: "Huh, alright. I\u2019ll take that into consideration. Maybe I should
+        look at next quarter\u2019s earnings, while I\u2019m at it."
       objectReference: {fileID: 0}
     - target: {fileID: 5649420678716342883, guid: 413f3417a98a4c6419cc516d4343530e, type: 3}
       propertyPath: greetingDialogue
@@ -4103,11 +4117,13 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5649420678716342883, guid: 413f3417a98a4c6419cc516d4343530e, type: 3}
       propertyPath: negativeDialogue
-      value: What the hell are you talking about?
+      value: What the hell are you talking about? And my secretary can make better
+        coffee than this!
       objectReference: {fileID: 0}
     - target: {fileID: 5649420678716342883, guid: 413f3417a98a4c6419cc516d4343530e, type: 3}
       propertyPath: positiveDialogue
-      value: "Surprisingly insightful. Here\u2019s a tip."
+      value: "Surprisingly insightful. Here\u2019s a tip. With skills like that,
+        you\u2019d do well to invest in the stock market."
       objectReference: {fileID: 0}
     - target: {fileID: 6441273633716868318, guid: 413f3417a98a4c6419cc516d4343530e, type: 3}
       propertyPath: m_Name

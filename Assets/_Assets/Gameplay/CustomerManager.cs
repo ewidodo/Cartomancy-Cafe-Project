@@ -47,9 +47,9 @@ public class CustomerManager : Singleton<CustomerManager>
 
         int customerIndex = (SceneLoader.Instance.dayNumber - 1) * customersPerDay;
         // If overflowed, start repeating customers
-        while (customerIndex >= customers.Count)
+        if (customerIndex >= customers.Count)
         {
-            customerIndex -= customersPerDay;
+            customerIndex = Random.Range(0, customers.Count);
         }
 
         GameObject customer = Instantiate(customers[customerIndex], customerParent);

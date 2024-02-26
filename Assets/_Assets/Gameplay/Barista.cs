@@ -6,6 +6,7 @@ using UnityEngine.Events;
 public class Barista : Singleton<Barista>
 {
     [HideInInspector] public List<IngredientCard> currentDrinkIngredients = new();
+    public int maxIngredients;
     public List<IngredientCard> reserveIngredients = new();
     public Customer currentCustomer;
     public UnityEvent<Customer> customerChangeEvent;
@@ -44,6 +45,11 @@ public class Barista : Singleton<Barista>
     public void UseIngredient(IngredientCard ingredient)
     {
         if (!currentCustomer.customerAcceptingDrink)
+        {
+            return;
+        }
+
+        if (currentDrinkIngredients.Count >= maxIngredients)
         {
             return;
         }

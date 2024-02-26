@@ -142,8 +142,8 @@ public class Customer : MonoBehaviour
         {
             Vector2 oldPosition = position;
             position += ingredientCard.ingredient.fortuneOffset;
-            position = new Vector2(Mathf.Clamp(position.x, 0f, fortuneTable.fortuneTableSize.x),
-                                   Mathf.Clamp(position.y, 0f, fortuneTable.fortuneTableSize.y));
+            //position = new Vector2(Mathf.Clamp(position.x, 0f, fortuneTable.fortuneTableSize.x),
+            //                       Mathf.Clamp(position.y, 0f, fortuneTable.fortuneTableSize.y));
             ingredientCard.linkedArrow = FortuneDisplay.Instance.DisplayVector(oldPosition, position);
             ingredientCard.linkedArrow.linkedIngredientCard = ingredientCard;
         }
@@ -167,8 +167,8 @@ public class Customer : MonoBehaviour
         {
             oldPosition = position;
             position += ingredientCard.ingredient.fortuneOffset;
-            position = new Vector2(Mathf.Clamp(position.x, 0f, fortuneTable.fortuneTableSize.x),
-                                   Mathf.Clamp(position.y, 0f, fortuneTable.fortuneTableSize.y));
+            //position = new Vector2(Mathf.Clamp(position.x, 0f, fortuneTable.fortuneTableSize.x),
+            //                       Mathf.Clamp(position.y, 0f, fortuneTable.fortuneTableSize.y));
             ingredientCard.linkedArrow = FortuneDisplay.Instance.DisplayVector(oldPosition, position);
             ingredientCard.linkedArrow.linkedIngredientCard = ingredientCard;
         }
@@ -176,8 +176,8 @@ public class Customer : MonoBehaviour
         // Peek next vector
         oldPosition = position;
         position += card.ingredient.fortuneOffset;
-        position = new Vector2(Mathf.Clamp(position.x, 0f, fortuneTable.fortuneTableSize.x),
-                               Mathf.Clamp(position.y, 0f, fortuneTable.fortuneTableSize.y));
+        //position = new Vector2(Mathf.Clamp(position.x, 0f, fortuneTable.fortuneTableSize.x),
+        //                       Mathf.Clamp(position.y, 0f, fortuneTable.fortuneTableSize.y));
         card.peekedArrow = FortuneDisplay.Instance.DisplayVector(oldPosition, position);
         card.peekedArrow.linkedIngredientCard = card;
         card.peekedArrow.Highlight();
