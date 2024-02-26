@@ -98,6 +98,8 @@ public class FortuneDisplay : Singleton<FortuneDisplay>
             DestroyImmediate(fortuneGrid.transform.GetChild(0).gameObject);
         }
 
+        ClearArrows();
+
         currentFortuneTable = customer.GetComponent<FortuneTable>();
 
         FortuneTable.FortuneRegion defaultRegion = new();
