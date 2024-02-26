@@ -229,7 +229,7 @@ public class Customer : MonoBehaviour
     private void RespondToFortune(FortunePreference reaction)
     {
         if (currentDialogueRoutine != null) StopCoroutine(currentDialogueRoutine); currentDialogueRoutine = null;
-        ScoreManager.Instance.score += (int) reaction.preference;
+        ScoreManager.Instance.AddScore((int) reaction.preference);
         customerAcceptingDrink = false;
         StartCoroutine(TextScroll(preferenceResponses[reaction.preference], CustomerManager.Instance.SwapCustomers));
     }
