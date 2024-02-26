@@ -14,10 +14,11 @@ public class Arrow : MonoBehaviour
     [Header("Colors")]
     public Color defaultColor;
     public Color highlightColor;
+    public Color peekColor;
 
     
 
-    private void Start()
+    private void Awake()
     {
         canvas = GetComponent<Canvas>();
     }
@@ -34,6 +35,12 @@ public class Arrow : MonoBehaviour
     {
         canvas.sortingOrder += 1;
         ChangeColor(highlightColor);
+    }
+
+    public void PeekHighlight()
+    {
+        canvas.sortingOrder += 1;
+        ChangeColor(peekColor);
     }
 
     public void ResetColor()

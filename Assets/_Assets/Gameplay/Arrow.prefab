@@ -208,6 +208,7 @@ MonoBehaviour:
   linkedIngredientCard: {fileID: 0}
   defaultColor: {r: 0, g: 0, b: 0, a: 1}
   highlightColor: {r: 1, g: 1, b: 1, a: 1}
+  peekColor: {r: 1, g: 1, b: 1, a: 0.49803922}
 --- !u!223 &9047176762977886800
 Canvas:
   m_ObjectHideFlags: 0

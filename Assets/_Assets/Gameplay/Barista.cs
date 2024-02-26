@@ -45,6 +45,7 @@ public class Barista : Singleton<Barista>
         addedIngredient.card.transform.localScale = addedIngredient.defaultScale;
 
         currentDrinkIngredients.Add(addedIngredient);
+        currentCustomer.drinkIngredients.Add(addedIngredient);
         currentCustomer.DisplayFortune(currentDrinkIngredients);
     }
 
@@ -53,6 +54,7 @@ public class Barista : Singleton<Barista>
         if (currentDrinkIngredients.Contains(ingredient))
         {
             currentDrinkIngredients.Remove(ingredient);
+            currentCustomer.drinkIngredients.Remove(ingredient);
             Destroy(ingredient.gameObject);
             currentCustomer.DisplayFortune(currentDrinkIngredients);
         }

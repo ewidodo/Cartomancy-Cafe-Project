@@ -19,6 +19,7 @@ public class IngredientCard : MonoBehaviour
     public Image image;
     public TextMeshProUGUI number;
     [ReadOnly] public Arrow linkedArrow;
+    [ReadOnly] public Arrow peekedArrow;
 
     [Header("Display Parameters")]
     [SerializeField] private float hoverScaleMultiplier;
@@ -60,6 +61,11 @@ public class IngredientCard : MonoBehaviour
 
         // Highlight linked arrow on fortune display
         if (linkedArrow != null) linkedArrow.Highlight();
+        else
+        {
+            // Display temp arrow at the end of the fortune table
+            Barista.Instance.currentCustomer.PeekFortune(this);
+        }
     }
 
     public void ResetSize()
@@ -76,6 +82,7 @@ public class IngredientCard : MonoBehaviour
 
         // Reset linked arrow color on fortune display
         if (linkedArrow != null) linkedArrow.ResetColor();
+        if (peekedArrow != null) DestroyImmediate(peekedArrow.gameObject); peekedArrow = null;
     }
 
     public void SelectIngredient()

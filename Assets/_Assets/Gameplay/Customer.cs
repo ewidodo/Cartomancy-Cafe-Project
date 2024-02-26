@@ -11,7 +11,7 @@ public class Customer : MonoBehaviour
     private Ingredient mystery;
 
     [SerializeField, ReadOnly] private List<Ingredient> preferredIngredients = new();
-    private List<IngredientCard> drinkIngredients = new();
+    [HideInInspector] public List<IngredientCard> drinkIngredients = new();
     private FortuneTable fortuneTable;
 
     [Serializable]
@@ -137,9 +137,44 @@ public class Customer : MonoBehaviour
             position = new Vector2(Mathf.Clamp(position.x, 0f, fortuneTable.fortuneTableSize.x),
                                    Mathf.Clamp(position.y, 0f, fortuneTable.fortuneTableSize.y));
             ingredientCard.linkedArrow = FortuneDisplay.Instance.DisplayVector(oldPosition, position);
-            ingredientCard.linkedArrow.GetComponent<Arrow>().linkedIngredientCard = ingredientCard;
+            ingredientCard.linkedArrow.linkedIngredientCard = ingredientCard;
         }
 
+        Fortune fortune = fortuneTable.ReadFortune(position);
+        FortuneDisplay.Instance.currentDrinkFortune = fortune;
+        FortuneDisplay.Instance.DisplayFortune(fortune);
+
+        return fortune;
+    }
+
+    public Fortune PeekFortune(IngredientCard card)
+    {
+        Vector2 position = fortuneTable.startingPosition;
+        Vector2 oldPosition;
+
+        FortuneDisplay.Instance.ClearArrows();
+
+        // Display current fortune
+        foreach (IngredientCard ingredientCard in drinkIngredients)
+        {
+            oldPosition = position;
+            position += ingredientCard.ingredient.fortuneOffset;
+            position = new Vector2(Mathf.Clamp(position.x, 0f, fortuneTable.fortuneTableSize.x),
+                                   Mathf.Clamp(position.y, 0f, fortuneTable.fortuneTableSize.y));
+            ingredientCard.linkedArrow = FortuneDisplay.Instance.DisplayVector(oldPosition, position);
+            ingredientCard.linkedArrow.linkedIngredientCard = ingredientCard;
+        }
+
+        // Peek next vector
+        oldPosition = position;
+        position += card.ingredient.fortuneOffset;
+        position = new Vector2(Mathf.Clamp(position.x, 0f, fortuneTable.fortuneTableSize.x),
+                               Mathf.Clamp(position.y, 0f, fortuneTable.fortuneTableSize.y));
+        card.peekedArrow = FortuneDisplay.Instance.DisplayVector(oldPosition, position);
+        card.peekedArrow.linkedIngredientCard = card;
+        card.peekedArrow.Highlight();
+
+        // Display fortune
         Fortune fortune = fortuneTable.ReadFortune(position);
         FortuneDisplay.Instance.currentDrinkFortune = fortune;
         FortuneDisplay.Instance.DisplayFortune(fortune);
