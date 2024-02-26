@@ -51,4 +51,9 @@ public class Arrow : MonoBehaviour
     {
         linkedIngredientCard.ResetSize();
     }
+
+    public void RemoveLinkedCard()
+    {
+        linkedIngredientCard.SelectIngredient();
+    }
 }
