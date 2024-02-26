@@ -559,14 +559,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: SceneManager
       objectReference: {fileID: 0}
-    - target: {fileID: 8196438784194219539, guid: fd13e94f2b31ed545a4d9a1b0c0a5608, type: 3}
-      propertyPath: slideDirection
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 8196438784194219539, guid: fd13e94f2b31ed545a4d9a1b0c0a5608, type: 3}
-      propertyPath: transitionType
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 8515225624267840956, guid: fd13e94f2b31ed545a4d9a1b0c0a5608, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5

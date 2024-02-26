@@ -69,8 +69,9 @@ MonoBehaviour:
   descriptionDisplay: {fileID: 1643122326071236733}
   fortuneOffsetDisplay: {fileID: 0}
   image: {fileID: 8013075288884018719}
-  number: {fileID: 0}
+  number: {fileID: 943895548062077519}
   linkedArrow: {fileID: 0}
+  peekedArrow: {fileID: 0}
   hoverScaleMultiplier: 1.4
   hoverScaleTime: 0.1
   defaultScale: {x: 1, y: 1, z: 1}

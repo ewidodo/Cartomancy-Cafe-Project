@@ -17,4 +17,4 @@ MonoBehaviour:
   fortuneOffset: {x: 2, y: 1}
   ingredientDescription: 
   ingredientSprite: {fileID: 21300000, guid: 9efde6dc43af3d54bacff09eac143302, type: 3}
-  ingredientNumber: 
+  ingredientNumber: IV

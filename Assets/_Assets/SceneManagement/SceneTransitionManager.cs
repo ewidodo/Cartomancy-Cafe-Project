@@ -142,7 +142,8 @@ public class SceneTransitionManager : MonoBehaviour
                                            (Color color) => { _canvasGroup.transform.localPosition = new Vector3(color.r, color.g, color.b); },
                                            new Color(0, 0, 0),
                                            new Color(SceneLoader.Instance.GetComponent<RectTransform>().sizeDelta.x, 0, 0),
-                                           duration).setOnComplete(() => { transitionComplete.Invoke(); });
+                                           duration)
+                                           .setOnComplete(() => { transitionComplete.Invoke(); });
                 }
             case SLIDEDIRECTION.UP:
                 {
@@ -150,7 +151,8 @@ public class SceneTransitionManager : MonoBehaviour
                                            (Color color) => { _canvasGroup.transform.localPosition = new Vector3(color.r, color.g, color.b); },
                                            new Color(0, 0, 0),
                                            new Color(0, SceneLoader.Instance.GetComponent<RectTransform>().sizeDelta.y, 0),
-                                           duration);
+                                           duration)
+                                           .setOnComplete(() => { transitionComplete.Invoke(); });
                 }
             case SLIDEDIRECTION.LEFT:
                 {
@@ -158,7 +160,8 @@ public class SceneTransitionManager : MonoBehaviour
                                            (Color color) => { _canvasGroup.transform.localPosition = new Vector3(color.r, color.g, color.b); },
                                            new Color(0, 0, 0),
                                            new Color(-SceneLoader.Instance.GetComponent<RectTransform>().sizeDelta.x, 0, 0),
-                                           duration);
+                                           duration)
+                                           .setOnComplete(() => { transitionComplete.Invoke(); });
                 }
             case SLIDEDIRECTION.DOWN:
                 {
@@ -166,7 +169,8 @@ public class SceneTransitionManager : MonoBehaviour
                                            (Color color) => { _canvasGroup.transform.localPosition = new Vector3(color.r, color.g, color.b); },
                                            new Color(0, 0, 0),
                                            new Color(0, -SceneLoader.Instance.GetComponent<RectTransform>().sizeDelta.y, 0),
-                                           duration);
+                                           duration)
+                                           .setOnComplete(() => { transitionComplete.Invoke(); });
                 }
         }
 
