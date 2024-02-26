@@ -8,6 +8,7 @@ public class CustomerManager : Singleton<CustomerManager>
     public List<GameObject> customers = new();
     [SerializeField] private Transform customerParent;
     public int customersPerDay;
+    private int todaysCustomerCount;
 
     [Header("Timing")]
     [SerializeField] private float customerLeaveDelay;
@@ -34,20 +35,29 @@ public class CustomerManager : Singleton<CustomerManager>
 
     public void SpawnNextCustomer()
     {
-        if (customers.Count <= 0)
+        ++todaysCustomerCount;
+
+        if (todaysCustomerCount > customersPerDay)
         {
-            Debug.Log("All customers have been given drinks!");
+            Debug.Log("All of today's customers have been given drinks!");
             // access sceneloader.cs and load next day/credits
-            SceneLoader.Instance.LoadScene("Credits");
+            SceneLoader.Instance.LoadScene("Yelp");
             return;
         }
 
-        GameObject customer = Instantiate(customers[0], customerParent);
+        int customerIndex = (SceneLoader.Instance.dayNumber - 1) * customersPerDay;
+        // If overflowed, start repeating customers
+        while (customerIndex >= customers.Count)
+        {
+            customerIndex -= customersPerDay;
+        }
+
+        GameObject customer = Instantiate(customers[customerIndex], customerParent);
         Barista.Instance.currentCustomer = customer.GetComponent<Customer>();
         StartCoroutine(Barista.Instance.currentCustomer.Spawn());
         FortuneDisplay.Instance.GenerateFortuneRegionDisplay(Barista.Instance.currentCustomer);
 
-        customers.RemoveAt(0);
+        customers.RemoveAt(customerIndex);
     }
 
     public void SwapCustomers()

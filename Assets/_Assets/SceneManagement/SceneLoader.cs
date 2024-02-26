@@ -8,7 +8,7 @@ public class SceneLoader : SingletonDontDestroy<SceneLoader>
 {
     [SerializeField] public SceneTransitionManager sceneTransitionManager;
     public float fadeDuration;
-    public int dayNumber = 0;
+    [ReadOnly] public int dayNumber = 1;
     public int totalDays = 3;
 
     [Serializable]
@@ -27,6 +27,7 @@ public class SceneLoader : SingletonDontDestroy<SceneLoader>
     // Start is called before the first frame update
     void Start()
     {
+        dayNumber = 1;
         SceneManager.sceneLoaded += OnSceneLoaded;
         InitSceneDictionary();
         //StartScene();
@@ -72,7 +73,7 @@ public class SceneLoader : SingletonDontDestroy<SceneLoader>
         if (dayNumber > totalDays)
         {
             LoadScene("Credits");
-            dayNumber = 0;
+            dayNumber = 1;
             return;
         }
 

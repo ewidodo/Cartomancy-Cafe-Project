@@ -28,6 +28,11 @@ public class Barista : Singleton<Barista>
             return;
         }
 
+        if (!currentCustomer.customerAcceptingDrink)
+        {
+            return;
+        }
+
         currentCustomer.GiveIngredients(currentDrinkIngredients);
         foreach(IngredientCard ingredient in currentDrinkIngredients)
         {

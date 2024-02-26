@@ -9,6 +9,11 @@ public class ButtonActions : MonoBehaviour
         SceneLoader.Instance.LoadScene(sceneName);
     }
 
+    public void LoadNextDay()
+    {
+        SceneLoader.Instance.LoadNextDay();
+    }
+
     public void OpenMenu(GameObject menu)
     {
         menu.SetActive(true);

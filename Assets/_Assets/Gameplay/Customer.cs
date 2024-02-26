@@ -62,6 +62,11 @@ public class Customer : MonoBehaviour
         customerAcceptingDrink = true;
     }
 
+    private void OnDestroy()
+    {
+        StopAllCoroutines();
+    }
+
     private void GeneratePreferenceDictionary()
     {
         preferenceResponses.Add(FORTUNEPREFERENCEENUM.POSITIVE, positiveDialogue);
@@ -240,7 +245,7 @@ public class Customer : MonoBehaviour
         if (currentDialogueRoutine != null) StopCoroutine(currentDialogueRoutine);
         yield return currentDialogueRoutine = StartCoroutine(TextScroll(greetingDialogue, null));
         yield return new WaitForSeconds(nextDialogueDelay);
-        if (currentDialogueRoutine == null) yield return currentDialogueRoutine = StartCoroutine(TextScroll(drinkDialogue, null));
+        if (currentDialogueRoutine == null && customerAcceptingDrink) yield return currentDialogueRoutine = StartCoroutine(TextScroll(drinkDialogue, null));
     }
 
     public void Despawn()
