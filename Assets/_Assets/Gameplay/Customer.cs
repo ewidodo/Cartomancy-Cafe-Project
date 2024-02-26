@@ -171,6 +171,7 @@ public class Customer : MonoBehaviour
         }
 
         if (callback != null) callback.Invoke();
+        currentDialogueRoutine = null;
         yield return null;
     }
 
@@ -195,7 +196,7 @@ public class Customer : MonoBehaviour
     public IEnumerator Spawn()
     {
         if (currentDialogueRoutine != null) StopCoroutine(currentDialogueRoutine);
-        yield return StartCoroutine(TextScroll(greetingDialogue, null));
+        yield return currentDialogueRoutine = StartCoroutine(TextScroll(greetingDialogue, null));
         yield return new WaitForSeconds(nextDialogueDelay);
         if (currentDialogueRoutine == null) yield return currentDialogueRoutine = StartCoroutine(TextScroll(drinkDialogue, null));
     }
