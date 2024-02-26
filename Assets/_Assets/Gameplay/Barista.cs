@@ -38,6 +38,12 @@ public class Barista : Singleton<Barista>
 
     public void UseIngredient(IngredientCard ingredient)
     {
+        if (!currentCustomer.customerAcceptingDrink)
+        {
+            return;
+        }
+
+
         // Instantiate ingredient in current ingredient display
         IngredientCard addedIngredient = Instantiate(ingredient.gameObject, currentIngredientDisplay.transform).GetComponent<IngredientCard>();
         addedIngredient.inDrink = true;

@@ -6,6 +6,8 @@ using TMPro;
 
 public class Customer : MonoBehaviour
 {
+    [ReadOnly] public bool customerAcceptingDrink = true;
+
     private Drink drink;
     private Ingredient addon;
     private Ingredient mystery;
@@ -57,6 +59,7 @@ public class Customer : MonoBehaviour
         fortuneTable = GetComponent<FortuneTable>();
         GeneratePreferenceDictionary();
         GenerateDesires();
+        customerAcceptingDrink = true;
     }
 
     private void GeneratePreferenceDictionary()
@@ -222,6 +225,7 @@ public class Customer : MonoBehaviour
     {
         if (currentDialogueRoutine != null) StopCoroutine(currentDialogueRoutine); currentDialogueRoutine = null;
         ScoreManager.Instance.score += (int) reaction.preference;
+        customerAcceptingDrink = false;
         StartCoroutine(TextScroll(preferenceResponses[reaction.preference], CustomerManager.Instance.SwapCustomers));
     }
 
