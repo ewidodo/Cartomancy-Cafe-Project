@@ -16,6 +16,8 @@ public class IngredientCard : MonoBehaviour
     public TextMeshProUGUI nameDisplay;
     public TextMeshProUGUI descriptionDisplay;
     public TextMeshProUGUI fortuneOffsetDisplay;
+    public Image image;
+    public TextMeshProUGUI number;
     [ReadOnly] public Arrow linkedArrow;
 
     [Header("Display Parameters")]
@@ -39,7 +41,9 @@ public class IngredientCard : MonoBehaviour
     {
         nameDisplay.text = ingredient.ingredientName;
         descriptionDisplay.text = ingredient.ingredientDescription;
-        fortuneOffsetDisplay.text = ingredient.fortuneOffset.ToString();
+        if (fortuneOffsetDisplay != null) fortuneOffsetDisplay.text = ingredient.fortuneOffset.ToString();
+        image.sprite = ingredient.ingredientSprite;
+        number.text = ingredient.ingredientNumber;
     }
 
     public void Enlarge()

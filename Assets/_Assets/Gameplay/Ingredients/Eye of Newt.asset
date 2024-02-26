@@ -16,5 +16,5 @@ MonoBehaviour:
   ingredientKeyword: historical
   fortuneOffset: {x: -1, y: -2}
   ingredientDescription: 
-  ingredientSprite: {fileID: 0}
+  ingredientSprite: {fileID: 21300000, guid: 7f2587233b2dbe2479e96047c0f8d3d4, type: 3}
   ingredientNumber: 

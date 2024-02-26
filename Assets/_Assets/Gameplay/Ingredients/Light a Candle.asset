@@ -16,5 +16,5 @@ MonoBehaviour:
   ingredientKeyword: with warmth
   fortuneOffset: {x: 0, y: -1}
   ingredientDescription: 
-  ingredientSprite: {fileID: 0}
+  ingredientSprite: {fileID: 21300000, guid: 97b89991d8a51db42b3c368e85e93998, type: 3}
   ingredientNumber: 
