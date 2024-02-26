@@ -4,15 +4,23 @@ using UnityEngine;
 
 public class CustomerManager : Singleton<CustomerManager>
 {
+    [Header("Customer Logic")]
     public List<GameObject> customers = new();
     [SerializeField] private Transform customerParent;
+    public int customersPerDay;
 
+    [Header("Timing")]
     [SerializeField] private float customerLeaveDelay;
     [SerializeField] private float customerArriveDelay;
 
     private void Start()
     {
-        SpawnNextCustomer();
+        SceneLoader.Instance.sceneTransitionManager.transitionComplete.AddListener(SpawnNextCustomer);
+    }
+
+    private void OnDestroy()
+    {
+        SceneLoader.Instance.sceneTransitionManager.transitionComplete.RemoveListener(SpawnNextCustomer);
     }
 
     public void DespawnCurrentCustomer()

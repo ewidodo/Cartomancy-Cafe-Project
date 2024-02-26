@@ -56,6 +56,7 @@ MonoBehaviour:
   - {fileID: 6443936621012947436}
   - {fileID: 601777422213022657}
   customerParent: {fileID: 0}
+  customersPerDay: 3
   customerLeaveDelay: 1
   customerArriveDelay: 1
 --- !u!1001 &3579139148764625243

@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class SceneLoader : SingletonDontDestroy<SceneLoader>
 {
-    [SerializeField] private SceneTransitionManager sceneTransitionManager;
+    [SerializeField] public SceneTransitionManager sceneTransitionManager;
     public float fadeDuration;
     public int dayNumber = 0;
     public int totalDays = 3;
@@ -56,12 +56,12 @@ public class SceneLoader : SingletonDontDestroy<SceneLoader>
 
     void StartScene()
     {
-        sceneTransitionManager.FadeFromBlack(fadeDuration);
+        sceneTransitionManager.TransitionFrom(fadeDuration);
     }
 
     void EndScene()
     {
-        sceneTransitionManager.FadeToBlack(fadeDuration);
+        sceneTransitionManager.TransitionTo(fadeDuration);
     }
 
     // Need to set up scenes for this to work
@@ -76,7 +76,12 @@ public class SceneLoader : SingletonDontDestroy<SceneLoader>
             return;
         }
 
-        LoadScene("Day" + dayNumber);
+        LoadScene("Gameplay");
+    }
+
+    public void LoadYelp()
+    {
+        LoadScene("Yelp");
     }
 
     public void LoadScene(string sceneName)
@@ -89,7 +94,7 @@ public class SceneLoader : SingletonDontDestroy<SceneLoader>
             return;
         }
 
-        sceneTransitionManager.FadeToBlack(fadeDuration).setOnComplete(() =>
+        sceneTransitionManager.TransitionTo(fadeDuration).setOnComplete(() =>
             { 
                 SceneManager.LoadScene(sceneName);
             });
@@ -98,7 +103,7 @@ public class SceneLoader : SingletonDontDestroy<SceneLoader>
     void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
         if (_sceneDict.TryGetValue(scene.name, out SceneData sceneData)) sceneData.sceneStartEvent.Post(this.gameObject);
-        sceneTransitionManager.FadeFromBlack(fadeDuration);
+        sceneTransitionManager.TransitionFrom(fadeDuration);
         currentScene = scene.name;
     }
 }
