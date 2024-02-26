@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ba764b2f769ead48a0b789565e81866, type: 3}
+  m_Name: X of Swords Cold Brew
+  m_EditorClassIdentifier: 
+  drinkName: X of Swords Cold Brew
+  drinkDescription: 'A painfully bitter, highly caffeinated beverage. Not for the
+    faint of heart. Topped with foamed swords and a dash of powdered luck. '
+  drinkSprite: {fileID: 0}
+  ingredients:
+  - {fileID: 11400000, guid: 70629a14aa2d96d4184b17186f72be54, type: 2}
+  - {fileID: 11400000, guid: f9be7ac9eaeeaf940b7deb0e41525a9a, type: 2}
+  drinkColor: {r: 0, g: 0, b: 0, a: 0}

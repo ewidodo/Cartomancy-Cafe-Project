@@ -1,4 +1,4 @@
 Event	ID	Name			Wwise Object Path	Notes
-	1518434845	GameplaySceneUnloaded			\Default Work Unit\GameplaySceneUnloaded	
-	2191945436	GameplaySceneLoaded			\Default Work Unit\GameplaySceneLoaded	
+	1518434845	GameplaySceneUnloaded			\Default Work Unit\SceneManagement\GameplaySceneUnloaded	
+	2191945436	GameplaySceneLoaded			\Default Work Unit\SceneManagement\GameplaySceneLoaded	
 

@@ -6,7 +6,12 @@ using TMPro;
 
 public class Customer : MonoBehaviour
 {
-    private List<Ingredient> drinkIngredients = new();
+    private Drink drink;
+    private Ingredient addon;
+    private Ingredient mystery;
+
+    [SerializeField, ReadOnly] private List<Ingredient> preferredIngredients = new();
+    private List<IngredientCard> drinkIngredients = new();
     private FortuneTable fortuneTable;
 
     [Serializable]
@@ -22,45 +27,119 @@ public class Customer : MonoBehaviour
     {
         public Fortune fortune;
         public FORTUNEPREFERENCEENUM preference;
-        public string dialogue;
+        //public string dialogue;
     }
 
     [SerializeField] private List<FortunePreference> fortunePreferences = new();
 
     [Header("Dialogue")]
     [TextArea(1, 5)] public string greetingDialogue;
+    [TextArea(1, 5)] public string drinkDialogue;
+    [TextArea(1, 5)] public string positiveDialogue;
+    [TextArea(1, 5)] public string neutralDialogue;
+    [TextArea(1, 5)] public string negativeDialogue;
+    private Dictionary<FORTUNEPREFERENCEENUM, string> preferenceResponses = new();
+    public float textScrollRate = 20;
+    public float nextDialogueDelay = 2;
+    private Coroutine currentDialogueRoutine;
 
     [Header("Display References")]
+    public TextMeshProUGUI nameDisplay;
     public TextMeshProUGUI dialogueDisplay;
-    public TextMeshProUGUI fortuneName;
-    public TextMeshProUGUI fortunePosition;
+
+    [Header("Data References")]
+    public List<Fortune> fortunes;
+    public List<Drink> drinks;
+    public List<Ingredient> ingredients;
 
     private void Awake()
     {
         fortuneTable = GetComponent<FortuneTable>();
+        GeneratePreferenceDictionary();
+        GenerateDesires();
     }
 
-    public void GiveIngredients(List<Ingredient> ingredients)
+    private void GeneratePreferenceDictionary()
+    {
+        preferenceResponses.Add(FORTUNEPREFERENCEENUM.POSITIVE, positiveDialogue);
+        preferenceResponses.Add(FORTUNEPREFERENCEENUM.NEUTRAL, neutralDialogue);
+        preferenceResponses.Add(FORTUNEPREFERENCEENUM.NEGATIVE, negativeDialogue);
+    }
+
+    // Generate base drink, modifier ingredients, mystery ingredients
+    private void GenerateDesires()
+    {
+        // Generate base drink
+        drink = drinks[UnityEngine.Random.Range(0, drinks.Count)];
+
+        // Generate specific ingredient
+        addon = ingredients[UnityEngine.Random.Range(0, ingredients.Count)];
+
+        // Generate mystery ingredient
+        mystery = ingredients[UnityEngine.Random.Range(0, ingredients.Count)];
+
+        // Generate preferred fortune
+        preferredIngredients.AddRange(drink.ingredients);
+        preferredIngredients.Add(addon);
+        preferredIngredients.Add(mystery);
+        Fortune preferredFortune = ReadFortune(preferredIngredients);
+        FortunePreference preference = new();
+        preference.fortune = preferredFortune;
+        preference.preference = FORTUNEPREFERENCEENUM.POSITIVE;
+        fortunePreferences.Add(preference);
+
+        // Generate other fortune preferences randomly?
+        foreach (FortuneTable.FortuneRegion fortuneRegion in fortuneTable.fortuneRegions)
+        {
+            FortunePreference tablePreference = new();
+            tablePreference.fortune = fortuneRegion.fortuneType;
+            tablePreference.preference = (FORTUNEPREFERENCEENUM) UnityEngine.Random.Range(0, 2);
+            fortunePreferences.Add(tablePreference);
+        }
+
+        drinkDialogue = $"Give me a {drink.drinkName} with {addon.ingredientName} and make it {mystery.ingredientKeyword}";
+
+        // Double check everything?
+    }
+
+    public void GiveIngredients(List<IngredientCard> ingredients)
     {
         drinkIngredients = ingredients;
-        Fortune fortune = ReadFortune(ingredients);
+        Fortune fortune = DisplayFortune(ingredients);
         FortunePreference preference =  ReactToFortune(fortune);
-        SayDialogue(preference);
-        CustomerManager.Instance.SwapCustomers();
+        RespondToFortune(preference);
     }
 
     public Fortune ReadFortune(List<Ingredient> ingredients)
     {
         Vector2 position = new Vector2();
-        foreach(Ingredient ingredient in ingredients)
+
+        foreach (Ingredient ingredient in ingredients)
         {
             position += ingredient.fortuneOffset;
+        }
+
+        Fortune fortune = fortuneTable.ReadFortune(position);
+
+        return fortune;
+    }
+
+    public Fortune DisplayFortune(List<IngredientCard> ingredients)
+    {
+        Vector2 position = new Vector2();
+
+        foreach(IngredientCard ingredientCard in ingredients)
+        {
+            Vector2 oldPosition = position;
+            position += ingredientCard.ingredient.fortuneOffset;
             position = new Vector2(Mathf.Clamp(position.x, 0f, fortuneTable.fortuneTableSize.x),
                                    Mathf.Clamp(position.y, 0f, fortuneTable.fortuneTableSize.y));
+            FortuneDisplay.Instance.DisplayVector(oldPosition, position);
         }
+
         Fortune fortune = fortuneTable.ReadFortune(position);
-        FortuneDisplay.Instance.fortuneName.text = fortune.name;
-        FortuneDisplay.Instance.fortunePosition.text = position.ToString();
+        FortuneDisplay.Instance.currentDrinkFortune = fortune;
+        FortuneDisplay.Instance.DisplayFortune(fortune);
 
         return fortune;
     }
@@ -81,14 +160,45 @@ public class Customer : MonoBehaviour
         return defaultPreference;
     }
 
-    private void SayDialogue(FortunePreference reaction)
+    private IEnumerator TextScroll(string finalText, Action callback)
     {
-        dialogueDisplay.text = reaction.dialogue;
+        dialogueDisplay.text = "";
+
+        foreach (char c in finalText)
+        {
+            dialogueDisplay.text += c;
+            yield return new WaitForSeconds(1 / textScrollRate);
+        }
+
+        if (callback != null) callback.Invoke();
+        currentDialogueRoutine = null;
+        yield return null;
     }
 
-    public void Spawn()
+    private void IncrementDialogueState()
     {
-        dialogueDisplay.text = greetingDialogue;
+
+    }
+
+    private void RespondToFortune(FortunePreference reaction)
+    {
+        if (currentDialogueRoutine != null) StopCoroutine(currentDialogueRoutine); currentDialogueRoutine = null;
+        ScoreManager.Instance.score += (int) reaction.preference;
+        StartCoroutine(TextScroll(preferenceResponses[reaction.preference], CustomerManager.Instance.SwapCustomers));
+    }
+
+    private void DisplayDrinkDialogue()
+    {
+        if (currentDialogueRoutine != null) StopCoroutine(currentDialogueRoutine); currentDialogueRoutine = null;
+        currentDialogueRoutine = StartCoroutine(TextScroll(drinkDialogue, null));
+    }
+
+    public IEnumerator Spawn()
+    {
+        if (currentDialogueRoutine != null) StopCoroutine(currentDialogueRoutine);
+        yield return currentDialogueRoutine = StartCoroutine(TextScroll(greetingDialogue, null));
+        yield return new WaitForSeconds(nextDialogueDelay);
+        if (currentDialogueRoutine == null) yield return currentDialogueRoutine = StartCoroutine(TextScroll(drinkDialogue, null));
     }
 
     public void Despawn()

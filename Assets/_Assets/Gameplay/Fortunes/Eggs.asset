@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ebe968d0797adb2489e31f4131753999, type: 3}
+  m_Name: Eggs
+  m_EditorClassIdentifier: 
+  fortuneName: Eggs
+  fortuneDescription: "Get an extra dozen eggs at the grocery store next time you
+    go. You\u2019re going to need them."
+  fortuneSprite: {fileID: 0}
+  fortuneColor: {r: 0.8396226, g: 0.7251459, b: 0.52674437, a: 1}

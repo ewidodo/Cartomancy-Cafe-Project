@@ -5,8 +5,8 @@ using UnityEngine.Events;
 
 public class Barista : Singleton<Barista>
 {
-    [HideInInspector] public List<Ingredient> currentDrinkIngredients = new();
-    public List<Ingredient> reserveIngredients = new();
+    [HideInInspector] public List<IngredientCard> currentDrinkIngredients = new();
+    public List<IngredientCard> reserveIngredients = new();
     public Customer currentCustomer;
     public UnityEvent<Customer> customerChangeEvent;
 
@@ -23,31 +23,38 @@ public class Barista : Singleton<Barista>
 
     public void GiveCustomerDrink()
     {
+        if (currentCustomer == null)
+        {
+            return;
+        }
+
         currentCustomer.GiveIngredients(currentDrinkIngredients);
-        foreach(Ingredient ingredient in currentDrinkIngredients)
+        foreach(IngredientCard ingredient in currentDrinkIngredients)
         {
             Destroy(ingredient.gameObject);
         }
         currentDrinkIngredients.Clear();
     }
 
-    public void UseIngredient(Ingredient ingredient)
+    public void UseIngredient(IngredientCard ingredient)
     {
         // Instantiate ingredient in current ingredient display
-        Ingredient addedIngredient = Instantiate(ingredient.gameObject, currentIngredientDisplay.transform).GetComponent<Ingredient>();
+        IngredientCard addedIngredient = Instantiate(ingredient.gameObject, currentIngredientDisplay.transform).GetComponent<IngredientCard>();
         addedIngredient.inDrink = true;
+        addedIngredient.defaultScale = new Vector3(0.5f, 0.5f, 0.5f);
+        addedIngredient.card.transform.localScale = addedIngredient.defaultScale;
 
         currentDrinkIngredients.Add(addedIngredient);
-        currentCustomer.ReadFortune(currentDrinkIngredients);
+        currentCustomer.DisplayFortune(currentDrinkIngredients);
     }
 
-    public void RemoveIngredient(Ingredient ingredient)
+    public void RemoveIngredient(IngredientCard ingredient)
     {
         if (currentDrinkIngredients.Contains(ingredient))
         {
             currentDrinkIngredients.Remove(ingredient);
             Destroy(ingredient.gameObject);
-            currentCustomer.ReadFortune(currentDrinkIngredients);
+            currentCustomer.DisplayFortune(currentDrinkIngredients);
         }
         else
         {

@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ba764b2f769ead48a0b789565e81866, type: 3}
+  m_Name: Ace of Cups Signature Coffee
+  m_EditorClassIdentifier: 
+  drinkName: Ace of Cups Signature Coffee
+  drinkDescription: "Our signature bean. Nutty, with chocolate undertones. Infused
+    with our secret ingredient \u2014 eye of newt! Provided in a goblet."
+  drinkSprite: {fileID: 0}
+  ingredients:
+  - {fileID: 11400000, guid: f7d7faff774b9e240a8bbb6d6211f542, type: 2}
+  - {fileID: 11400000, guid: c8145c85d7627e744a265061b1877274, type: 2}
+  drinkColor: {r: 0, g: 0, b: 0, a: 0}

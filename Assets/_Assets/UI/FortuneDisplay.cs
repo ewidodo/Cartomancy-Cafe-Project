@@ -6,7 +6,8 @@ using UnityEngine.UI;
 
 public class FortuneDisplay : Singleton<FortuneDisplay>
 {
-    public List<Fortune> displayedFortunes = new();
+    public List<Fortune> hoveredFortunes = new();
+    public Fortune currentDrinkFortune;
     private FortuneTable currentFortuneTable;
     public bool mouseInDisplay = false;
 
@@ -18,13 +19,14 @@ public class FortuneDisplay : Singleton<FortuneDisplay>
     public Camera camera;
 
 
-    private void Awake()
+    private new void Awake()
     {
         base.Awake();
     }
 
     private void Start()
     {
+        // Regenerate display whenever a new customer appears
         Barista.Instance.customerChangeEvent.AddListener(GenerateFortuneRegionDisplay);
     }
 
@@ -33,10 +35,38 @@ public class FortuneDisplay : Singleton<FortuneDisplay>
         //DisplayMouseCoordinates();
     }
 
+    public void DisplayFortune(Fortune fortune)
+    {
+        fortuneName.text = fortune.name;
+    }
 
+    public void DisplayVector(Vector2 oldPos, Vector2 newPos)
+    {
+        //LineRenderer.
+    }
+
+    private Vector3 FortuneDisplayToWorldCoordinates(Vector3 worldPos)
+    {
+        RectTransform fortuneGridRect = fortuneGrid.GetComponent<RectTransform>();
+
+        // There's no way this just works right
+        float gridScalarX = fortuneGridRect.sizeDelta.x / currentFortuneTable.fortuneTableSize.x;
+        float gridScalarY = fortuneGridRect.sizeDelta.y / currentFortuneTable.fortuneTableSize.y;
+
+        return new Vector3();
+    }
+
+    #region Initial Display Generation
     public void GenerateFortuneRegionDisplay(Customer customer)
     {
         Debug.Log("Generating Fortune Region Display...");
+
+        // Clear current grid
+        while (fortuneGrid.transform.childCount > 0)
+        {
+            DestroyImmediate(fortuneGrid.transform.GetChild(0).gameObject);
+        }
+
         currentFortuneTable = customer.GetComponent<FortuneTable>();
 
         FortuneTable.FortuneRegion defaultRegion = new();
@@ -74,37 +104,40 @@ public class FortuneDisplay : Singleton<FortuneDisplay>
         fortuneRegionUI.fortune = region.fortuneType;
         newFortuneRegion.GetComponent<Image>().color = fortuneRegionUI.fortune.fortuneColor;
     }
+    #endregion
 
-    public void AddFortune(Fortune fortune)
+    #region Hover Behavior
+    public void AddHoveredFortune(Fortune fortune)
     {
-        displayedFortunes.Add(fortune);
-        DisplayCurrentFortune();
+        hoveredFortunes.Add(fortune);
+        DisplayHoveredFortune();
     }
 
-    public void RemoveFortune(Fortune fortune)
+    public void RemoveHoveredFortune(Fortune fortune)
     {
-        if (displayedFortunes.Contains(fortune))
+        if (hoveredFortunes.Contains(fortune))
         {
-            displayedFortunes.Remove(fortune);
+            hoveredFortunes.Remove(fortune);
         }
-        DisplayCurrentFortune();
+        DisplayHoveredFortune();
     }
 
-    public void DisplayCurrentFortune()
+    public void DisplayHoveredFortune()
     {
-        if (displayedFortunes.Count <= 0)
+        if (hoveredFortunes.Count <= 0)
         {
-            fortuneName.text = "";
+            if (currentDrinkFortune == null) return;
+            fortuneName.text = currentDrinkFortune.fortuneName;
             return;
         }
 
-        Fortune displayedFortune = displayedFortunes[displayedFortunes.Count - 1];
+        Fortune displayedFortune = hoveredFortunes[hoveredFortunes.Count - 1];
         fortuneName.text = displayedFortune.name;
     }
 
     public void DisplayMouseCoordinates()
     {
-        if (displayedFortunes.Count <= 0)
+        if (hoveredFortunes.Count <= 0)
         {
             return;
         }
@@ -125,4 +158,5 @@ public class FortuneDisplay : Singleton<FortuneDisplay>
 
         fortunePosition.text = localPoint.ToString();
     }
+    #endregion
 }

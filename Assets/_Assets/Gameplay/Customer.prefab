@@ -262,20 +262,42 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e203eff0289bd1b449538dcb658752f8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fortunePreferences:
-  - fortune: {fileID: 11400000, guid: d0c111b81b7078d4a81de5f9539beaaf, type: 2}
-    preference: 0
-    dialogue: Wow I hate this! Thanks!
-  - fortune: {fileID: 11400000, guid: 06aaa5c4142c90344b5710c3644e2078, type: 2}
-    preference: 1
-    dialogue: This is pretty bad. Two stars.
-  - fortune: {fileID: 11400000, guid: 30d5feea4eb061045a9c7dd0d60316f7, type: 2}
-    preference: 4
-    dialogue: OMG I'M IN LOVE!!!!!!!
-  greetingDialogue: 
+  preferredIngredients: []
+  fortunePreferences: []
+  greetingDialogue: NO GREETING DIALOGUE
+  drinkDialogue: Give me a {drink.drinkName} with {addon.ingredientName} and make
+    it {mystery.ingredientKeyword}
+  positiveDialogue: NO POSITIVE DIALOGUE
+  neutralDialogue: NO NEUTRAL DIALOGUE
+  negativeDialogue: NO NEGATIVE DIALOGUE
+  textScrollRate: 30
+  nameDisplay: {fileID: 0}
   dialogueDisplay: {fileID: 3274310176185969696}
-  fortuneName: {fileID: 0}
-  fortunePosition: {fileID: 0}
+  fortunes:
+  - {fileID: 11400000, guid: 75125fc3d87bd5549994e076c90bb4a8, type: 2}
+  - {fileID: 11400000, guid: 9fe6e2ae53bed66458c38e11f19f02fa, type: 2}
+  - {fileID: 11400000, guid: bdc45c27d5657154bb7cd96cb86dbe63, type: 2}
+  - {fileID: 11400000, guid: eb1d95d2570454841ad41f1f4cda8b78, type: 2}
+  - {fileID: 11400000, guid: cd6fe16fd1bbeec48991616e2d037f23, type: 2}
+  - {fileID: 11400000, guid: 313fe88a0a3eabd41888c693f2ad0807, type: 2}
+  - {fileID: 11400000, guid: ce99177517600004d8c5eae674019253, type: 2}
+  - {fileID: 11400000, guid: 06aaa5c4142c90344b5710c3644e2078, type: 2}
+  - {fileID: 11400000, guid: bc4c8815b59ff834796d3fd500a2988c, type: 2}
+  drinks:
+  - {fileID: 11400000, guid: b0b630c5d437e054e8fb0cf9de632d90, type: 2}
+  - {fileID: 11400000, guid: 3712f58035408774487668a829d758d2, type: 2}
+  - {fileID: 11400000, guid: ed7a09640b2a2ec4992585e86c6a0499, type: 2}
+  - {fileID: 11400000, guid: ca8cf56bc701b7f4b9dd64ac99cb1fcd, type: 2}
+  ingredients:
+  - {fileID: 11400000, guid: a80b7d94424b363458439af085fe2754, type: 2}
+  - {fileID: 11400000, guid: f7d7faff774b9e240a8bbb6d6211f542, type: 2}
+  - {fileID: 11400000, guid: 70629a14aa2d96d4184b17186f72be54, type: 2}
+  - {fileID: 11400000, guid: 17688cbce2ab1f34eb78af53f6e29874, type: 2}
+  - {fileID: 11400000, guid: 60c2a0d2268dfdb48b46165dd2e07035, type: 2}
+  - {fileID: 11400000, guid: c8145c85d7627e744a265061b1877274, type: 2}
+  - {fileID: 11400000, guid: f9be7ac9eaeeaf940b7deb0e41525a9a, type: 2}
+  - {fileID: 11400000, guid: 682a7b3bb0dc26446ad8eb60798bc18e, type: 2}
+  - {fileID: 11400000, guid: 3fcc9f1316df4d34c99dc088188f9212, type: 2}
 --- !u!114 &3230768083283520689
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -295,11 +317,11 @@ MonoBehaviour:
     fortuneType: {fileID: 11400000, guid: 06aaa5c4142c90344b5710c3644e2078, type: 2}
     topLeftBorder: {x: 0, y: 0}
     bottomRightBorder: {x: 9, y: 1}
-  - displayName: The Lovers
-    fortuneType: {fileID: 11400000, guid: 30d5feea4eb061045a9c7dd0d60316f7, type: 2}
+  - displayName: Phone a Friend
+    fortuneType: {fileID: 11400000, guid: cd6fe16fd1bbeec48991616e2d037f23, type: 2}
     topLeftBorder: {x: 0, y: 1}
     bottomRightBorder: {x: 9, y: 2}
-  defaultFortune: {fileID: 11400000, guid: d0c111b81b7078d4a81de5f9539beaaf, type: 2}
+  defaultFortune: {fileID: 11400000, guid: bdc45c27d5657154bb7cd96cb86dbe63, type: 2}
 --- !u!222 &5143300188737219370
 CanvasRenderer:
   m_ObjectHideFlags: 0

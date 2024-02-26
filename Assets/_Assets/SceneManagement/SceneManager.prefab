@@ -150,6 +150,7 @@ GameObject:
   - component: {fileID: 6005527182554323343}
   - component: {fileID: 9051789256665805621}
   - component: {fileID: 3828611539355571427}
+  - component: {fileID: 6372583460861361762}
   m_Layer: 5
   m_Name: SceneManager
   m_TagString: Untagged
@@ -254,6 +255,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sceneTransitionManager: {fileID: 8196438784194219539}
   fadeDuration: 1
+  dayNumber: 0
+  totalDays: 3
   scenes:
   - sceneName: MainMenu
     sceneStartEvent:
@@ -282,3 +285,32 @@ MonoBehaviour:
       idInternal: 0
       valueGuidInternal: 
       WwiseObjectReference: {fileID: 11400000, guid: 91f1fb41ce8d59b4d8bd3ee93e64cd29, type: 2}
+  initEvent:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 94f6e3824918a37428c979cc61c2e634, type: 2}
+--- !u!114 &6372583460861361762
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6127866105191780414}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9cc4232f50d011942a32764caf6a6e92, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  triggerList: ae8d9d44
+  useOtherObject: 0
+  data:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 60b3e97547b988e429efa0cbf1b4b2a7, type: 2}
+  decodeBank: 0
+  overrideLoadSetting: 0
+  loadAsynchronous: 0
+  saveDecodedBank: 0
+  unloadTriggerList: 958ca0ea
+  bankNameInternal: 
+  valueGuidInternal: 

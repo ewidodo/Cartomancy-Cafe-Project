@@ -20,6 +20,7 @@ public class SceneLoader : SingletonDontDestroy<SceneLoader>
     }
     [SerializeField] private List<SceneData> scenes = new();
     private Dictionary<string, SceneData> _sceneDict = new();
+    [SerializeField] private AK.Wwise.Event initEvent;
 
     private string currentScene = "Init";
 
@@ -31,6 +32,7 @@ public class SceneLoader : SingletonDontDestroy<SceneLoader>
         //StartScene();
         if (SceneManager.GetActiveScene().name == "Init")
         {
+            initEvent.Post(this.gameObject);
             LoadScene("MainMenu");
         }
         else
@@ -80,6 +82,13 @@ public class SceneLoader : SingletonDontDestroy<SceneLoader>
     public void LoadScene(string sceneName)
     {
         if (_sceneDict.TryGetValue(currentScene, out SceneData sceneData)) sceneData.sceneEndEvent.Post(this.gameObject);
+        // Skip fade to black if screen is already black
+        if (sceneTransitionManager.IsTransitionActive())
+        {
+            SceneManager.LoadScene(sceneName);
+            return;
+        }
+
         sceneTransitionManager.FadeToBlack(fadeDuration).setOnComplete(() =>
             { 
                 SceneManager.LoadScene(sceneName);

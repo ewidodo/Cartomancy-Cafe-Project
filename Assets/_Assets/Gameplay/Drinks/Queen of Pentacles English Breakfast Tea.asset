@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ba764b2f769ead48a0b789565e81866, type: 3}
+  m_Name: Queen of Pentacles English Breakfast Tea
+  m_EditorClassIdentifier: 
+  drinkName: Queen of Pentacles English Breakfast Tea
+  drinkDescription: The perfect morning cup. Malty, full-bodied, with floral notes.
+    Stirred with a wand and served with a lit candle.
+  drinkSprite: {fileID: 0}
+  ingredients:
+  - {fileID: 11400000, guid: 3fcc9f1316df4d34c99dc088188f9212, type: 2}
+  - {fileID: 11400000, guid: 60c2a0d2268dfdb48b46165dd2e07035, type: 2}
+  drinkColor: {r: 0, g: 0, b: 0, a: 0}
