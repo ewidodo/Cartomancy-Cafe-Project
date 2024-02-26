@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 1311618837671949650}
   - component: {fileID: 7598317380835631392}
   m_Layer: 5
-  m_Name: Arrow (1)
+  m_Name: HeadLeft
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -87,7 +87,7 @@ GameObject:
   - component: {fileID: 7734765493323818913}
   - component: {fileID: 1787045840689723401}
   m_Layer: 5
-  m_Name: Arrow
+  m_Name: Tail
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -159,6 +159,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6136035262973378080}
+  - component: {fileID: 4847510260099706488}
+  - component: {fileID: 9047176762977886800}
   m_Layer: 5
   m_Name: Arrow
   m_TagString: Untagged
@@ -188,6 +190,44 @@ RectTransform:
   m_AnchoredPosition: {x: -268, y: -16}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 1.0000001, y: 0.5}
+--- !u!114 &4847510260099706488
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7116313771361029190}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aabd057e5af05b847a3402c99a1be5b1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tail: {fileID: 6350731867680206527}
+  defaultColor: {r: 0, g: 0, b: 0, a: 1}
+  highlightColor: {r: 1, g: 1, b: 1, a: 1}
+--- !u!223 &9047176762977886800
+Canvas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7116313771361029190}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_RenderMode: 2
+  m_Camera: {fileID: 0}
+  m_PlaneDistance: 100
+  m_PixelPerfect: 0
+  m_ReceivesEvents: 1
+  m_OverrideSorting: 1
+  m_OverridePixelPerfect: 0
+  m_SortingBucketNormalizedSize: 0
+  m_VertexColorAlwaysGammaSpace: 0
+  m_AdditionalShaderChannelsFlag: 0
+  m_UpdateRectTransformForStandalone: 0
+  m_SortingLayerID: 0
+  m_SortingOrder: 1
+  m_TargetDisplay: 0
 --- !u!1 &8912326179746759794
 GameObject:
   m_ObjectHideFlags: 0
@@ -200,7 +240,7 @@ GameObject:
   - component: {fileID: 8555649651938690934}
   - component: {fileID: 2614641692935963556}
   m_Layer: 5
-  m_Name: Arrow (2)
+  m_Name: HeadRight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

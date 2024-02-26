@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using TMPro;
 
 // The data component of anything that will affect the final fortune
@@ -21,6 +22,7 @@ public class IngredientCard : MonoBehaviour
     [SerializeField] private float hoverScaleMultiplier;
     [SerializeField] private float hoverScaleTime;
     public Vector3 defaultScale = Vector3.one;
+    public Color arrowHighlightColor;
 
 
     private void Awake()
@@ -51,6 +53,9 @@ public class IngredientCard : MonoBehaviour
                         new Color(defaultScale.x, defaultScale.y, defaultScale.z, 1),
                         new Color(hoverScaleMultiplier, hoverScaleMultiplier, hoverScaleMultiplier),
                         hoverScaleTime);
+
+        // Highlight linked arrow on fortune display
+        if (linkedArrow != null) linkedArrow.GetComponent<Arrow>().Highlight();
     }
 
     public void ResetSize()
@@ -64,6 +69,9 @@ public class IngredientCard : MonoBehaviour
                         new Color(card.transform.localScale.x, card.transform.localScale.y, card.transform.localScale.z),
                         new Color(defaultScale.x, defaultScale.y, defaultScale.z, 1),
                         hoverScaleTime);
+
+        // Reset linked arrow color on fortune display
+        if (linkedArrow != null) linkedArrow.GetComponent<Arrow>().ResetColor();
     }
 
     public void SelectIngredient()
