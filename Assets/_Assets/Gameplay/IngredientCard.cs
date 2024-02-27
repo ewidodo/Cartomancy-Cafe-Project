@@ -50,7 +50,7 @@ public class IngredientCard : MonoBehaviour
     public void Enlarge()
     {
         // Display in front
-        GetComponent<Canvas>().sortingOrder = 1;
+        GetComponent<Canvas>().sortingOrder += 1;
         // Cancel any other ongoing scale tweens
         LeanTween.cancel(this.gameObject);
         LeanTween.value(this.gameObject,
@@ -71,7 +71,7 @@ public class IngredientCard : MonoBehaviour
     public void ResetSize()
     {
         // Display normally
-        GetComponent<Canvas>().sortingOrder = 0;
+        GetComponent<Canvas>().sortingOrder -= 1;
         // Cancel any other ongoing scale tweens
         LeanTween.cancel(this.gameObject);
         LeanTween.value(this.gameObject, 

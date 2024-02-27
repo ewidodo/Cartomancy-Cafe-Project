@@ -54,7 +54,7 @@ public class CustomerManager : Singleton<CustomerManager>
 
         GameObject customer = Instantiate(customers[customerIndex], customerParent);
         Barista.Instance.currentCustomer = customer.GetComponent<Customer>();
-        StartCoroutine(Barista.Instance.currentCustomer.Spawn());
+        Barista.Instance.currentCustomer.Spawn();
         FortuneDisplay.Instance.GenerateFortuneRegionDisplay(Barista.Instance.currentCustomer);
 
         customers.RemoveAt(customerIndex);

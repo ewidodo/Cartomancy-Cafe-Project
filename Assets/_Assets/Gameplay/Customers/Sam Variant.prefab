@@ -1,0 +1,122 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &5364580880016603157
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1273512388880590186, guid: 74ad3ae978d85c541b6746c80454bc72, type: 3}
+      propertyPath: m_Pivot.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1273512388880590186, guid: 74ad3ae978d85c541b6746c80454bc72, type: 3}
+      propertyPath: m_Pivot.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1273512388880590186, guid: 74ad3ae978d85c541b6746c80454bc72, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1273512388880590186, guid: 74ad3ae978d85c541b6746c80454bc72, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1273512388880590186, guid: 74ad3ae978d85c541b6746c80454bc72, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1273512388880590186, guid: 74ad3ae978d85c541b6746c80454bc72, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1273512388880590186, guid: 74ad3ae978d85c541b6746c80454bc72, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 435.9216
+      objectReference: {fileID: 0}
+    - target: {fileID: 1273512388880590186, guid: 74ad3ae978d85c541b6746c80454bc72, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 435.9216
+      objectReference: {fileID: 0}
+    - target: {fileID: 1273512388880590186, guid: 74ad3ae978d85c541b6746c80454bc72, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1273512388880590186, guid: 74ad3ae978d85c541b6746c80454bc72, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1273512388880590186, guid: 74ad3ae978d85c541b6746c80454bc72, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 4.8902993
+      objectReference: {fileID: 0}
+    - target: {fileID: 1273512388880590186, guid: 74ad3ae978d85c541b6746c80454bc72, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1273512388880590186, guid: 74ad3ae978d85c541b6746c80454bc72, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1273512388880590186, guid: 74ad3ae978d85c541b6746c80454bc72, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1273512388880590186, guid: 74ad3ae978d85c541b6746c80454bc72, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1273512388880590186, guid: 74ad3ae978d85c541b6746c80454bc72, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1273512388880590186, guid: 74ad3ae978d85c541b6746c80454bc72, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1273512388880590186, guid: 74ad3ae978d85c541b6746c80454bc72, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1273512388880590186, guid: 74ad3ae978d85c541b6746c80454bc72, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1273512388880590186, guid: 74ad3ae978d85c541b6746c80454bc72, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1777198281363827339, guid: 74ad3ae978d85c541b6746c80454bc72, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: d658d92798a6d314692e367b298b7472, type: 3}
+    - target: {fileID: 3701697325712446305, guid: 74ad3ae978d85c541b6746c80454bc72, type: 3}
+      propertyPath: m_Name
+      value: Sam Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 9209138014308891448, guid: 74ad3ae978d85c541b6746c80454bc72, type: 3}
+      propertyPath: neutralDialogue
+      value: "Huh. Well, thanks for the coffee, anyway. And if you ever need your
+        vehicle looked at, I\u2019m here."
+      objectReference: {fileID: 0}
+    - target: {fileID: 9209138014308891448, guid: 74ad3ae978d85c541b6746c80454bc72, type: 3}
+      propertyPath: greetingDialogue
+      value: "Yo. I\u2019m here for my daily cup. Someone brought in a real junker
+        today and I\u2019m beat."
+      objectReference: {fileID: 0}
+    - target: {fileID: 9209138014308891448, guid: 74ad3ae978d85c541b6746c80454bc72, type: 3}
+      propertyPath: negativeDialogue
+      value: Not too sure about that one. Engine not firing on all cylinders today?
+      objectReference: {fileID: 0}
+    - target: {fileID: 9209138014308891448, guid: 74ad3ae978d85c541b6746c80454bc72, type: 3}
+      propertyPath: positiveDialogue
+      value: "Hah! That\u2019s wild! I\u2019ll be on the lookout, then. Maybe there\u2019s
+        a new Mercedes in my future too?"
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 74ad3ae978d85c541b6746c80454bc72, type: 3}

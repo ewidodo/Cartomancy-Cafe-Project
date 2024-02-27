@@ -16,6 +16,9 @@ public class Customer : MonoBehaviour
     [HideInInspector] public List<IngredientCard> drinkIngredients = new();
     private FortuneTable fortuneTable;
 
+    [Header("Timing")]
+    public float spawnTime;
+
     [Serializable]
     private enum FORTUNEPREFERENCEENUM
     {
@@ -42,12 +45,15 @@ public class Customer : MonoBehaviour
     [TextArea(1, 5)] public string negativeDialogue;
     private Dictionary<FORTUNEPREFERENCEENUM, string> preferenceResponses = new();
     public float textScrollRate = 20;
+    public float periodPauseTime = 0.25f;
+    public float commaPauseTime = 0.1f;
     public float nextDialogueDelay = 2;
     private Coroutine currentDialogueRoutine;
 
     [Header("Display References")]
     public TextMeshProUGUI nameDisplay;
     public TextMeshProUGUI dialogueDisplay;
+    public GameObject dialogueBubble;
 
     [Header("Data References")]
     public List<Fortune> fortunes;
@@ -60,6 +66,7 @@ public class Customer : MonoBehaviour
         GeneratePreferenceDictionary();
         GenerateDesires();
         customerAcceptingDrink = true;
+        dialogueBubble.SetActive(false);
     }
 
     private void OnDestroy()
@@ -214,6 +221,8 @@ public class Customer : MonoBehaviour
         {
             dialogueDisplay.text += c;
             yield return new WaitForSeconds(1 / textScrollRate);
+            if (c == '.' || c == '?' || c == '!') yield return new WaitForSeconds(periodPauseTime);
+            if (c == ',') yield return new WaitForSeconds(commaPauseTime);
         }
 
         if (callback != null) callback.Invoke();
@@ -240,8 +249,29 @@ public class Customer : MonoBehaviour
         currentDialogueRoutine = StartCoroutine(TextScroll(drinkDialogue, null));
     }
 
-    public IEnumerator Spawn()
+    public void Spawn()
     {
+        SpawnAnimation(TriggerSpawnDialogue);
+    }
+
+    public void SpawnAnimation(Action callback)
+    {
+        LeanTween.value(this.gameObject,
+                        callOnUpdate: (val) => { transform.localPosition = new Vector3(val, transform.localPosition.y, transform.localPosition.z); },
+                        1000,
+                        0,
+                        spawnTime)
+                        .setOnComplete(callback);
+    }
+
+    public void TriggerSpawnDialogue()
+    {
+        StartCoroutine(SpawnDialogue());
+    }
+
+    public IEnumerator SpawnDialogue()
+    {
+        dialogueBubble.SetActive(true);
         if (currentDialogueRoutine != null) StopCoroutine(currentDialogueRoutine);
         yield return currentDialogueRoutine = StartCoroutine(TextScroll(greetingDialogue, null));
         yield return new WaitForSeconds(nextDialogueDelay);
@@ -249,6 +279,22 @@ public class Customer : MonoBehaviour
     }
 
     public void Despawn()
+    {
+        dialogueBubble.SetActive(false);
+        DespawnAnimation(DestroySelf);
+    }
+
+    public void DespawnAnimation(Action callback)
+    {
+        LeanTween.value(this.gameObject,
+                        callOnUpdate: (val) => { transform.localPosition = new Vector3(val, transform.localPosition.y, transform.localPosition.z); },
+                        0,
+                        1000,
+                        spawnTime)
+                        .setOnComplete(callback);
+    }
+
+    private void DestroySelf()
     {
         Destroy(gameObject);
     }
