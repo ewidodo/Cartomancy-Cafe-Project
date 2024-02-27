@@ -87,6 +87,8 @@ public class IngredientCard : MonoBehaviour
 
     public void SelectIngredient()
     {
+        if (TutorialManager.Instance != null) TutorialManager.Instance.clickedCard = true;
+
         if (!inDrink)
         {
             Barista.Instance?.UseIngredient(this);

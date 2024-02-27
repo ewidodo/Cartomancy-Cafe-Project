@@ -18,7 +18,7 @@ public class TutorialText : MonoBehaviour
         defaultColor = text.color;
     }
 
-    private void Start()
+    private void OnEnable()
     {
         AnimateTextHighlight();
     }

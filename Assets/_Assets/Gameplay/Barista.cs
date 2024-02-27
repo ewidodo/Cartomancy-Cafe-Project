@@ -34,6 +34,9 @@ public class Barista : Singleton<Barista>
             return;
         }
 
+        // Update tutorial
+        if (TutorialManager.Instance != null) TutorialManager.Instance.servedDrink = true;
+
         currentCustomer.GiveIngredients(currentDrinkIngredients);
         foreach(IngredientCard ingredient in currentDrinkIngredients)
         {

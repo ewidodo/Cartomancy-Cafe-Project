@@ -276,6 +276,11 @@ public class Customer : MonoBehaviour
         yield return currentDialogueRoutine = StartCoroutine(TextScroll(greetingDialogue, null));
         yield return new WaitForSeconds(nextDialogueDelay);
         if (currentDialogueRoutine == null && customerAcceptingDrink) yield return currentDialogueRoutine = StartCoroutine(TextScroll(drinkDialogue, null));
+
+        if (TutorialManager.Instance != null && TutorialManager.Instance.clickedCard == false)
+        {
+            StartCoroutine(TutorialManager.Instance.CardTutorial());
+        }
     }
 
     public void Despawn()

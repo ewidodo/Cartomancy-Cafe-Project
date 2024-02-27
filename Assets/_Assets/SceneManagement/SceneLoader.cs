@@ -68,6 +68,8 @@ public class SceneLoader : SingletonDontDestroy<SceneLoader>
     // Need to set up scenes for this to work
     public void LoadNextDay()
     {
+        if (TutorialManager.Instance != null) TutorialManager.Instance.HideAllTutorialText();
+
         ++dayNumber;
 
         if (dayNumber > totalDays)
@@ -82,11 +84,15 @@ public class SceneLoader : SingletonDontDestroy<SceneLoader>
 
     public void LoadYelp()
     {
+        if (TutorialManager.Instance != null) TutorialManager.Instance.HideAllTutorialText();
+
         LoadScene("Yelp");
     }
 
     public void LoadScene(string sceneName)
     {
+        if (TutorialManager.Instance != null) TutorialManager.Instance.HideAllTutorialText();
+
         if (_sceneDict.TryGetValue(currentScene, out SceneData sceneData)) sceneData.sceneEndEvent.Post(this.gameObject);
         // Skip fade to black if screen is already black
         if (sceneTransitionManager.IsTransitionActive())

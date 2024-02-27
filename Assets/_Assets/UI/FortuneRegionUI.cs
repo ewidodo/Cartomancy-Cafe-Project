@@ -9,6 +9,8 @@ public class FortuneRegionUI : EventTrigger
 
     public override void OnPointerEnter(PointerEventData eventData)
     {
+        if (TutorialManager.Instance != null) TutorialManager.Instance.hoveredFortunes = true;
+
         FortuneDisplay.Instance.AddHoveredFortune(fortune);
 
         Debug.Log("Mouse inside object!!!");

@@ -4,6 +4,11 @@ using UnityEngine;
 
 public class ButtonActions : MonoBehaviour
 {
+    public void UpdateRecipeTutorial()
+    {
+        if (TutorialManager.Instance != null) TutorialManager.Instance.readRecipeBook = true;
+    }
+
     public void LoadScene(string sceneName)
     {
         SceneLoader.Instance.LoadScene(sceneName);
