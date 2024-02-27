@@ -120,7 +120,7 @@ public class FortuneDisplay : Singleton<FortuneDisplay>
         defaultRegion.bottomRightBorder = currentFortuneTable.fortuneTableSize;
 
         // Instantiate default region over entire table
-        InstantiateFortuneRegion(defaultRegion, currentFortuneTable);
+        InstantiateFortuneRegion(defaultRegion, currentFortuneTable, invisible:true);
 
         // Instantiate all custom regions
         foreach (FortuneTable.FortuneRegion region in currentFortuneTable.fortuneRegions)
@@ -129,7 +129,7 @@ public class FortuneDisplay : Singleton<FortuneDisplay>
         }
     }
 
-    private void InstantiateFortuneRegion(FortuneTable.FortuneRegion region, FortuneTable fortuneTable)
+    private void InstantiateFortuneRegion(FortuneTable.FortuneRegion region, FortuneTable fortuneTable, bool invisible=false)
     {
         GameObject newFortuneRegion = Instantiate(fortuneRegionUIPrefab, fortuneGrid.transform);
         RectTransform rect = newFortuneRegion.GetComponent<RectTransform>();
@@ -147,7 +147,9 @@ public class FortuneDisplay : Singleton<FortuneDisplay>
 
         FortuneRegionUI fortuneRegionUI = newFortuneRegion.GetComponent<FortuneRegionUI>();
         fortuneRegionUI.fortune = region.fortuneType;
-        newFortuneRegion.GetComponent<Image>().color = fortuneRegionUI.fortune.fortuneColor;
+
+        if (invisible) newFortuneRegion.GetComponent<Image>().color = new Color(0, 0, 0, 0);
+        else newFortuneRegion.GetComponent<Image>().color = fortuneRegionUI.fortune.fortuneColor;
     }
     #endregion
 
