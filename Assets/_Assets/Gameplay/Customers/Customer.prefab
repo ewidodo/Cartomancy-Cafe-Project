@@ -199,6 +199,7 @@ MonoBehaviour:
   negativeDialogue: NO NEGATIVE DIALOGUE
   textScrollRate: 30
   periodPauseTime: 0.25
+  commaPauseTime: 0.1
   nextDialogueDelay: 2
   nameDisplay: {fileID: 0}
   dialogueDisplay: {fileID: 3464358551349991836}
@@ -213,6 +214,10 @@ MonoBehaviour:
   - {fileID: 11400000, guid: ce99177517600004d8c5eae674019253, type: 2}
   - {fileID: 11400000, guid: 06aaa5c4142c90344b5710c3644e2078, type: 2}
   - {fileID: 11400000, guid: bc4c8815b59ff834796d3fd500a2988c, type: 2}
+  - {fileID: 11400000, guid: 136b19323ab057e4a8ad1f2158865785, type: 2}
+  - {fileID: 11400000, guid: 09180f929c22cd542adfb5b1d39906e8, type: 2}
+  - {fileID: 11400000, guid: 340cc07cb83d3b345a303a61655ad2dd, type: 2}
+  - {fileID: 11400000, guid: 25409b1e42836704495e4f4ef06fc6cf, type: 2}
   drinks:
   - {fileID: 11400000, guid: b0b630c5d437e054e8fb0cf9de632d90, type: 2}
   - {fileID: 11400000, guid: 3712f58035408774487668a829d758d2, type: 2}
@@ -228,6 +233,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: f9be7ac9eaeeaf940b7deb0e41525a9a, type: 2}
   - {fileID: 11400000, guid: 682a7b3bb0dc26446ad8eb60798bc18e, type: 2}
   - {fileID: 11400000, guid: 3fcc9f1316df4d34c99dc088188f9212, type: 2}
+  - {fileID: 11400000, guid: 8677f64a465ef4e428e06495bb21fd5a, type: 2}
 --- !u!114 &3230768083283520689
 MonoBehaviour:
   m_ObjectHideFlags: 0
