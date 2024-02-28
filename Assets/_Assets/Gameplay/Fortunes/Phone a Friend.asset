@@ -15,5 +15,5 @@ MonoBehaviour:
   fortuneName: Phone a Friend
   fortuneDescription: "Call your friend tonight. They\u2019re going through a rough
     time."
-  fortuneSprite: {fileID: 0}
+  fortuneSprite: {fileID: 21300000, guid: c9286ab19d1ef1049b3bbf81417a01bd, type: 3}
   fortuneColor: {r: 0.7179308, g: 0.8392157, b: 0.5254902, a: 1}

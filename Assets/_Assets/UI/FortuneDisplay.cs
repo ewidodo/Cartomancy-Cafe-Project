@@ -13,10 +13,13 @@ public class FortuneDisplay : Singleton<FortuneDisplay>
 
     [Header("Display References")]
     public TextMeshProUGUI fortuneName;
-    public TextMeshProUGUI fortunePosition;
+    public TextMeshProUGUI fortuneDescription;
+    public Image fortuneSprite;
     public GameObject fortuneGrid;
     public GameObject fortuneRegionUIPrefab;
     public Camera camera;
+    public Transform arrowPrefab;
+    public Transform arrowParent;
 
 
     private new void Awake()
@@ -37,15 +40,57 @@ public class FortuneDisplay : Singleton<FortuneDisplay>
 
     public void DisplayFortune(Fortune fortune)
     {
+        if (fortune == null)
+        {
+            fortuneName.text = "";
+            fortuneDescription.text = "";
+            fortuneSprite.sprite = null;
+            fortuneSprite.color = new Color(0, 0, 0, 0);
+            return;
+        }
+
+        fortuneSprite.color = new Color(255, 255, 255, 255);
         fortuneName.text = fortune.name;
+        fortuneDescription.text = fortune.fortuneDescription;
+        fortuneSprite.sprite = fortune.fortuneSprite;
     }
 
-    public void DisplayVector(Vector2 oldPos, Vector2 newPos)
+    #region Arrow Calculations
+    public Arrow DisplayVector(Vector2 oldPos, Vector2 newPos)
     {
-        //LineRenderer.
+        Vector3 one = FortuneDisplayToScreenCoordinates(Vector3.one);
+
+        Debug.Log($"Vector points: {oldPos} and {newPos}");
+        // Instantiate new arrow prefab
+        Transform arrow = Instantiate(arrowPrefab, arrowParent);
+
+        // Scale tail to distance between the two points
+        float dist = Vector2.Distance(oldPos, newPos);
+        Debug.Log($"Vector distance: {dist}");
+        RectTransform arrowRect = arrow.GetChild(2).GetComponent<RectTransform>();
+        arrowRect.sizeDelta = new Vector2(dist * one.x, arrowRect.sizeDelta.y);
+
+        // Rotate to the angle between the two points
+        float rot = Vector2.Angle(new Vector2(1, 0), newPos - oldPos); // y axis is flipped
+        if (newPos.y > oldPos.y) rot *= -1;
+        Debug.Log($"Vector rotation: {rot}");
+        arrow.localRotation = Quaternion.Euler(0, 0, rot);
+
+        // Move arrow to newPos (anchor is at tip)
+        arrow.localPosition = FortuneDisplayToScreenCoordinates(newPos);
+
+        return arrow.GetComponent<Arrow>();
     }
 
-    private Vector3 FortuneDisplayToWorldCoordinates(Vector3 worldPos)
+    public void ClearArrows()
+    {
+        while (arrowParent.childCount > 0)
+        {
+            DestroyImmediate(arrowParent.GetChild(0).gameObject);
+        }
+    }
+
+    private Vector3 FortuneDisplayToScreenCoordinates(Vector3 worldPos)
     {
         RectTransform fortuneGridRect = fortuneGrid.GetComponent<RectTransform>();
 
@@ -53,8 +98,9 @@ public class FortuneDisplay : Singleton<FortuneDisplay>
         float gridScalarX = fortuneGridRect.sizeDelta.x / currentFortuneTable.fortuneTableSize.x;
         float gridScalarY = fortuneGridRect.sizeDelta.y / currentFortuneTable.fortuneTableSize.y;
 
-        return new Vector3();
+        return new Vector3(worldPos.x * gridScalarX, -1 * worldPos.y * gridScalarY, 1);
     }
+    #endregion
 
     #region Initial Display Generation
     public void GenerateFortuneRegionDisplay(Customer customer)
@@ -67,6 +113,8 @@ public class FortuneDisplay : Singleton<FortuneDisplay>
             DestroyImmediate(fortuneGrid.transform.GetChild(0).gameObject);
         }
 
+        ClearArrows();
+
         currentFortuneTable = customer.GetComponent<FortuneTable>();
 
         FortuneTable.FortuneRegion defaultRegion = new();
@@ -75,7 +123,7 @@ public class FortuneDisplay : Singleton<FortuneDisplay>
         defaultRegion.bottomRightBorder = currentFortuneTable.fortuneTableSize;
 
         // Instantiate default region over entire table
-        InstantiateFortuneRegion(defaultRegion, currentFortuneTable);
+        InstantiateFortuneRegion(defaultRegion, currentFortuneTable, invisible:true);
 
         // Instantiate all custom regions
         foreach (FortuneTable.FortuneRegion region in currentFortuneTable.fortuneRegions)
@@ -84,7 +132,7 @@ public class FortuneDisplay : Singleton<FortuneDisplay>
         }
     }
 
-    private void InstantiateFortuneRegion(FortuneTable.FortuneRegion region, FortuneTable fortuneTable)
+    private void InstantiateFortuneRegion(FortuneTable.FortuneRegion region, FortuneTable fortuneTable, bool invisible=false)
     {
         GameObject newFortuneRegion = Instantiate(fortuneRegionUIPrefab, fortuneGrid.transform);
         RectTransform rect = newFortuneRegion.GetComponent<RectTransform>();
@@ -102,7 +150,9 @@ public class FortuneDisplay : Singleton<FortuneDisplay>
 
         FortuneRegionUI fortuneRegionUI = newFortuneRegion.GetComponent<FortuneRegionUI>();
         fortuneRegionUI.fortune = region.fortuneType;
-        newFortuneRegion.GetComponent<Image>().color = fortuneRegionUI.fortune.fortuneColor;
+
+        if (invisible) newFortuneRegion.GetComponent<Image>().color = new Color(0, 0, 0, 0);
+        else newFortuneRegion.GetComponent<Image>().color = fortuneRegionUI.fortune.fortuneColor;
     }
     #endregion
 
@@ -126,13 +176,13 @@ public class FortuneDisplay : Singleton<FortuneDisplay>
     {
         if (hoveredFortunes.Count <= 0)
         {
-            if (currentDrinkFortune == null) return;
-            fortuneName.text = currentDrinkFortune.fortuneName;
+            if (currentDrinkFortune == null) DisplayFortune(null);
+            else DisplayFortune(currentDrinkFortune);
             return;
         }
 
         Fortune displayedFortune = hoveredFortunes[hoveredFortunes.Count - 1];
-        fortuneName.text = displayedFortune.name;
+        DisplayFortune(displayedFortune);
     }
 
     public void DisplayMouseCoordinates()
@@ -156,7 +206,7 @@ public class FortuneDisplay : Singleton<FortuneDisplay>
         Debug.Log($"Scaled mouse position: {scaledMousePos}");
         */
 
-        fortunePosition.text = localPoint.ToString();
+        //fortunePosition.text = localPoint.ToString();
     }
     #endregion
 }

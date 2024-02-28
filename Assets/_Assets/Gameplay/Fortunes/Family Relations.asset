@@ -15,5 +15,5 @@ MonoBehaviour:
   fortuneName: Family Relations
   fortuneDescription: "It\u2019s time to stop pretending you like your mother\u2019s
     tuna salad. She can take the heartbreak."
-  fortuneSprite: {fileID: 0}
+  fortuneSprite: {fileID: 21300000, guid: 0a8f1f6cc011f29429a9247ac5a5b9fd, type: 3}
   fortuneColor: {r: 0.5254902, g: 0.5291489, b: 0.8392157, a: 1}

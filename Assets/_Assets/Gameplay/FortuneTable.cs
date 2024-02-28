@@ -51,9 +51,9 @@ public class FortuneTable : MonoBehaviour
         if (position.x < 0 || position.y < 0 || 
             position.x > fortuneTableSize.x || position.y > fortuneTableSize.y)
         {
-            Debug.LogError($"Fortune out of bounds error! Fortune position {position} " +
+            Debug.LogWarning($"Fortune out of bounds error! Fortune position {position} " +
                            $"outside the defined range of (0, 0) to {fortuneTableSize} of the fortune table.");
-            return null;
+            return defaultFortune;
         }
 
         // Match position to relevant fortune. Note that this prioritizes fortunes higher in the list if multiple overlap

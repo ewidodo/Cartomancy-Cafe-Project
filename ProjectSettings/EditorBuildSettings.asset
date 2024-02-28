@@ -15,6 +15,9 @@ EditorBuildSettings:
     path: Assets/_Assets/Scenes/Gameplay.unity
     guid: 809d85f639508c842a955f445a944be1
   - enabled: 1
+    path: Assets/_Assets/Scenes/Yelp.unity
+    guid: 5edf0c4fff0c0044b929eb147bd3421a
+  - enabled: 1
     path: Assets/_Assets/Scenes/Credits.unity
     guid: 76a8f23b83a864d49887e9933aba7bf3
   - enabled: 1

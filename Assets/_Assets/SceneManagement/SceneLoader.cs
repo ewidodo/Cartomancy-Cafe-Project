@@ -6,9 +6,9 @@ using UnityEngine.SceneManagement;
 
 public class SceneLoader : SingletonDontDestroy<SceneLoader>
 {
-    [SerializeField] private SceneTransitionManager sceneTransitionManager;
+    [SerializeField] public SceneTransitionManager sceneTransitionManager;
     public float fadeDuration;
-    public int dayNumber = 0;
+    [ReadOnly] public int dayNumber = 1;
     public int totalDays = 3;
 
     [Serializable]
@@ -27,6 +27,7 @@ public class SceneLoader : SingletonDontDestroy<SceneLoader>
     // Start is called before the first frame update
     void Start()
     {
+        dayNumber = 1;
         SceneManager.sceneLoaded += OnSceneLoaded;
         InitSceneDictionary();
         //StartScene();
@@ -56,31 +57,42 @@ public class SceneLoader : SingletonDontDestroy<SceneLoader>
 
     void StartScene()
     {
-        sceneTransitionManager.FadeFromBlack(fadeDuration);
+        sceneTransitionManager.TransitionFrom(fadeDuration);
     }
 
     void EndScene()
     {
-        sceneTransitionManager.FadeToBlack(fadeDuration);
+        sceneTransitionManager.TransitionTo(fadeDuration);
     }
 
     // Need to set up scenes for this to work
     public void LoadNextDay()
     {
+        if (TutorialManager.Instance != null) TutorialManager.Instance.HideAllTutorialText();
+
         ++dayNumber;
 
         if (dayNumber > totalDays)
         {
             LoadScene("Credits");
-            dayNumber = 0;
+            dayNumber = 1;
             return;
         }
 
-        LoadScene("Day" + dayNumber);
+        LoadScene("Gameplay");
+    }
+
+    public void LoadYelp()
+    {
+        if (TutorialManager.Instance != null) TutorialManager.Instance.HideAllTutorialText();
+
+        LoadScene("Yelp");
     }
 
     public void LoadScene(string sceneName)
     {
+        if (TutorialManager.Instance != null) TutorialManager.Instance.HideAllTutorialText();
+
         if (_sceneDict.TryGetValue(currentScene, out SceneData sceneData)) sceneData.sceneEndEvent.Post(this.gameObject);
         // Skip fade to black if screen is already black
         if (sceneTransitionManager.IsTransitionActive())
@@ -89,7 +101,7 @@ public class SceneLoader : SingletonDontDestroy<SceneLoader>
             return;
         }
 
-        sceneTransitionManager.FadeToBlack(fadeDuration).setOnComplete(() =>
+        sceneTransitionManager.TransitionTo(fadeDuration).setOnComplete(() =>
             { 
                 SceneManager.LoadScene(sceneName);
             });
@@ -98,7 +110,7 @@ public class SceneLoader : SingletonDontDestroy<SceneLoader>
     void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
         if (_sceneDict.TryGetValue(scene.name, out SceneData sceneData)) sceneData.sceneStartEvent.Post(this.gameObject);
-        sceneTransitionManager.FadeFromBlack(fadeDuration);
+        sceneTransitionManager.TransitionFrom(fadeDuration);
         currentScene = scene.name;
     }
 }

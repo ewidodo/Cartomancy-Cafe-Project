@@ -6,6 +6,7 @@ using UnityEngine.Events;
 public class Barista : Singleton<Barista>
 {
     [HideInInspector] public List<IngredientCard> currentDrinkIngredients = new();
+    public int maxIngredients;
     public List<IngredientCard> reserveIngredients = new();
     public Customer currentCustomer;
     public UnityEvent<Customer> customerChangeEvent;
@@ -28,6 +29,14 @@ public class Barista : Singleton<Barista>
             return;
         }
 
+        if (!currentCustomer.customerAcceptingDrink)
+        {
+            return;
+        }
+
+        // Update tutorial
+        if (TutorialManager.Instance != null) TutorialManager.Instance.servedDrink = true;
+
         currentCustomer.GiveIngredients(currentDrinkIngredients);
         foreach(IngredientCard ingredient in currentDrinkIngredients)
         {
@@ -38,6 +47,17 @@ public class Barista : Singleton<Barista>
 
     public void UseIngredient(IngredientCard ingredient)
     {
+        if (!currentCustomer.customerAcceptingDrink)
+        {
+            return;
+        }
+
+        if (currentDrinkIngredients.Count >= maxIngredients)
+        {
+            return;
+        }
+
+
         // Instantiate ingredient in current ingredient display
         IngredientCard addedIngredient = Instantiate(ingredient.gameObject, currentIngredientDisplay.transform).GetComponent<IngredientCard>();
         addedIngredient.inDrink = true;
@@ -45,6 +65,7 @@ public class Barista : Singleton<Barista>
         addedIngredient.card.transform.localScale = addedIngredient.defaultScale;
 
         currentDrinkIngredients.Add(addedIngredient);
+        currentCustomer.drinkIngredients.Add(addedIngredient);
         currentCustomer.DisplayFortune(currentDrinkIngredients);
     }
 
@@ -53,6 +74,7 @@ public class Barista : Singleton<Barista>
         if (currentDrinkIngredients.Contains(ingredient))
         {
             currentDrinkIngredients.Remove(ingredient);
+            currentCustomer.drinkIngredients.Remove(ingredient);
             Destroy(ingredient.gameObject);
             currentCustomer.DisplayFortune(currentDrinkIngredients);
         }

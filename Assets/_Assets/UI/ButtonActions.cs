@@ -4,9 +4,19 @@ using UnityEngine;
 
 public class ButtonActions : MonoBehaviour
 {
+    public void UpdateRecipeTutorial()
+    {
+        if (TutorialManager.Instance != null) TutorialManager.Instance.readRecipeBook = true;
+    }
+
     public void LoadScene(string sceneName)
     {
         SceneLoader.Instance.LoadScene(sceneName);
+    }
+
+    public void LoadNextDay()
+    {
+        SceneLoader.Instance.LoadNextDay();
     }
 
     public void OpenMenu(GameObject menu)
@@ -17,6 +27,11 @@ public class ButtonActions : MonoBehaviour
     public void CloseMenu(GameObject menu)
     {
         menu.SetActive(false);
+    }
+
+    public void ToggleMenu(GameObject menu)
+    {
+        menu.SetActive(!menu.activeInHierarchy);
     }
 
     public void QuitGame()

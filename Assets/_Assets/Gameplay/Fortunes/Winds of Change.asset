@@ -15,5 +15,5 @@ MonoBehaviour:
   fortuneName: Winds of Change
   fortuneDescription: "A major upheaval is coming in your life. It\u2019s for the
     better, but it will be tough nonetheless. The number three comes to mind."
-  fortuneSprite: {fileID: 0}
+  fortuneSprite: {fileID: 21300000, guid: bc90ac71418789146b819fb4ebacddf4, type: 3}
   fortuneColor: {r: 0.8392157, g: 0.6476974, b: 0.5254902, a: 1}

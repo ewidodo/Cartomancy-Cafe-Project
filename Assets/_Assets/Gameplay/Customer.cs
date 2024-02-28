@@ -6,13 +6,18 @@ using TMPro;
 
 public class Customer : MonoBehaviour
 {
+    [ReadOnly] public bool customerAcceptingDrink = true;
+
     private Drink drink;
     private Ingredient addon;
     private Ingredient mystery;
 
     [SerializeField, ReadOnly] private List<Ingredient> preferredIngredients = new();
-    private List<IngredientCard> drinkIngredients = new();
+    [HideInInspector] public List<IngredientCard> drinkIngredients = new();
     private FortuneTable fortuneTable;
+
+    [Header("Timing")]
+    public float spawnTime;
 
     [Serializable]
     private enum FORTUNEPREFERENCEENUM
@@ -40,12 +45,15 @@ public class Customer : MonoBehaviour
     [TextArea(1, 5)] public string negativeDialogue;
     private Dictionary<FORTUNEPREFERENCEENUM, string> preferenceResponses = new();
     public float textScrollRate = 20;
+    public float periodPauseTime = 0.25f;
+    public float commaPauseTime = 0.1f;
     public float nextDialogueDelay = 2;
     private Coroutine currentDialogueRoutine;
 
     [Header("Display References")]
     public TextMeshProUGUI nameDisplay;
     public TextMeshProUGUI dialogueDisplay;
+    public GameObject dialogueBubble;
 
     [Header("Data References")]
     public List<Fortune> fortunes;
@@ -57,6 +65,13 @@ public class Customer : MonoBehaviour
         fortuneTable = GetComponent<FortuneTable>();
         GeneratePreferenceDictionary();
         GenerateDesires();
+        customerAcceptingDrink = true;
+        dialogueBubble.SetActive(false);
+    }
+
+    private void OnDestroy()
+    {
+        StopAllCoroutines();
     }
 
     private void GeneratePreferenceDictionary()
@@ -112,7 +127,7 @@ public class Customer : MonoBehaviour
 
     public Fortune ReadFortune(List<Ingredient> ingredients)
     {
-        Vector2 position = new Vector2();
+        Vector2 position = fortuneTable.startingPosition;
 
         foreach (Ingredient ingredient in ingredients)
         {
@@ -126,17 +141,64 @@ public class Customer : MonoBehaviour
 
     public Fortune DisplayFortune(List<IngredientCard> ingredients)
     {
-        Vector2 position = new Vector2();
+        Vector2 position = fortuneTable.startingPosition;
+
+        FortuneDisplay.Instance.ClearArrows();
 
         foreach(IngredientCard ingredientCard in ingredients)
         {
             Vector2 oldPosition = position;
             position += ingredientCard.ingredient.fortuneOffset;
-            position = new Vector2(Mathf.Clamp(position.x, 0f, fortuneTable.fortuneTableSize.x),
-                                   Mathf.Clamp(position.y, 0f, fortuneTable.fortuneTableSize.y));
-            FortuneDisplay.Instance.DisplayVector(oldPosition, position);
+            //position = new Vector2(Mathf.Clamp(position.x, 0f, fortuneTable.fortuneTableSize.x),
+            //                       Mathf.Clamp(position.y, 0f, fortuneTable.fortuneTableSize.y));
+            ingredientCard.linkedArrow = FortuneDisplay.Instance.DisplayVector(oldPosition, position);
+            ingredientCard.linkedArrow.linkedIngredientCard = ingredientCard;
         }
 
+        Fortune fortune = fortuneTable.ReadFortune(position);
+
+        if (ingredients.Count <= 0)
+        {
+            FortuneDisplay.Instance.currentDrinkFortune = null;
+            FortuneDisplay.Instance.DisplayFortune(null);
+        }
+        else
+        {
+            FortuneDisplay.Instance.currentDrinkFortune = fortune;
+            FortuneDisplay.Instance.DisplayFortune(fortune);
+        }
+
+        return fortune;
+    }
+
+    public Fortune PeekFortune(IngredientCard card)
+    {
+        Vector2 position = fortuneTable.startingPosition;
+        Vector2 oldPosition;
+
+        FortuneDisplay.Instance.ClearArrows();
+
+        // Display current fortune
+        foreach (IngredientCard ingredientCard in drinkIngredients)
+        {
+            oldPosition = position;
+            position += ingredientCard.ingredient.fortuneOffset;
+            //position = new Vector2(Mathf.Clamp(position.x, 0f, fortuneTable.fortuneTableSize.x),
+            //                       Mathf.Clamp(position.y, 0f, fortuneTable.fortuneTableSize.y));
+            ingredientCard.linkedArrow = FortuneDisplay.Instance.DisplayVector(oldPosition, position);
+            ingredientCard.linkedArrow.linkedIngredientCard = ingredientCard;
+        }
+
+        // Peek next vector
+        oldPosition = position;
+        position += card.ingredient.fortuneOffset;
+        //position = new Vector2(Mathf.Clamp(position.x, 0f, fortuneTable.fortuneTableSize.x),
+        //                       Mathf.Clamp(position.y, 0f, fortuneTable.fortuneTableSize.y));
+        card.peekedArrow = FortuneDisplay.Instance.DisplayVector(oldPosition, position);
+        card.peekedArrow.linkedIngredientCard = card;
+        card.peekedArrow.Highlight();
+
+        // Display fortune
         Fortune fortune = fortuneTable.ReadFortune(position);
         FortuneDisplay.Instance.currentDrinkFortune = fortune;
         FortuneDisplay.Instance.DisplayFortune(fortune);
@@ -168,6 +230,8 @@ public class Customer : MonoBehaviour
         {
             dialogueDisplay.text += c;
             yield return new WaitForSeconds(1 / textScrollRate);
+            if (c == '.' || c == '?' || c == '!') yield return new WaitForSeconds(periodPauseTime);
+            if (c == ',') yield return new WaitForSeconds(commaPauseTime);
         }
 
         if (callback != null) callback.Invoke();
@@ -183,7 +247,8 @@ public class Customer : MonoBehaviour
     private void RespondToFortune(FortunePreference reaction)
     {
         if (currentDialogueRoutine != null) StopCoroutine(currentDialogueRoutine); currentDialogueRoutine = null;
-        ScoreManager.Instance.score += (int) reaction.preference;
+        ScoreManager.Instance.AddScore((int) reaction.preference);
+        customerAcceptingDrink = false;
         StartCoroutine(TextScroll(preferenceResponses[reaction.preference], CustomerManager.Instance.SwapCustomers));
     }
 
@@ -193,15 +258,57 @@ public class Customer : MonoBehaviour
         currentDialogueRoutine = StartCoroutine(TextScroll(drinkDialogue, null));
     }
 
-    public IEnumerator Spawn()
+    public void Spawn()
     {
+        SpawnAnimation(TriggerSpawnDialogue);
+    }
+
+    public void SpawnAnimation(Action callback)
+    {
+        LeanTween.value(this.gameObject,
+                        callOnUpdate: (val) => { transform.localPosition = new Vector3(val, transform.localPosition.y, transform.localPosition.z); },
+                        1000,
+                        0,
+                        spawnTime)
+                        .setOnComplete(callback);
+    }
+
+    public void TriggerSpawnDialogue()
+    {
+        StartCoroutine(SpawnDialogue());
+    }
+
+    public IEnumerator SpawnDialogue()
+    {
+        dialogueBubble.SetActive(true);
         if (currentDialogueRoutine != null) StopCoroutine(currentDialogueRoutine);
         yield return currentDialogueRoutine = StartCoroutine(TextScroll(greetingDialogue, null));
         yield return new WaitForSeconds(nextDialogueDelay);
-        if (currentDialogueRoutine == null) yield return currentDialogueRoutine = StartCoroutine(TextScroll(drinkDialogue, null));
+        if (currentDialogueRoutine == null && customerAcceptingDrink) yield return currentDialogueRoutine = StartCoroutine(TextScroll(drinkDialogue, null));
+
+        if (TutorialManager.Instance != null && TutorialManager.Instance.clickedCard == false)
+        {
+            StartCoroutine(TutorialManager.Instance.CardTutorial());
+        }
     }
 
     public void Despawn()
+    {
+        dialogueBubble.SetActive(false);
+        DespawnAnimation(DestroySelf);
+    }
+
+    public void DespawnAnimation(Action callback)
+    {
+        LeanTween.value(this.gameObject,
+                        callOnUpdate: (val) => { transform.localPosition = new Vector3(val, transform.localPosition.y, transform.localPosition.z); },
+                        0,
+                        1000,
+                        spawnTime)
+                        .setOnComplete(callback);
+    }
+
+    private void DestroySelf()
     {
         Destroy(gameObject);
     }
