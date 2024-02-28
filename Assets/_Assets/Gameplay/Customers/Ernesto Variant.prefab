@@ -97,6 +97,11 @@ PrefabInstance:
       value: Ernesto Variant
       objectReference: {fileID: 0}
     - target: {fileID: 9209138014308891448, guid: 74ad3ae978d85c541b6746c80454bc72, type: 3}
+      propertyPath: drinkDialogue
+      value: "Serve me up a big ol\u2019 $drink with a dash of $addon and, shoot,
+        why not make it $mystery?"
+      objectReference: {fileID: 0}
+    - target: {fileID: 9209138014308891448, guid: 74ad3ae978d85c541b6746c80454bc72, type: 3}
       propertyPath: neutralDialogue
       value: "Sure enough? Not sure that\u2019s quite on the money, but a good guess
         all the same! Better than the toilet I fixed last week, that\u2019s for sure."

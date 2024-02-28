@@ -93,6 +93,11 @@ PrefabInstance:
       value: Saga Variant
       objectReference: {fileID: 0}
     - target: {fileID: 9209138014308891448, guid: 74ad3ae978d85c541b6746c80454bc72, type: 3}
+      propertyPath: drinkDialogue
+      value: "Your challenge today is\u2026.a $drink with $addon...and by all means,
+        make it $mystery...."
+      objectReference: {fileID: 0}
+    - target: {fileID: 9209138014308891448, guid: 74ad3ae978d85c541b6746c80454bc72, type: 3}
       propertyPath: neutralDialogue
       value: "Hmm\u2026a serviceable prediction. You are on the right track. Perhaps
         someday you will be on par with my skills."

@@ -112,7 +112,7 @@ public class Customer : MonoBehaviour
             fortunePreferences.Add(tablePreference);
         }
 
-        drinkDialogue = $"Give me a {drink.drinkName} with {addon.ingredientName} and make it {mystery.ingredientKeyword}";
+        //drinkDialogue = $"Give me a {drink.drinkName} with {addon.ingredientName} and make it {mystery.ingredientKeyword}";
 
         // Double check everything?
     }
@@ -239,6 +239,43 @@ public class Customer : MonoBehaviour
         yield return null;
     }
 
+    private string ParseWildcards(string text)
+    {
+        string[] split = text.Split(' ');
+        for (int i = 0; i < split.Length; i++)
+        {
+            string s = split[i];
+
+            if (s[0] == '$')
+            {
+                string wildcard = s.Substring(1);
+
+                if (wildcard.Substring(0, 5) == "drink")
+                {
+                    split[i] = drink.drinkName + wildcard.Substring(5);
+                }
+                else if (wildcard.Substring(0, 5) == "addon")
+                {
+                    split[i] = addon.ingredientName + wildcard.Substring(5);
+                }
+                else if (wildcard.Substring(0, 7) == "mystery")
+                {
+                    split[i] = mystery.ingredientKeyword + wildcard.Substring(7);
+                }
+            }
+        }
+
+        // recombine split
+        string result = "";
+        for (int i = 0; i < split.Length; ++i)
+        {
+            if (i > 0) result += " ";
+            result += split[i];
+        }
+
+        return result;
+    }
+
     private void IncrementDialogueState()
     {
 
@@ -284,7 +321,7 @@ public class Customer : MonoBehaviour
         if (currentDialogueRoutine != null) StopCoroutine(currentDialogueRoutine);
         yield return currentDialogueRoutine = StartCoroutine(TextScroll(greetingDialogue, null));
         yield return new WaitForSeconds(nextDialogueDelay);
-        if (currentDialogueRoutine == null && customerAcceptingDrink) yield return currentDialogueRoutine = StartCoroutine(TextScroll(drinkDialogue, null));
+        if (currentDialogueRoutine == null && customerAcceptingDrink) yield return currentDialogueRoutine = StartCoroutine(TextScroll(ParseWildcards(drinkDialogue), null));
 
         if (TutorialManager.Instance != null && TutorialManager.Instance.clickedCard == false)
         {

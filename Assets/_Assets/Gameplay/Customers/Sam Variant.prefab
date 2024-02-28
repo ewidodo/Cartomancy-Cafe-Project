@@ -97,6 +97,10 @@ PrefabInstance:
       value: Sam Variant
       objectReference: {fileID: 0}
     - target: {fileID: 9209138014308891448, guid: 74ad3ae978d85c541b6746c80454bc72, type: 3}
+      propertyPath: drinkDialogue
+      value: Could I get $drink, add some $addon, and just for fun, make it $mystery.
+      objectReference: {fileID: 0}
+    - target: {fileID: 9209138014308891448, guid: 74ad3ae978d85c541b6746c80454bc72, type: 3}
       propertyPath: neutralDialogue
       value: "Huh. Well, thanks for the coffee, anyway. And if you ever need your
         vehicle looked at, I\u2019m here."

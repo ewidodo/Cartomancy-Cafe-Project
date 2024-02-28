@@ -97,6 +97,10 @@ PrefabInstance:
       value: Arnie Variant
       objectReference: {fileID: 0}
     - target: {fileID: 9209138014308891448, guid: 74ad3ae978d85c541b6746c80454bc72, type: 3}
+      propertyPath: drinkDialogue
+      value: "I\u2019ll take $drink with $addon, but today make it $mystery."
+      objectReference: {fileID: 0}
+    - target: {fileID: 9209138014308891448, guid: 74ad3ae978d85c541b6746c80454bc72, type: 3}
       propertyPath: neutralDialogue
       value: "Sorry, kind of zoned out there thinking about my next painting\u2026Anyway,
         you were saying?"
