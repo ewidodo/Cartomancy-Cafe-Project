@@ -82,6 +82,11 @@ public class IngredientCard : MonoBehaviour
 
         // Reset linked arrow color on fortune display
         if (linkedArrow != null) linkedArrow.ResetColor();
+        else
+        {
+            // Reset fortune display
+            Barista.Instance.currentCustomer.DisplayFortune(Barista.Instance.currentCustomer.drinkIngredients);
+        }
         if (peekedArrow != null) DestroyImmediate(peekedArrow.gameObject); peekedArrow = null;
     }
 

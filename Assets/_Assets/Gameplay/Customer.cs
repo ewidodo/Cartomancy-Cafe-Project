@@ -156,8 +156,17 @@ public class Customer : MonoBehaviour
         }
 
         Fortune fortune = fortuneTable.ReadFortune(position);
-        FortuneDisplay.Instance.currentDrinkFortune = fortune;
-        FortuneDisplay.Instance.DisplayFortune(fortune);
+
+        if (ingredients.Count <= 0)
+        {
+            FortuneDisplay.Instance.currentDrinkFortune = null;
+            FortuneDisplay.Instance.DisplayFortune(null);
+        }
+        else
+        {
+            FortuneDisplay.Instance.currentDrinkFortune = fortune;
+            FortuneDisplay.Instance.DisplayFortune(fortune);
+        }
 
         return fortune;
     }

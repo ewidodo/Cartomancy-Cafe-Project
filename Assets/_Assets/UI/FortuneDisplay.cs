@@ -45,8 +45,11 @@ public class FortuneDisplay : Singleton<FortuneDisplay>
             fortuneName.text = "";
             fortuneDescription.text = "";
             fortuneSprite.sprite = null;
+            fortuneSprite.color = new Color(0, 0, 0, 0);
+            return;
         }
 
+        fortuneSprite.color = new Color(255, 255, 255, 255);
         fortuneName.text = fortune.name;
         fortuneDescription.text = fortune.fortuneDescription;
         fortuneSprite.sprite = fortune.fortuneSprite;

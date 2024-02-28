@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ingredientName: Hair of the Dog
   ingredientKeyword: doggy style :)
-  fortuneOffset: {x: -2, y: 0}
+  fortuneOffset: {x: 0, y: 2}
   ingredientDescription: 
   ingredientSprite: {fileID: 21300000, guid: b89b2fe0c88f56b49881c0c69327b70c, type: 3}
   ingredientNumber: IX
