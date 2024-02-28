@@ -16,5 +16,5 @@ MonoBehaviour:
   ingredientKeyword: doggy style :)
   fortuneOffset: {x: 0, y: 2}
   ingredientDescription: 
-  ingredientSprite: {fileID: 21300000, guid: b89b2fe0c88f56b49881c0c69327b70c, type: 3}
+  ingredientSprite: {fileID: 21300000, guid: 8d781505c52483240bb4ad1cdfa9c29d, type: 3}
   ingredientNumber: IX

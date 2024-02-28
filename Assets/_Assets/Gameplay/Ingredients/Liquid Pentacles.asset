@@ -16,5 +16,5 @@ MonoBehaviour:
   ingredientKeyword: golden
   fortuneOffset: {x: -1, y: -1}
   ingredientDescription: 
-  ingredientSprite: {fileID: 21300000, guid: 938bc10efce89d341811141641bc025d, type: 3}
+  ingredientSprite: {fileID: 21300000, guid: 635907b269066ca48bc2e5c0f970ac61, type: 3}
   ingredientNumber: VI

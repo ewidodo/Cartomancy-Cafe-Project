@@ -16,5 +16,5 @@ MonoBehaviour:
   ingredientKeyword: with a spin
   fortuneOffset: {x: -3, y: 0}
   ingredientDescription: 
-  ingredientSprite: {fileID: 21300000, guid: 79626077f2c3ad84ab8e6fd3847d9f88, type: 3}
+  ingredientSprite: {fileID: 21300000, guid: 7f27ee7d0827baa49b8ffcf6e9804f08, type: 3}
   ingredientNumber: VIII

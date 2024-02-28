@@ -16,5 +16,5 @@ MonoBehaviour:
   ingredientKeyword: magical
   fortuneOffset: {x: 2, y: 0}
   ingredientDescription: 
-  ingredientSprite: {fileID: 21300000, guid: f58af0c81664bbe45b41776dfc871bd2, type: 3}
+  ingredientSprite: {fileID: 21300000, guid: d161da13f07d70f4ebba37af05ae89ed, type: 3}
   ingredientNumber: X
