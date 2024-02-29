@@ -68,6 +68,9 @@ public class Customer : MonoBehaviour
         customerAcceptingDrink = true;
         dialogueBubble.SetActive(false);
         transform.localPosition = new Vector3(1000, 0, 0);
+
+        //Grab text speed from settings
+        textScrollRate = PlayerPrefs.GetInt("TextSpeed");
     }
 
     private void OnDestroy()
