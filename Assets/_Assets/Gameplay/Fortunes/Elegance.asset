@@ -16,4 +16,4 @@ MonoBehaviour:
   fortuneDescription: "You\u2019re going to have a wardrobe malfunction at your next
     social event. Take caution. Bring tape."
   fortuneSprite: {fileID: 0}
-  fortuneColor: {r: 0, g: 0, b: 0, a: 0}
+  fortuneColor: {r: 0.6666882, g: 0.36040404, b: 0.8396226, a: 1}

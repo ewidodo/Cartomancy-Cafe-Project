@@ -16,4 +16,4 @@ MonoBehaviour:
   fortuneDescription: A black cat will cross your path. This is a sign of great fortune,
     because it means you get to see a little kitty!
   fortuneSprite: {fileID: 0}
-  fortuneColor: {r: 0, g: 0, b: 0, a: 0}
+  fortuneColor: {r: 0, g: 0, b: 0, a: 1}

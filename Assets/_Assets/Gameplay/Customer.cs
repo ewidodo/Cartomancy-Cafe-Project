@@ -64,7 +64,7 @@ public class Customer : MonoBehaviour
     {
         fortuneTable = GetComponent<FortuneTable>();
         GeneratePreferenceDictionary();
-        GenerateDesires();
+        //GenerateDesires();
         customerAcceptingDrink = true;
         dialogueBubble.SetActive(false);
     }
@@ -297,6 +297,7 @@ public class Customer : MonoBehaviour
 
     public void Spawn()
     {
+        GenerateDesires();
         SpawnAnimation(TriggerSpawnDialogue);
     }
 
