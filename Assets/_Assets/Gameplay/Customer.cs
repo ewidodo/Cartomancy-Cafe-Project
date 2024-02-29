@@ -67,6 +67,7 @@ public class Customer : MonoBehaviour
         //GenerateDesires();
         customerAcceptingDrink = true;
         dialogueBubble.SetActive(false);
+        transform.localPosition = new Vector3(1000, 0, 0);
     }
 
     private void OnDestroy()

@@ -11,6 +11,7 @@ public class TutorialManager : SingletonDontDestroy<TutorialManager>
     [ReadOnly] public bool hoveredFortunes = false;
     [ReadOnly] public bool readRecipeBook = false;
     [ReadOnly] public bool servedDrink = false;
+    public bool seenTutorial = false;
 
     [Header("Display References")]
     public GameObject cardTutorialText;

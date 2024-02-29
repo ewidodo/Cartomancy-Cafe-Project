@@ -9,6 +9,17 @@ public class ButtonActions : MonoBehaviour
         if (TutorialManager.Instance != null) TutorialManager.Instance.readRecipeBook = true;
     }
 
+    public void UpdateTutorialStatus()
+    {
+        if (TutorialManager.Instance != null) TutorialManager.Instance.seenTutorial = true;
+    }  
+    
+    public void LoadTutorial()
+    {
+        if (TutorialManager.Instance != null && !TutorialManager.Instance.seenTutorial) SceneLoader.Instance.LoadScene("Tutorial");
+        else SceneLoader.Instance.LoadScene("Gameplay");
+    }    
+
     public void LoadScene(string sceneName)
     {
         SceneLoader.Instance.LoadScene(sceneName);
