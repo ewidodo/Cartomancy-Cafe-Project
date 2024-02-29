@@ -254,10 +254,28 @@ public class Customer : MonoBehaviour
                 if (wildcard.Substring(0, 5) == "drink")
                 {
                     split[i] = drink.drinkName + wildcard.Substring(5);
+
+                    // Replace "a" with "an" for vowels
+                    if ((split[i][0] == 'A' || split[i][0] == 'X') && split[i - 1][split[i-1].Length - 1] == 'a')
+                    {
+                        split[i - 1] += "n";
+                    }
+
+                    // Remove extra "the"s
+                    if (split[i][0] == 'T' && split[i - 1] == "the")
+                    {
+                        split[i] = split[i].Substring(4);
+                    }
                 }
                 else if (wildcard.Substring(0, 5) == "addon")
                 {
                     split[i] = addon.ingredientName + wildcard.Substring(5);
+
+                    // Special case for "Reversed"
+                    if (split[i] == "Reversed" && split[i - 1] == "with")
+                    {
+                        split[i - 1] = "";
+                    }
                 }
                 else if (wildcard.Substring(0, 7) == "mystery")
                 {
@@ -270,7 +288,7 @@ public class Customer : MonoBehaviour
         string result = "";
         for (int i = 0; i < split.Length; ++i)
         {
-            if (i > 0) result += " ";
+            if (i > 0 && split[i] != "") result += " ";
             result += split[i];
         }
 
