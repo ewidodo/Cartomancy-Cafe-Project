@@ -218,8 +218,8 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1417116736}
-  - {fileID: 1775548269}
   - {fileID: 657986168}
+  - {fileID: 1775548269}
   - {fileID: 484546049}
   - {fileID: 230517756}
   - {fileID: 1835788916}
@@ -3062,8 +3062,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.025864, y: -284.82}
-  m_SizeDelta: {x: 1920.1, y: 510.24}
+  m_AnchoredPosition: {x: 0.025864, y: -283.79358}
+  m_SizeDelta: {x: 1920.1, y: 512.2928}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1775548270
 MonoBehaviour:
@@ -4295,10 +4295,6 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3074427747436099018, guid: 413f3417a98a4c6419cc516d4343530e, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 4957211125829364632, guid: 413f3417a98a4c6419cc516d4343530e, type: 3}
       propertyPath: neutralDialogue
       value: "Huh. Well, thanks for the coffee, anyway. And if you ever need your
@@ -4344,10 +4340,6 @@ PrefabInstance:
     - target: {fileID: 6443936621012947436, guid: 413f3417a98a4c6419cc516d4343530e, type: 3}
       propertyPath: m_Name
       value: Janice
-      objectReference: {fileID: 0}
-    - target: {fileID: 8907566909332416487, guid: 413f3417a98a4c6419cc516d4343530e, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
