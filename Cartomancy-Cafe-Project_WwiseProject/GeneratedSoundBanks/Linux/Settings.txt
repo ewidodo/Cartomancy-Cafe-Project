@@ -1,6 +1,3 @@
-Event	ID	Name			Wwise Object Path	Notes
-	3157003241	Test			\Default Work Unit\Test	
-
 Game Parameter	ID	Name			Wwise Object Path	Notes
 	1204480359	AmbienceVolume			\Default Work Unit\AmbienceVolume	
 	2346531308	MusicVolume			\Default Work Unit\MusicVolume	

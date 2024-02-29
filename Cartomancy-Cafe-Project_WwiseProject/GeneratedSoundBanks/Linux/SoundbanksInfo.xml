@@ -9,11 +9,20 @@
 	</RootPaths>
 	<DialogueEvents/>
 	<SoundBanks>
-		<SoundBank Id="89505537" Type="User" Language="SFX" Hash="{AE1D874F-83A3-8A67-345D-EA9900B95B80}">
+		<SoundBank Id="89505537" Type="User" Language="SFX" Hash="{0B8E0C3A-16FC-3D8D-63BB-27264C4F0800}">
 			<ShortName>Gameplay</ShortName>
 			<Path>Gameplay.bnk</Path>
+			<Media>
+				<File Id="211939400" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Ambience.wav</ShortName>
+					<CachePath>SFX/Ambience_818F3B66.wem</CachePath>
+				</File>
+			</Media>
 			<Events>
-				<Event Id="2191945436" Name="GameplaySceneLoaded" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0">
+				<Event Id="2191945436" Name="GameplaySceneLoaded" DurationType="OneShot" DurationMin="68.6437" DurationMax="68.6437">
+					<MediaRefs>
+						<MediaRef Id="211939400"/>
+					</MediaRefs>
 					<ActionSetState>
 						<ActionSetStateEntry GroupId="3103015060" Id="984691642" Name="InGame"/>
 					</ActionSetState>
@@ -61,7 +70,7 @@
 				</StateGroup>
 			</StateGroups>
 		</SoundBank>
-		<SoundBank Id="1465331116" Type="User" Language="SFX" Hash="{7056C96C-FDA7-CB15-C906-F53F4FFEB8CE}">
+		<SoundBank Id="1465331116" Type="User" Language="SFX" Hash="{8EFF1D10-10EA-2598-E5B8-B8073A6B6DA7}">
 			<ShortName>Global</ShortName>
 			<Path>Global.bnk</Path>
 			<Media>
@@ -76,6 +85,10 @@
 				<File Id="625777191" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>CartomancyMainMenu_NoMelody.wav</ShortName>
 					<CachePath>SFX/CartomancyMainMenu_NoMelody_FBC78EF0.wem</CachePath>
+				</File>
+				<File Id="642369818" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>CartomancyInGame_NoMelody.wav</ShortName>
+					<CachePath>SFX/CartomancyInGame_NoMelody_FBC78EF0.wem</CachePath>
 				</File>
 				<File Id="646974316" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>CartomancyMainMenu_PianoMelody.wav</ShortName>
@@ -108,7 +121,7 @@
 							<SwitchValue GroupType="State" GroupId="3103015060" Id="984691642"/>
 							<MediaRefs>
 								<MediaRef Id="191583604"/>
-								<MediaRef Id="625777191"/>
+								<MediaRef Id="642369818"/>
 								<MediaRef Id="852145671"/>
 							</MediaRefs>
 						</SwitchContainer>
@@ -130,6 +143,80 @@
 					<ActionSetState>
 						<ActionSetStateEntry GroupId="3103015060" Id="3604647259" Name="MainMenu"/>
 					</ActionSetState>
+				</Event>
+				<Event Id="3092587493" Name="Pause" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0">
+					<MediaRefs>
+						<MediaRef Id="353524156"/>
+						<MediaRef Id="1063039539"/>
+					</MediaRefs>
+					<SwitchContainers>
+						<SwitchContainer>
+							<SwitchValue GroupType="State" GroupId="3103015060" Id="3604647259"/>
+							<MediaRefs>
+								<MediaRef Id="625777191"/>
+								<MediaRef Id="646974316"/>
+							</MediaRefs>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="State" GroupId="3103015060" Id="984691642"/>
+							<MediaRefs>
+								<MediaRef Id="191583604"/>
+								<MediaRef Id="642369818"/>
+								<MediaRef Id="852145671"/>
+							</MediaRefs>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="State" GroupId="3103015060" Id="0"/>
+							<MediaRefs>
+								<MediaRef Id="625777191"/>
+								<MediaRef Id="646974316"/>
+							</MediaRefs>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="State" GroupId="3103015060" Id="748895195"/>
+							<MediaRefs>
+								<MediaRef Id="625777191"/>
+								<MediaRef Id="646974316"/>
+							</MediaRefs>
+						</SwitchContainer>
+					</SwitchContainers>
+				</Event>
+				<Event Id="3412868374" Name="Unpause" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0">
+					<MediaRefs>
+						<MediaRef Id="353524156"/>
+						<MediaRef Id="1063039539"/>
+					</MediaRefs>
+					<SwitchContainers>
+						<SwitchContainer>
+							<SwitchValue GroupType="State" GroupId="3103015060" Id="3604647259"/>
+							<MediaRefs>
+								<MediaRef Id="625777191"/>
+								<MediaRef Id="646974316"/>
+							</MediaRefs>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="State" GroupId="3103015060" Id="984691642"/>
+							<MediaRefs>
+								<MediaRef Id="191583604"/>
+								<MediaRef Id="642369818"/>
+								<MediaRef Id="852145671"/>
+							</MediaRefs>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="State" GroupId="3103015060" Id="0"/>
+							<MediaRefs>
+								<MediaRef Id="625777191"/>
+								<MediaRef Id="646974316"/>
+							</MediaRefs>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="State" GroupId="3103015060" Id="748895195"/>
+							<MediaRefs>
+								<MediaRef Id="625777191"/>
+								<MediaRef Id="646974316"/>
+							</MediaRefs>
+						</SwitchContainer>
+					</SwitchContainers>
 				</Event>
 			</Events>
 			<StateGroups>
@@ -163,7 +250,7 @@
 				</StateGroup>
 			</StateGroups>
 		</SoundBank>
-		<SoundBank Id="2910527622" Type="User" Language="SFX" Hash="{A8CC58D9-BFA5-982F-61CB-8D7348E4871B}">
+		<SoundBank Id="2910527622" Type="User" Language="SFX" Hash="{9C62D096-0556-D340-0793-2E23E5664CFB}">
 			<ShortName>Settings</ShortName>
 			<Path>Settings.bnk</Path>
 			<Media>
@@ -172,13 +259,6 @@
 					<CachePath>SFX/Branches_8_818F3B66.wem</CachePath>
 				</File>
 			</Media>
-			<Events>
-				<Event Id="3157003241" Name="Test" DurationType="OneShot" DurationMin="0.99106574" DurationMax="0.99106574">
-					<MediaRefs>
-						<MediaRef Id="607739207"/>
-					</MediaRefs>
-				</Event>
-			</Events>
 			<Busses>
 				<Bus Id="57144414" Name="Sound Effects Bus"/>
 				<Bus Id="3127962312" Name="Music Bus"/>
@@ -220,5 +300,5 @@
 			</StateGroups>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{A78C3F34-65AD-C700-9B02-B704F088E082}</FileHash>
+	<FileHash>{4C84A325-BCB1-EAD6-2460-971F8525987E}</FileHash>
 </SoundBanksInfo>

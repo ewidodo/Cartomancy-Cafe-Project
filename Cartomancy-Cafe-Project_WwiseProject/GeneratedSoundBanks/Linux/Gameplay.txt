@@ -2,3 +2,6 @@ Event	ID	Name			Wwise Object Path	Notes
 	1518434845	GameplaySceneUnloaded			\Default Work Unit\SceneManagement\GameplaySceneUnloaded	
 	2191945436	GameplaySceneLoaded			\Default Work Unit\SceneManagement\GameplaySceneLoaded	
 
+In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	211939400	Ambience	S:\2_Games\Projects\Unity\DaniJam\Cartomancy-Cafe-Project\Cartomancy-Cafe-Project_WwiseProject\.cache\Linux\SFX\Ambience_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ambience		12108844
+

@@ -3,18 +3,6 @@
 	<Events>
 		<WorkUnit Name="Default Work Unit" ID="{FB033B42-0DE8-4191-B98A-BFEB44C02C12}" PersistMode="Standalone">
 			<ChildrenList>
-				<Event Name="Test" ID="{110B4AC6-305E-430F-9719-258023AA043D}">
-					<ChildrenList>
-						<Action Name="" ID="{9B2A9120-7903-4D59-85A7-E6A6D8CCCB59}" ShortID="617556762">
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="Branches_8" ID="{AEFAB0B0-54BD-4C05-850D-57CDFF518EA5}" WorkUnitID="{90AC13BD-24B4-4141-9BEF-0F4B77B371EB}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-					</ChildrenList>
-				</Event>
-				<Event Name="New_Event" ID="{804F4FDA-9B3F-4252-9BD3-D9EB02F29C98}"/>
 				<Folder Name="SceneManagement" ID="{A31CD44A-9CA7-45E4-A2DD-AF2D748699AB}" ShortID="243123357">
 					<ChildrenList>
 						<Event Name="MainMenuSceneLoaded" ID="{91D797C3-E0DC-4F3D-AA65-DCFCB87101BF}">
@@ -44,9 +32,30 @@
 										</Reference>
 									</ReferenceList>
 								</Action>
+								<Action Name="" ID="{D98F2A64-7EAE-445B-A59A-100FB96ACDFF}" ShortID="563069185">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Ambience" ID="{E3FE0423-73EC-4935-8F61-99EE084BCE89}" WorkUnitID="{90AC13BD-24B4-4141-9BEF-0F4B77B371EB}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
 							</ChildrenList>
 						</Event>
-						<Event Name="GameplaySceneUnloaded" ID="{159726D5-57B1-4717-A80D-3D58A5C03CC4}"/>
+						<Event Name="GameplaySceneUnloaded" ID="{159726D5-57B1-4717-A80D-3D58A5C03CC4}">
+							<ChildrenList>
+								<Action Name="" ID="{894D94F1-74E1-49AF-BD75-8E2D444101FC}" ShortID="851367536">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+										<Property Name="FadeTime" Type="Real64" Value="2"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Ambience" ID="{E3FE0423-73EC-4935-8F61-99EE084BCE89}" WorkUnitID="{90AC13BD-24B4-4141-9BEF-0F4B77B371EB}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
 						<Event Name="CreditsSceneLoaded" ID="{5E6D1DD2-A9B8-4994-ACBB-D24F7ED9247C}">
 							<ChildrenList>
 								<Action Name="" ID="{014D1A60-616F-4464-9A3D-D9F8C3F80401}" ShortID="1016052170">
@@ -85,6 +94,103 @@
 						</Event>
 					</ChildrenList>
 				</Folder>
+				<Folder Name="SFX" ID="{6FEE645B-002E-489D-B8BD-E82BA4002F87}" ShortID="630842178">
+					<ChildrenList>
+						<Event Name="Submit" ID="{384944BE-B7BE-4E3D-BF03-21B805449AA9}">
+							<ChildrenList>
+								<Action Name="" ID="{85534787-8FFA-4EBD-A42F-4A143317004D}" ShortID="865454099">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Submit" ID="{1C1F07DB-12CB-45F3-816C-322B15CA5ED9}" WorkUnitID="{90AC13BD-24B4-4141-9BEF-0F4B77B371EB}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Card" ID="{E1615523-4A8F-45D9-9659-214561ECA680}">
+							<ChildrenList>
+								<Action Name="" ID="{58EE2307-E782-424F-891E-2CCDD2EABA38}" ShortID="816632042">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Card" ID="{E8EC1DEA-7199-469D-9F66-2A905182B10A}" WorkUnitID="{90AC13BD-24B4-4141-9BEF-0F4B77B371EB}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Book" ID="{69F4E2B1-63F8-459D-B1D4-131964DCF808}">
+							<ChildrenList>
+								<Action Name="" ID="{B055554B-8923-412F-A535-284E3542BCB9}" ShortID="680850411">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Book" ID="{EF708301-92E3-408C-8B99-6C2C457D326D}" WorkUnitID="{90AC13BD-24B4-4141-9BEF-0F4B77B371EB}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Pour" ID="{F37001BE-A5FC-4025-8A0F-E440899DE778}">
+							<ChildrenList>
+								<Action Name="" ID="{E2D86F4C-B312-4D04-864F-360E872A43E2}" ShortID="375278908">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Pour1" ID="{7D81AF28-C725-448F-B7DE-BAA55A7011EE}" WorkUnitID="{90AC13BD-24B4-4141-9BEF-0F4B77B371EB}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+					</ChildrenList>
+				</Folder>
+				<Event Name="Pause" ID="{D0C7A034-603F-49F5-BD18-E88B09B4AD84}">
+					<ChildrenList>
+						<Action Name="" ID="{417482C3-1FEB-404D-BF6D-CBBEFABED627}" ShortID="142829752">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="26"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="MusicMain" ID="{28D4D6B5-2EFD-4AC6-B49B-469A6B8CCCF0}" WorkUnitID="{E629E0D6-BF65-4559-A03A-C67A109DE164}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{219C27A5-B0B6-451E-BC4A-12025A4EBC20}" ShortID="40653125">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="8"/>
+							</PropertyList>
+							<ReferenceList/>
+							<ChildrenList>
+								<EventActionException Name="" ID="{C4E15753-01EB-486C-88F4-8A4479D97107}">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="MusicMain" ID="{28D4D6B5-2EFD-4AC6-B49B-469A6B8CCCF0}" WorkUnitID="{E629E0D6-BF65-4559-A03A-C67A109DE164}"/>
+										</Reference>
+									</ReferenceList>
+								</EventActionException>
+							</ChildrenList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Unpause" ID="{67DB64D0-7ADE-4293-9D7D-E58AE16899CC}">
+					<ChildrenList>
+						<Action Name="" ID="{F7FC3B35-5157-4573-BC30-39D0C63C4DD0}" ShortID="696878152">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="10"/>
+							</PropertyList>
+							<ReferenceList/>
+						</Action>
+						<Action Name="" ID="{79CD4DFA-1842-4AEF-B2B5-995FA346FBD3}" ShortID="572361048">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="27"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="MusicMain" ID="{28D4D6B5-2EFD-4AC6-B49B-469A6B8CCCF0}" WorkUnitID="{E629E0D6-BF65-4559-A03A-C67A109DE164}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

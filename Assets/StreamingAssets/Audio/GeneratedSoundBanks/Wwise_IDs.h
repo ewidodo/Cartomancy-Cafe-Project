@@ -20,7 +20,8 @@ namespace AK
         static const AkUniqueID INIT = 1355168291U;
         static const AkUniqueID MAINMENUSCENELOADED = 2497386818U;
         static const AkUniqueID MAINMENUSCENEUNLOADED = 1917959679U;
-        static const AkUniqueID TEST = 3157003241U;
+        static const AkUniqueID PAUSE = 3092587493U;
+        static const AkUniqueID UNPAUSE = 3412868374U;
     } // namespace EVENTS
 
     namespace STATES
