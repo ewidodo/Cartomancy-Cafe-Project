@@ -57,8 +57,9 @@ public class UIAudioSlider : MonoBehaviour
         }
         else
         {
-            AkSoundEngine.GetRTPCValue(rtpcName, this.gameObject, 0, out volume, ref io_rValueType);
-            volume *= 2 / 100; // transform to range 0-2
+            volume = 1.0f;
+            //AkSoundEngine.GetRTPCValue(rtpcName, this.gameObject, 0, out volume, ref io_rValueType);
+            //volume *= 2 / 100; // transform to range 0-2
         }
 
         //Debug.Log("Loading " + rtpcName + " Slider: " + volume);

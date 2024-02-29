@@ -56,8 +56,10 @@ public class FortuneTable : MonoBehaviour
             return defaultFortune;
         }
 
-        // Match position to relevant fortune. Note that this prioritizes fortunes higher in the list if multiple overlap
-        foreach (FortuneRegion region in fortuneRegions)
+        // Match position to relevant fortune. Note that this prioritizes fortunes lower in the list if multiple overlap
+        List<FortuneRegion> reversedRegions = new List<FortuneRegion>(fortuneRegions);
+        reversedRegions.Reverse();
+        foreach (FortuneRegion region in reversedRegions)
         {
             if (position.x >= region.topLeftBorder.x && position.y >= region.topLeftBorder.y && 
                 position.x <= region.bottomRightBorder.x && position.y <= region.bottomRightBorder.y)
