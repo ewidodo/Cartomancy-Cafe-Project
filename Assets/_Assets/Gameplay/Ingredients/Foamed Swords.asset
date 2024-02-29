@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Foamed Swords
   m_EditorClassIdentifier: 
   ingredientName: Foamed Swords
-  ingredientKeyword: make it sharp
+  ingredientKeyword: sharp
   fortuneOffset: {x: 1, y: -1}
   ingredientDescription: 
   ingredientSprite: {fileID: 21300000, guid: 46695386351276248ae479fd30c2026a, type: 3}

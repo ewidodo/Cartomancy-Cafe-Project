@@ -32,6 +32,126 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: d658d92798a6d314692e367b298b7472, type: 3}
+    - target: {fileID: 3230768083283520689, guid: 74ad3ae978d85c541b6746c80454bc72, type: 3}
+      propertyPath: defaultFortune
+      value: 
+      objectReference: {fileID: 11400000, guid: 9fe6e2ae53bed66458c38e11f19f02fa, type: 2}
+    - target: {fileID: 3230768083283520689, guid: 74ad3ae978d85c541b6746c80454bc72, type: 3}
+      propertyPath: fortuneRegions.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3230768083283520689, guid: 74ad3ae978d85c541b6746c80454bc72, type: 3}
+      propertyPath: fortuneRegions.Array.data[0].displayName
+      value: Sleep Well
+      objectReference: {fileID: 0}
+    - target: {fileID: 3230768083283520689, guid: 74ad3ae978d85c541b6746c80454bc72, type: 3}
+      propertyPath: fortuneRegions.Array.data[0].fortuneType
+      value: 
+      objectReference: {fileID: 11400000, guid: ce99177517600004d8c5eae674019253, type: 2}
+    - target: {fileID: 3230768083283520689, guid: 74ad3ae978d85c541b6746c80454bc72, type: 3}
+      propertyPath: fortuneRegions.Array.data[1].displayName
+      value: Coin Flip
+      objectReference: {fileID: 0}
+    - target: {fileID: 3230768083283520689, guid: 74ad3ae978d85c541b6746c80454bc72, type: 3}
+      propertyPath: fortuneRegions.Array.data[1].fortuneType
+      value: 
+      objectReference: {fileID: 11400000, guid: 75125fc3d87bd5549994e076c90bb4a8, type: 2}
+    - target: {fileID: 3230768083283520689, guid: 74ad3ae978d85c541b6746c80454bc72, type: 3}
+      propertyPath: fortuneRegions.Array.data[2].displayName
+      value: Black Cat
+      objectReference: {fileID: 0}
+    - target: {fileID: 3230768083283520689, guid: 74ad3ae978d85c541b6746c80454bc72, type: 3}
+      propertyPath: fortuneRegions.Array.data[2].fortuneType
+      value: 
+      objectReference: {fileID: 11400000, guid: 136b19323ab057e4a8ad1f2158865785, type: 2}
+    - target: {fileID: 3230768083283520689, guid: 74ad3ae978d85c541b6746c80454bc72, type: 3}
+      propertyPath: fortuneRegions.Array.data[3].displayName
+      value: The Tower
+      objectReference: {fileID: 0}
+    - target: {fileID: 3230768083283520689, guid: 74ad3ae978d85c541b6746c80454bc72, type: 3}
+      propertyPath: fortuneRegions.Array.data[3].fortuneType
+      value: 
+      objectReference: {fileID: 11400000, guid: 06aaa5c4142c90344b5710c3644e2078, type: 2}
+    - target: {fileID: 3230768083283520689, guid: 74ad3ae978d85c541b6746c80454bc72, type: 3}
+      propertyPath: fortuneRegions.Array.data[4].displayName
+      value: Coin Flip
+      objectReference: {fileID: 0}
+    - target: {fileID: 3230768083283520689, guid: 74ad3ae978d85c541b6746c80454bc72, type: 3}
+      propertyPath: fortuneRegions.Array.data[4].fortuneType
+      value: 
+      objectReference: {fileID: 11400000, guid: 340cc07cb83d3b345a303a61655ad2dd, type: 2}
+    - target: {fileID: 3230768083283520689, guid: 74ad3ae978d85c541b6746c80454bc72, type: 3}
+      propertyPath: fortuneRegions.Array.data[1].topLeftBorder.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3230768083283520689, guid: 74ad3ae978d85c541b6746c80454bc72, type: 3}
+      propertyPath: fortuneRegions.Array.data[1].topLeftBorder.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3230768083283520689, guid: 74ad3ae978d85c541b6746c80454bc72, type: 3}
+      propertyPath: fortuneRegions.Array.data[2].topLeftBorder.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3230768083283520689, guid: 74ad3ae978d85c541b6746c80454bc72, type: 3}
+      propertyPath: fortuneRegions.Array.data[2].topLeftBorder.y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3230768083283520689, guid: 74ad3ae978d85c541b6746c80454bc72, type: 3}
+      propertyPath: fortuneRegions.Array.data[3].topLeftBorder.x
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3230768083283520689, guid: 74ad3ae978d85c541b6746c80454bc72, type: 3}
+      propertyPath: fortuneRegions.Array.data[3].topLeftBorder.y
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3230768083283520689, guid: 74ad3ae978d85c541b6746c80454bc72, type: 3}
+      propertyPath: fortuneRegions.Array.data[4].topLeftBorder.x
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3230768083283520689, guid: 74ad3ae978d85c541b6746c80454bc72, type: 3}
+      propertyPath: fortuneRegions.Array.data[4].topLeftBorder.y
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3230768083283520689, guid: 74ad3ae978d85c541b6746c80454bc72, type: 3}
+      propertyPath: fortuneRegions.Array.data[0].bottomRightBorder.x
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 3230768083283520689, guid: 74ad3ae978d85c541b6746c80454bc72, type: 3}
+      propertyPath: fortuneRegions.Array.data[0].bottomRightBorder.y
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 3230768083283520689, guid: 74ad3ae978d85c541b6746c80454bc72, type: 3}
+      propertyPath: fortuneRegions.Array.data[1].bottomRightBorder.x
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 3230768083283520689, guid: 74ad3ae978d85c541b6746c80454bc72, type: 3}
+      propertyPath: fortuneRegions.Array.data[1].bottomRightBorder.y
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 3230768083283520689, guid: 74ad3ae978d85c541b6746c80454bc72, type: 3}
+      propertyPath: fortuneRegions.Array.data[2].bottomRightBorder.x
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 3230768083283520689, guid: 74ad3ae978d85c541b6746c80454bc72, type: 3}
+      propertyPath: fortuneRegions.Array.data[2].bottomRightBorder.y
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 3230768083283520689, guid: 74ad3ae978d85c541b6746c80454bc72, type: 3}
+      propertyPath: fortuneRegions.Array.data[3].bottomRightBorder.x
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3230768083283520689, guid: 74ad3ae978d85c541b6746c80454bc72, type: 3}
+      propertyPath: fortuneRegions.Array.data[3].bottomRightBorder.y
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3230768083283520689, guid: 74ad3ae978d85c541b6746c80454bc72, type: 3}
+      propertyPath: fortuneRegions.Array.data[4].bottomRightBorder.x
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3230768083283520689, guid: 74ad3ae978d85c541b6746c80454bc72, type: 3}
+      propertyPath: fortuneRegions.Array.data[4].bottomRightBorder.y
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 3701697325712446305, guid: 74ad3ae978d85c541b6746c80454bc72, type: 3}
       propertyPath: m_Name
       value: Sam Variant

@@ -15,4 +15,4 @@ MonoBehaviour:
   fortuneName: Cheers
   fortuneDescription: "The next toast you raise will be to someone else\u2019s misfortune."
   fortuneSprite: {fileID: 0}
-  fortuneColor: {r: 0.9647059, g: 0.40875652, b: 0.18039216, a: 1}
+  fortuneColor: {r: 0.7924528, g: 0.4457479, b: 0.30277678, a: 1}

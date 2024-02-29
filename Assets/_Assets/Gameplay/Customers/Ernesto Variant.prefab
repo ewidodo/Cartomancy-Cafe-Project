@@ -40,6 +40,118 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: 71abdd8e785f2c441be8c90191d45755, type: 3}
+    - target: {fileID: 3230768083283520689, guid: 74ad3ae978d85c541b6746c80454bc72, type: 3}
+      propertyPath: defaultFortune
+      value: 
+      objectReference: {fileID: 11400000, guid: 313fe88a0a3eabd41888c693f2ad0807, type: 2}
+    - target: {fileID: 3230768083283520689, guid: 74ad3ae978d85c541b6746c80454bc72, type: 3}
+      propertyPath: fortuneRegions.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3230768083283520689, guid: 74ad3ae978d85c541b6746c80454bc72, type: 3}
+      propertyPath: fortuneRegions.Array.data[0].displayName
+      value: Family Relations
+      objectReference: {fileID: 0}
+    - target: {fileID: 3230768083283520689, guid: 74ad3ae978d85c541b6746c80454bc72, type: 3}
+      propertyPath: fortuneRegions.Array.data[0].fortuneType
+      value: 
+      objectReference: {fileID: 11400000, guid: eb1d95d2570454841ad41f1f4cda8b78, type: 2}
+    - target: {fileID: 3230768083283520689, guid: 74ad3ae978d85c541b6746c80454bc72, type: 3}
+      propertyPath: fortuneRegions.Array.data[1].displayName
+      value: The Tower
+      objectReference: {fileID: 0}
+    - target: {fileID: 3230768083283520689, guid: 74ad3ae978d85c541b6746c80454bc72, type: 3}
+      propertyPath: fortuneRegions.Array.data[1].fortuneType
+      value: 
+      objectReference: {fileID: 11400000, guid: 06aaa5c4142c90344b5710c3644e2078, type: 2}
+    - target: {fileID: 3230768083283520689, guid: 74ad3ae978d85c541b6746c80454bc72, type: 3}
+      propertyPath: fortuneRegions.Array.data[2].displayName
+      value: Cheers
+      objectReference: {fileID: 0}
+    - target: {fileID: 3230768083283520689, guid: 74ad3ae978d85c541b6746c80454bc72, type: 3}
+      propertyPath: fortuneRegions.Array.data[2].fortuneType
+      value: 
+      objectReference: {fileID: 11400000, guid: 09180f929c22cd542adfb5b1d39906e8, type: 2}
+    - target: {fileID: 3230768083283520689, guid: 74ad3ae978d85c541b6746c80454bc72, type: 3}
+      propertyPath: fortuneRegions.Array.data[3].displayName
+      value: Elegance
+      objectReference: {fileID: 0}
+    - target: {fileID: 3230768083283520689, guid: 74ad3ae978d85c541b6746c80454bc72, type: 3}
+      propertyPath: fortuneRegions.Array.data[3].fortuneType
+      value: 
+      objectReference: {fileID: 11400000, guid: 25409b1e42836704495e4f4ef06fc6cf, type: 2}
+    - target: {fileID: 3230768083283520689, guid: 74ad3ae978d85c541b6746c80454bc72, type: 3}
+      propertyPath: fortuneRegions.Array.data[4].displayName
+      value: Artsy!
+      objectReference: {fileID: 0}
+    - target: {fileID: 3230768083283520689, guid: 74ad3ae978d85c541b6746c80454bc72, type: 3}
+      propertyPath: fortuneRegions.Array.data[4].fortuneType
+      value: 
+      objectReference: {fileID: 11400000, guid: 75125fc3d87bd5549994e076c90bb4a8, type: 2}
+    - target: {fileID: 3230768083283520689, guid: 74ad3ae978d85c541b6746c80454bc72, type: 3}
+      propertyPath: fortuneRegions.Array.data[1].topLeftBorder.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3230768083283520689, guid: 74ad3ae978d85c541b6746c80454bc72, type: 3}
+      propertyPath: fortuneRegions.Array.data[1].topLeftBorder.y
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3230768083283520689, guid: 74ad3ae978d85c541b6746c80454bc72, type: 3}
+      propertyPath: fortuneRegions.Array.data[2].topLeftBorder.x
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3230768083283520689, guid: 74ad3ae978d85c541b6746c80454bc72, type: 3}
+      propertyPath: fortuneRegions.Array.data[2].topLeftBorder.y
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3230768083283520689, guid: 74ad3ae978d85c541b6746c80454bc72, type: 3}
+      propertyPath: fortuneRegions.Array.data[3].topLeftBorder.y
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3230768083283520689, guid: 74ad3ae978d85c541b6746c80454bc72, type: 3}
+      propertyPath: fortuneRegions.Array.data[4].topLeftBorder.x
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3230768083283520689, guid: 74ad3ae978d85c541b6746c80454bc72, type: 3}
+      propertyPath: fortuneRegions.Array.data[0].bottomRightBorder.x
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 3230768083283520689, guid: 74ad3ae978d85c541b6746c80454bc72, type: 3}
+      propertyPath: fortuneRegions.Array.data[0].bottomRightBorder.y
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3230768083283520689, guid: 74ad3ae978d85c541b6746c80454bc72, type: 3}
+      propertyPath: fortuneRegions.Array.data[1].bottomRightBorder.x
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3230768083283520689, guid: 74ad3ae978d85c541b6746c80454bc72, type: 3}
+      propertyPath: fortuneRegions.Array.data[1].bottomRightBorder.y
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3230768083283520689, guid: 74ad3ae978d85c541b6746c80454bc72, type: 3}
+      propertyPath: fortuneRegions.Array.data[2].bottomRightBorder.x
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 3230768083283520689, guid: 74ad3ae978d85c541b6746c80454bc72, type: 3}
+      propertyPath: fortuneRegions.Array.data[2].bottomRightBorder.y
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3230768083283520689, guid: 74ad3ae978d85c541b6746c80454bc72, type: 3}
+      propertyPath: fortuneRegions.Array.data[3].bottomRightBorder.x
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 3230768083283520689, guid: 74ad3ae978d85c541b6746c80454bc72, type: 3}
+      propertyPath: fortuneRegions.Array.data[3].bottomRightBorder.y
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 3230768083283520689, guid: 74ad3ae978d85c541b6746c80454bc72, type: 3}
+      propertyPath: fortuneRegions.Array.data[4].bottomRightBorder.x
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3230768083283520689, guid: 74ad3ae978d85c541b6746c80454bc72, type: 3}
+      propertyPath: fortuneRegions.Array.data[4].bottomRightBorder.y
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 3701697325712446305, guid: 74ad3ae978d85c541b6746c80454bc72, type: 3}
       propertyPath: m_Name
       value: Ernesto Variant

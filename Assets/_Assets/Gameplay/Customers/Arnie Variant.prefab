@@ -40,6 +40,122 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: c2bde0973ba5a4144b0e7986279014a1, type: 3}
+    - target: {fileID: 3230768083283520689, guid: 74ad3ae978d85c541b6746c80454bc72, type: 3}
+      propertyPath: defaultFortune
+      value: 
+      objectReference: {fileID: 11400000, guid: 75125fc3d87bd5549994e076c90bb4a8, type: 2}
+    - target: {fileID: 3230768083283520689, guid: 74ad3ae978d85c541b6746c80454bc72, type: 3}
+      propertyPath: fortuneRegions.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3230768083283520689, guid: 74ad3ae978d85c541b6746c80454bc72, type: 3}
+      propertyPath: fortuneRegions.Array.data[0].displayName
+      value: Elegance
+      objectReference: {fileID: 0}
+    - target: {fileID: 3230768083283520689, guid: 74ad3ae978d85c541b6746c80454bc72, type: 3}
+      propertyPath: fortuneRegions.Array.data[0].fortuneType
+      value: 
+      objectReference: {fileID: 11400000, guid: 25409b1e42836704495e4f4ef06fc6cf, type: 2}
+    - target: {fileID: 3230768083283520689, guid: 74ad3ae978d85c541b6746c80454bc72, type: 3}
+      propertyPath: fortuneRegions.Array.data[1].displayName
+      value: Eggs
+      objectReference: {fileID: 0}
+    - target: {fileID: 3230768083283520689, guid: 74ad3ae978d85c541b6746c80454bc72, type: 3}
+      propertyPath: fortuneRegions.Array.data[1].fortuneType
+      value: 
+      objectReference: {fileID: 11400000, guid: bdc45c27d5657154bb7cd96cb86dbe63, type: 2}
+    - target: {fileID: 3230768083283520689, guid: 74ad3ae978d85c541b6746c80454bc72, type: 3}
+      propertyPath: fortuneRegions.Array.data[2].displayName
+      value: Winds of Change
+      objectReference: {fileID: 0}
+    - target: {fileID: 3230768083283520689, guid: 74ad3ae978d85c541b6746c80454bc72, type: 3}
+      propertyPath: fortuneRegions.Array.data[2].fortuneType
+      value: 
+      objectReference: {fileID: 11400000, guid: bc4c8815b59ff834796d3fd500a2988c, type: 2}
+    - target: {fileID: 3230768083283520689, guid: 74ad3ae978d85c541b6746c80454bc72, type: 3}
+      propertyPath: fortuneRegions.Array.data[3].displayName
+      value: Rainstorm
+      objectReference: {fileID: 0}
+    - target: {fileID: 3230768083283520689, guid: 74ad3ae978d85c541b6746c80454bc72, type: 3}
+      propertyPath: fortuneRegions.Array.data[3].fortuneType
+      value: 
+      objectReference: {fileID: 11400000, guid: 313fe88a0a3eabd41888c693f2ad0807, type: 2}
+    - target: {fileID: 3230768083283520689, guid: 74ad3ae978d85c541b6746c80454bc72, type: 3}
+      propertyPath: fortuneRegions.Array.data[4].displayName
+      value: Chance Meeting
+      objectReference: {fileID: 0}
+    - target: {fileID: 3230768083283520689, guid: 74ad3ae978d85c541b6746c80454bc72, type: 3}
+      propertyPath: fortuneRegions.Array.data[4].fortuneType
+      value: 
+      objectReference: {fileID: 11400000, guid: 9fe6e2ae53bed66458c38e11f19f02fa, type: 2}
+    - target: {fileID: 3230768083283520689, guid: 74ad3ae978d85c541b6746c80454bc72, type: 3}
+      propertyPath: fortuneRegions.Array.data[1].topLeftBorder.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3230768083283520689, guid: 74ad3ae978d85c541b6746c80454bc72, type: 3}
+      propertyPath: fortuneRegions.Array.data[1].topLeftBorder.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3230768083283520689, guid: 74ad3ae978d85c541b6746c80454bc72, type: 3}
+      propertyPath: fortuneRegions.Array.data[2].topLeftBorder.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3230768083283520689, guid: 74ad3ae978d85c541b6746c80454bc72, type: 3}
+      propertyPath: fortuneRegions.Array.data[2].topLeftBorder.y
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3230768083283520689, guid: 74ad3ae978d85c541b6746c80454bc72, type: 3}
+      propertyPath: fortuneRegions.Array.data[3].topLeftBorder.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3230768083283520689, guid: 74ad3ae978d85c541b6746c80454bc72, type: 3}
+      propertyPath: fortuneRegions.Array.data[3].topLeftBorder.y
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3230768083283520689, guid: 74ad3ae978d85c541b6746c80454bc72, type: 3}
+      propertyPath: fortuneRegions.Array.data[4].topLeftBorder.x
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 3230768083283520689, guid: 74ad3ae978d85c541b6746c80454bc72, type: 3}
+      propertyPath: fortuneRegions.Array.data[0].bottomRightBorder.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3230768083283520689, guid: 74ad3ae978d85c541b6746c80454bc72, type: 3}
+      propertyPath: fortuneRegions.Array.data[0].bottomRightBorder.y
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 3230768083283520689, guid: 74ad3ae978d85c541b6746c80454bc72, type: 3}
+      propertyPath: fortuneRegions.Array.data[1].bottomRightBorder.x
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 3230768083283520689, guid: 74ad3ae978d85c541b6746c80454bc72, type: 3}
+      propertyPath: fortuneRegions.Array.data[1].bottomRightBorder.y
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3230768083283520689, guid: 74ad3ae978d85c541b6746c80454bc72, type: 3}
+      propertyPath: fortuneRegions.Array.data[2].bottomRightBorder.x
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 3230768083283520689, guid: 74ad3ae978d85c541b6746c80454bc72, type: 3}
+      propertyPath: fortuneRegions.Array.data[2].bottomRightBorder.y
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3230768083283520689, guid: 74ad3ae978d85c541b6746c80454bc72, type: 3}
+      propertyPath: fortuneRegions.Array.data[3].bottomRightBorder.x
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 3230768083283520689, guid: 74ad3ae978d85c541b6746c80454bc72, type: 3}
+      propertyPath: fortuneRegions.Array.data[3].bottomRightBorder.y
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 3230768083283520689, guid: 74ad3ae978d85c541b6746c80454bc72, type: 3}
+      propertyPath: fortuneRegions.Array.data[4].bottomRightBorder.x
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 3230768083283520689, guid: 74ad3ae978d85c541b6746c80454bc72, type: 3}
+      propertyPath: fortuneRegions.Array.data[4].bottomRightBorder.y
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 3701697325712446305, guid: 74ad3ae978d85c541b6746c80454bc72, type: 3}
       propertyPath: m_Name
       value: Arnie Variant

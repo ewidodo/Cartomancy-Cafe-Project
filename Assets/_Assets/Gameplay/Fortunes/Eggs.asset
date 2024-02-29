@@ -16,4 +16,4 @@ MonoBehaviour:
   fortuneDescription: "Get an extra dozen eggs at the grocery store next time you
     go. You\u2019re going to need them."
   fortuneSprite: {fileID: 21300000, guid: fb795059cffb22842bdc6780b8b6afa1, type: 3}
-  fortuneColor: {r: 0.8396226, g: 0.7251459, b: 0.52674437, a: 1}
+  fortuneColor: {r: 0.9528302, g: 0.77850044, b: 0.4719206, a: 1}

@@ -15,4 +15,4 @@ MonoBehaviour:
   fortuneName: Coin Flip
   fortuneDescription: Call heads the next time you flip a coin.
   fortuneSprite: {fileID: 0}
-  fortuneColor: {r: 0.60798764, g: 0.6226415, b: 0, a: 1}
+  fortuneColor: {r: 0.30196247, g: 0.5377358, b: 0.23589353, a: 1}
