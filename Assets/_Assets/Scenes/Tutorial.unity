@@ -393,7 +393,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.94509804, g: 0.8039216, b: 0.5372549, a: 1}
   m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -835,10 +835,11 @@ MonoBehaviour:
       m_Calls: []
   m_text: "Welcome to the Ace of Cups Cafe!\n\nAt our cafe, customers order both
     a fortune and a drink.\n\nWhen a customer orders a drink:\n\t- Consult the                
-    to find out the recipes for our base drinks.\n\n\t- Add any additional drinks
-    they ask for.\n\t- Customers will also ask for a mystery ingredient. Figure out
-    what they want!\n\t- When you think you've given them the correct order, hit            
-    !\n\nWhat ingredients you put in the drink determines what fortune they get!"
+    to find out the recipes for our base drinks.\n\n\t- Add any additional ingredients
+    at the customer's request.\n\t- Sometimes they'll ask for a mystery ingredient.
+    \n\t  Use their words as a clue to deduce what they're asking for!\n\t- When
+    you think you've given them the correct order, hit             !\n\nWhat ingredients
+    you put in the drink determines what fortune they get!"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 6a01d7c03f687854981700bdcbdcabc7, type: 2}
   m_sharedMaterial: {fileID: -622886877429086213, guid: 6a01d7c03f687854981700bdcbdcabc7, type: 2}
@@ -865,7 +866,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 27.9
+  m_fontSize: 25.75
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -928,8 +929,24 @@ PrefabInstance:
       value: TutorialText
       objectReference: {fileID: 0}
     - target: {fileID: 6974480102220197785, guid: 8eb0ea4b18fcd704fa805f8e37f51fe1, type: 3}
+      propertyPath: m_fontColor.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6974480102220197785, guid: 8eb0ea4b18fcd704fa805f8e37f51fe1, type: 3}
+      propertyPath: m_fontColor.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6974480102220197785, guid: 8eb0ea4b18fcd704fa805f8e37f51fe1, type: 3}
+      propertyPath: m_fontColor.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6974480102220197785, guid: 8eb0ea4b18fcd704fa805f8e37f51fe1, type: 3}
       propertyPath: m_RaycastTarget
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6974480102220197785, guid: 8eb0ea4b18fcd704fa805f8e37f51fe1, type: 3}
+      propertyPath: m_fontColor32.rgba
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 7100131318929246506, guid: 8eb0ea4b18fcd704fa805f8e37f51fe1, type: 3}
       propertyPath: m_Pivot.x
@@ -1055,7 +1072,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -336, y: 0.0014076}
+  m_AnchoredPosition: {x: -360, y: 21}
   m_SizeDelta: {x: 119.6672, y: 67.2828}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1369193138
@@ -1291,7 +1308,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 289, y: -127}
+  m_AnchoredPosition: {x: 213, y: -137}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1965403821

@@ -1,4 +1,4 @@
 Event	ID	Name			Wwise Object Path	Notes
-	1547344929	CreditsSceneUnloaded			\Default Work Unit\CreditsSceneUnloaded	
-	3815450896	CreditsSceneLoaded			\Default Work Unit\CreditsSceneLoaded	
+	1547344929	CreditsSceneUnloaded			\Default Work Unit\SceneManagement\CreditsSceneUnloaded	
+	3815450896	CreditsSceneLoaded			\Default Work Unit\SceneManagement\CreditsSceneLoaded	
 

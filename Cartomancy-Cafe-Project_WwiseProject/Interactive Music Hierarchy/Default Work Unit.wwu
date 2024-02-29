@@ -39,7 +39,7 @@
 										<MusicTransition Name="ToInGame" ID="{F6F87101-3B75-407F-AF19-76EEC2FB338E}">
 											<PropertyList>
 												<Property Name="DestinationContextType" Type="int16" Value="2"/>
-												<Property Name="ExitSourceAt" Type="int16" Value="2"/>
+												<Property Name="ExitSourceAt" Type="int16" Value="3"/>
 												<Property Name="SourceContextType" Type="int16" Value="2"/>
 												<Property Name="UseTransitionObject" Type="bool" Value="True"/>
 											</PropertyList>
@@ -58,7 +58,7 @@
 										<MusicTransition Name="ToMainMenu" ID="{D65633D8-204E-446C-8C08-4D6012C8F9C8}">
 											<PropertyList>
 												<Property Name="DestinationContextType" Type="int16" Value="2"/>
-												<Property Name="ExitSourceAt" Type="int16" Value="2"/>
+												<Property Name="ExitSourceAt" Type="int16" Value="3"/>
 												<Property Name="SourceContextType" Type="int16" Value="2"/>
 												<Property Name="UseTransitionObject" Type="bool" Value="True"/>
 											</PropertyList>

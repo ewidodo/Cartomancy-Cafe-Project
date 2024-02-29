@@ -32,23 +32,7 @@
 							</ChildrenList>
 						</Event>
 						<Event Name="CreditsSceneUnloaded" ID="{59108DF1-5A39-4449-B3BC-A05CB7C4174C}"/>
-						<Event Name="GameplaySceneLoaded" ID="{A7272602-FFCA-4FFF-B361-8C7A25167944}"/>
-						<Event Name="GameplaySceneUnloaded" ID="{159726D5-57B1-4717-A80D-3D58A5C03CC4}">
-							<ChildrenList>
-								<Action Name="" ID="{014D1A60-616F-4464-9A3D-D9F8C3F80401}" ShortID="1016052170">
-									<PropertyList>
-										<Property Name="ActionType" Type="int16" Value="22"/>
-									</PropertyList>
-									<ReferenceList>
-										<Reference Name="Target">
-											<ObjectRef Name="MainMenu" ID="{CACA3826-3913-47EB-B10D-C3E05259CC8C}" WorkUnitID="{39DB78CB-3E3D-40BA-86FB-77B7414B9269}"/>
-										</Reference>
-									</ReferenceList>
-								</Action>
-							</ChildrenList>
-						</Event>
-						<Event Name="CreditsSceneLoaded" ID="{5E6D1DD2-A9B8-4994-ACBB-D24F7ED9247C}"/>
-						<Event Name="MainMenuSceneUnloaded" ID="{BC42F10E-4D70-4F5A-909C-961C0F8143C7}">
+						<Event Name="GameplaySceneLoaded" ID="{A7272602-FFCA-4FFF-B361-8C7A25167944}">
 							<ChildrenList>
 								<Action Name="" ID="{65BF8973-4DCC-4A25-9BCF-4BDFC3EA16BC}" ShortID="172689345">
 									<PropertyList>
@@ -62,6 +46,22 @@
 								</Action>
 							</ChildrenList>
 						</Event>
+						<Event Name="GameplaySceneUnloaded" ID="{159726D5-57B1-4717-A80D-3D58A5C03CC4}"/>
+						<Event Name="CreditsSceneLoaded" ID="{5E6D1DD2-A9B8-4994-ACBB-D24F7ED9247C}">
+							<ChildrenList>
+								<Action Name="" ID="{014D1A60-616F-4464-9A3D-D9F8C3F80401}" ShortID="1016052170">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="22"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="MainMenu" ID="{CACA3826-3913-47EB-B10D-C3E05259CC8C}" WorkUnitID="{39DB78CB-3E3D-40BA-86FB-77B7414B9269}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="MainMenuSceneUnloaded" ID="{BC42F10E-4D70-4F5A-909C-961C0F8143C7}"/>
 						<Event Name="Init" ID="{993A7B77-9027-4C70-941F-0F9D2D83100A}">
 							<ChildrenList>
 								<Action Name="" ID="{6F4D1C07-6809-4B04-8F55-8424AE4FAEC0}" ShortID="667368882">
