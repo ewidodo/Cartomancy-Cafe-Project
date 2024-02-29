@@ -604,11 +604,11 @@
 												</Reference>
 											</ReferenceList>
 											<ChildrenList>
-												<AudioFileSource Name="CartomancyMainMenu_NoMelody" ID="{132AA40A-9BD7-4CD7-9308-C7887799EFE2}">
+												<AudioFileSource Name="CartomancyInGame_NoMelody" ID="{D3353FB8-F414-4D47-A77D-71AB462D72AA}">
 													<Language>SFX</Language>
-													<AudioFile>CartomancyMainMenu_NoMelody.wav</AudioFile>
+													<AudioFile>CartomancyInGame_NoMelody.wav</AudioFile>
 													<MediaIDList>
-														<MediaID ID="625777191"/>
+														<MediaID ID="642369818"/>
 													</MediaIDList>
 												</AudioFileSource>
 											</ChildrenList>
@@ -621,13 +621,13 @@
 																	<ObjectList Name="Clips">
 																		<Reference>
 																			<Local>
-																				<MusicClip Name="CartomancyMainMenu_NoMelody" ID="{1B690C34-1E3E-48FA-8B6C-C1ABE7EF837E}">
+																				<MusicClip Name="CartomancyInGame_NoMelody" ID="{29CA2383-B00C-49EE-AEA7-DB3B6DC2287A}">
 																					<PropertyList>
-																						<Property Name="EndTrimOffset" Type="Real64" Value="51818.1875"/>
+																						<Property Name="EndTrimOffset" Type="Real64" Value="51562.5"/>
 																						<Property Name="FadeInMode" Type="int16" Value="0"/>
 																						<Property Name="FadeOutMode" Type="int16" Value="0"/>
 																					</PropertyList>
-																					<AudioSourceRef Name="CartomancyMainMenu_NoMelody" ID="{132AA40A-9BD7-4CD7-9308-C7887799EFE2}"/>
+																					<AudioSourceRef Name="CartomancyInGame_NoMelody" ID="{D3353FB8-F414-4D47-A77D-71AB462D72AA}"/>
 																				</MusicClip>
 																			</Local>
 																		</Reference>
