@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class ToggleActions : MonoBehaviour
 {
@@ -9,10 +10,12 @@ public class ToggleActions : MonoBehaviour
         if (PlayerPrefs.GetInt("Fullscreen") == 1)
         {
             Screen.fullScreenMode = FullScreenMode.ExclusiveFullScreen;
+            GetComponent<Toggle>().isOn = true;
         }
         else if (PlayerPrefs.GetInt("Fullscreen") == 0)
         {
             Screen.fullScreenMode = FullScreenMode.Windowed;
+            GetComponent<Toggle>().isOn = false;
         }
     }
 
