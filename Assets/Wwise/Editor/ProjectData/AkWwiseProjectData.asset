@@ -118,7 +118,7 @@ MonoBehaviour:
     ParentPath: SoundBanks\Default Work Unit
     guid: 01b0af0ec7ad604696383e25c56eb617
     GuidInternal: 
-    m_lastTime: -8584927968451289245
+    m_lastTime: -8584923546420509255
     List:
     - name: Credits
       guid: 8c1098d2a3514849acc01f0a12a1c70e
@@ -202,8 +202,48 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: 423b03fbe80d9141b98abfeb44c02c12
     GuidInternal: 
-    m_lastTime: -8584924184138399891
+    m_lastTime: -8584923566654234567
     List:
+    - name: Book
+      guid: b1e2f469f8639d45b1d4131964dcf808
+      id: 1761501022
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 423b03fbe80d9141b98abfeb44c02c12
+      - ElementName: SFX
+        ObjectType: 4
+        guid: 5b64ee6f2e009d48b8bde82ba4002f87
+      - ElementName: Book
+        ObjectType: 3
+        guid: b1e2f469f8639d45b1d4131964dcf808
+      Path: Events\Default Work Unit\SFX\Book
+      maxAttenuation: 0
+      maxDuration: 0.17215419
+      minDuration: 0.16836734
+    - name: Card
+      guid: 235561e18f4ad9459659214561eca680
+      id: 4189504227
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 423b03fbe80d9141b98abfeb44c02c12
+      - ElementName: SFX
+        ObjectType: 4
+        guid: 5b64ee6f2e009d48b8bde82ba4002f87
+      - ElementName: Card
+        ObjectType: 3
+        guid: 235561e18f4ad9459659214561eca680
+      Path: Events\Default Work Unit\SFX\Card
+      maxAttenuation: 0
+      maxDuration: 0.35231292
+      minDuration: 0.20240363
     - name: CreditsSceneLoaded
       guid: d21d6d5eb8a99449acbbd24f7ed9247c
       id: 3815450896
@@ -262,8 +302,8 @@ MonoBehaviour:
         guid: 022627a7caffff4fb3618c7a25167944
       Path: Events\Default Work Unit\SceneManagement\GameplaySceneLoaded
       maxAttenuation: 0
-      maxDuration: 0
-      minDuration: 0
+      maxDuration: 68.6437
+      minDuration: 68.6437
     - name: GameplaySceneUnloaded
       guid: d5269715b1571747a80d3d58a5c03cc4
       id: 1518434845
@@ -344,9 +384,9 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
-    - name: New_Event
-      guid: da4f4f803f9b52429bd3d9eb02f29c98
-      id: 3050945240
+    - name: Pause
+      guid: 34a0c7d03f60f549bd18e88b09b4ad84
+      id: 3092587493
       PathAndIcons:
       - ElementName: Events
         ObjectType: 5
@@ -354,13 +394,33 @@ MonoBehaviour:
       - ElementName: Default Work Unit
         ObjectType: 12
         guid: 423b03fbe80d9141b98abfeb44c02c12
-      - ElementName: New_Event
+      - ElementName: Pause
         ObjectType: 3
-        guid: da4f4f803f9b52429bd3d9eb02f29c98
-      Path: Events\Default Work Unit\New_Event
+        guid: 34a0c7d03f60f549bd18e88b09b4ad84
+      Path: Events\Default Work Unit\Pause
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0
+      minDuration: 0
+    - name: Pour
+      guid: be0170f3fca525408a0fe440899de778
+      id: 1591902251
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 423b03fbe80d9141b98abfeb44c02c12
+      - ElementName: SFX
+        ObjectType: 4
+        guid: 5b64ee6f2e009d48b8bde82ba4002f87
+      - ElementName: Pour
+        ObjectType: 3
+        guid: be0170f3fca525408a0fe440899de778
+      Path: Events\Default Work Unit\SFX\Pour
+      maxAttenuation: 0
+      maxDuration: 1.3666893
+      minDuration: 1.3666893
     - name: SceneManagement
       guid: 4ad41ca3a79ce445a2ddaf2d748699ab
       id: 3009364058
@@ -378,9 +438,9 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
-    - name: Test
-      guid: c64a0b115e300f439719258023aa043d
-      id: 3157003241
+    - name: SFX
+      guid: 5b64ee6f2e009d48b8bde82ba4002f87
+      id: 393239870
       PathAndIcons:
       - ElementName: Events
         ObjectType: 5
@@ -388,13 +448,50 @@ MonoBehaviour:
       - ElementName: Default Work Unit
         ObjectType: 12
         guid: 423b03fbe80d9141b98abfeb44c02c12
-      - ElementName: Test
-        ObjectType: 3
-        guid: c64a0b115e300f439719258023aa043d
-      Path: Events\Default Work Unit\Test
+      - ElementName: SFX
+        ObjectType: 4
+        guid: 5b64ee6f2e009d48b8bde82ba4002f87
+      Path: Events\Default Work Unit\SFX
       maxAttenuation: 0
-      maxDuration: 0.99106574
-      minDuration: 0.99106574
+      maxDuration: -1
+      minDuration: -1
+    - name: Submit
+      guid: be444938beb73d4ebf0321b805449aa9
+      id: 2320974141
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 423b03fbe80d9141b98abfeb44c02c12
+      - ElementName: SFX
+        ObjectType: 4
+        guid: 5b64ee6f2e009d48b8bde82ba4002f87
+      - ElementName: Submit
+        ObjectType: 3
+        guid: be444938beb73d4ebf0321b805449aa9
+      Path: Events\Default Work Unit\SFX\Submit
+      maxAttenuation: 0
+      maxDuration: 0.7813152
+      minDuration: 0.25562358
+    - name: Unpause
+      guid: d064db67de7a93429d7de58ae16899cc
+      id: 3412868374
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 423b03fbe80d9141b98abfeb44c02c12
+      - ElementName: Unpause
+        ObjectType: 3
+        guid: d064db67de7a93429d7de58ae16899cc
+      Path: Events\Default Work Unit\Unpause
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
   RtpcWwu:
   - PhysicalPath: Game Parameters\Default Work Unit.wwu
     PathAndIcons:
@@ -574,7 +671,7 @@ MonoBehaviour:
     m_lastTime: -8584943366851152794
     List: []
   ExpandedFileSystemItemIds: 
-  ExpandedWaapiItemIds: 
+  ExpandedWaapiItemIds: 0500000006000000090000000e0000000f000000
   AutoSyncSelection: 0
   autoPopulateEnabled: 1
   currentDataSource: 0

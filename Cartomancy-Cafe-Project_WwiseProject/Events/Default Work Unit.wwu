@@ -35,7 +35,7 @@
 								<Action Name="" ID="{D98F2A64-7EAE-445B-A59A-100FB96ACDFF}" ShortID="563069185">
 									<ReferenceList>
 										<Reference Name="Target">
-											<ObjectRef Name="Ambience" ID="{E3FE0423-73EC-4935-8F61-99EE084BCE89}" WorkUnitID="{90AC13BD-24B4-4141-9BEF-0F4B77B371EB}"/>
+											<ObjectRef Name="Ambience Container" ID="{FBB7D63F-FD72-4E98-A87B-5C8EFA5684D1}" WorkUnitID="{90AC13BD-24B4-4141-9BEF-0F4B77B371EB}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>
@@ -50,7 +50,7 @@
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Target">
-											<ObjectRef Name="Ambience" ID="{E3FE0423-73EC-4935-8F61-99EE084BCE89}" WorkUnitID="{90AC13BD-24B4-4141-9BEF-0F4B77B371EB}"/>
+											<ObjectRef Name="Ambience Container" ID="{FBB7D63F-FD72-4E98-A87B-5C8EFA5684D1}" WorkUnitID="{90AC13BD-24B4-4141-9BEF-0F4B77B371EB}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>

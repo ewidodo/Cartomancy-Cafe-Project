@@ -60,20 +60,20 @@ public class FortuneDisplay : Singleton<FortuneDisplay>
     {
         Vector3 one = FortuneDisplayToScreenCoordinates(Vector3.one);
 
-        Debug.Log($"Vector points: {oldPos} and {newPos}");
+        //Debug.Log($"Vector points: {oldPos} and {newPos}");
         // Instantiate new arrow prefab
         Transform arrow = Instantiate(arrowPrefab, arrowParent);
 
         // Scale tail to distance between the two points
         float dist = Vector2.Distance(oldPos, newPos);
-        Debug.Log($"Vector distance: {dist}");
+        //Debug.Log($"Vector distance: {dist}");
         RectTransform arrowRect = arrow.GetChild(2).GetComponent<RectTransform>();
         arrowRect.sizeDelta = new Vector2(dist * one.x, arrowRect.sizeDelta.y);
 
         // Rotate to the angle between the two points
         float rot = Vector2.Angle(new Vector2(1, 0), newPos - oldPos); // y axis is flipped
         if (newPos.y > oldPos.y) rot *= -1;
-        Debug.Log($"Vector rotation: {rot}");
+        //Debug.Log($"Vector rotation: {rot}");
         arrow.localRotation = Quaternion.Euler(0, 0, rot);
 
         // Move arrow to newPos (anchor is at tip)

@@ -13,6 +13,8 @@ namespace AK
 {
     namespace EVENTS
     {
+        static const AkUniqueID BOOK = 1761501022U;
+        static const AkUniqueID CARD = 4189504227U;
         static const AkUniqueID CREDITSSCENELOADED = 3815450896U;
         static const AkUniqueID CREDITSSCENEUNLOADED = 1547344929U;
         static const AkUniqueID GAMEPLAYSCENELOADED = 2191945436U;
@@ -21,6 +23,8 @@ namespace AK
         static const AkUniqueID MAINMENUSCENELOADED = 2497386818U;
         static const AkUniqueID MAINMENUSCENEUNLOADED = 1917959679U;
         static const AkUniqueID PAUSE = 3092587493U;
+        static const AkUniqueID POUR = 1591902251U;
+        static const AkUniqueID SUBMIT = 2320974141U;
         static const AkUniqueID UNPAUSE = 3412868374U;
     } // namespace EVENTS
 

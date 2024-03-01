@@ -4,6 +4,13 @@ using UnityEngine;
 
 public class ButtonActions : MonoBehaviour
 {
+    public AK.Wwise.Event buttonPressSound;
+
+    public void PlayButtonSound()
+    {
+        buttonPressSound.Post(this.gameObject);
+    }
+
     public void UpdateRecipeTutorial()
     {
         if (TutorialManager.Instance != null) TutorialManager.Instance.readRecipeBook = true;

@@ -3350,8 +3350,41 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 3625798048205124061, guid: 7d99e3e655ad89b4ab511ccf518d775d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 4427007554119073368}
   m_SourcePrefab: {fileID: 100100000, guid: 7d99e3e655ad89b4ab511ccf518d775d, type: 3}
+--- !u!1 &4427007554119073367 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3625798048205124061, guid: 7d99e3e655ad89b4ab511ccf518d775d, type: 3}
+  m_PrefabInstance: {fileID: 4427007554119073366}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &4427007554119073368
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4427007554119073367}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9cc4232f50d011942a32764caf6a6e92, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  triggerList: ae8d9d44
+  useOtherObject: 0
+  data:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 1a53e7e85535cf54cbf48d81ba9fcf2f, type: 2}
+  decodeBank: 0
+  overrideLoadSetting: 0
+  loadAsynchronous: 0
+  saveDecodedBank: 0
+  unloadTriggerList: 958ca0ea
+  bankNameInternal: 
+  valueGuidInternal: 
 --- !u!1001 &4795985002884877064
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -9,25 +9,108 @@
 	</RootPaths>
 	<DialogueEvents/>
 	<SoundBanks>
-		<SoundBank Id="89505537" Type="User" Language="SFX" Hash="{0B8E0C3A-16FC-3D8D-63BB-27264C4F0800}">
+		<SoundBank Id="89505537" Type="User" Language="SFX" Hash="{845501DD-E915-F189-B6B7-82B2B7A15E59}">
 			<ShortName>Gameplay</ShortName>
 			<Path>Gameplay.bnk</Path>
 			<Media>
 				<File Id="211939400" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Ambience.wav</ShortName>
-					<CachePath>SFX/Ambience_818F3B66.wem</CachePath>
+					<CachePath>SFX/Ambience_FBC78EF0.wem</CachePath>
+				</File>
+				<File Id="238068912" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Card1.wav</ShortName>
+					<CachePath>SFX/Card1_818F3B66.wem</CachePath>
+				</File>
+				<File Id="330473102" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Submit2.wav</ShortName>
+					<CachePath>SFX/Submit2_818F3B66.wem</CachePath>
+				</File>
+				<File Id="414271480" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>CloseBook.wav</ShortName>
+					<CachePath>SFX/CloseBook_818F3B66.wem</CachePath>
+				</File>
+				<File Id="651868947" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Card4.wav</ShortName>
+					<CachePath>SFX/Card4_818F3B66.wem</CachePath>
+				</File>
+				<File Id="660825494" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Card2.wav</ShortName>
+					<CachePath>SFX/Card2_818F3B66.wem</CachePath>
+				</File>
+				<File Id="665845962" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Submit3.wav</ShortName>
+					<CachePath>SFX/Submit3_818F3B66.wem</CachePath>
+				</File>
+				<File Id="672252065" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Submit1.wav</ShortName>
+					<CachePath>SFX/Submit1_818F3B66.wem</CachePath>
+				</File>
+				<File Id="843558624" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>OpenBook.wav</ShortName>
+					<CachePath>SFX/OpenBook_818F3B66.wem</CachePath>
+				</File>
+				<File Id="945234134" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Card5.wav</ShortName>
+					<CachePath>SFX/Card5_818F3B66.wem</CachePath>
+				</File>
+				<File Id="1068946712" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Pour1.wav</ShortName>
+					<CachePath>SFX/Pour1_818F3B66.wem</CachePath>
+				</File>
+				<File Id="1071386084" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Card3.wav</ShortName>
+					<CachePath>SFX/Card3_818F3B66.wem</CachePath>
 				</File>
 			</Media>
+			<Plugins>
+				<ShareSets>
+					<Plugin Id="1008402193" Name="Low_Pass_20KHz" LibName="Wwise Parametric EQ" LibId="6881283"/>
+					<Plugin Id="2998002419" Name="Boost_3dB_10KHz" LibName="Wwise Parametric EQ" LibId="6881283"/>
+				</ShareSets>
+			</Plugins>
 			<Events>
-				<Event Id="2191945436" Name="GameplaySceneLoaded" DurationType="OneShot" DurationMin="68.6437" DurationMax="68.6437">
+				<Event Id="1761501022" Name="Book" DurationType="OneShot" DurationMin="0.16836734" DurationMax="0.17215419">
+					<MediaRefs>
+						<MediaRef Id="414271480"/>
+						<MediaRef Id="843558624"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="4189504227" Name="Card" DurationType="OneShot" DurationMin="0.20240363" DurationMax="0.35231292">
+					<MediaRefs>
+						<MediaRef Id="238068912"/>
+						<MediaRef Id="651868947"/>
+						<MediaRef Id="660825494"/>
+						<MediaRef Id="945234134"/>
+						<MediaRef Id="1071386084"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2191945436" Name="GameplaySceneLoaded" DurationType="Infinite">
 					<MediaRefs>
 						<MediaRef Id="211939400"/>
 					</MediaRefs>
+					<PluginRefs>
+						<ShareSets>
+							<PluginRef Id="1008402193"/>
+							<PluginRef Id="2998002419"/>
+						</ShareSets>
+					</PluginRefs>
 					<ActionSetState>
 						<ActionSetStateEntry GroupId="3103015060" Id="984691642" Name="InGame"/>
 					</ActionSetState>
 				</Event>
 				<Event Id="1518434845" Name="GameplaySceneUnloaded" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="1591902251" Name="Pour" DurationType="OneShot" DurationMin="1.3666893" DurationMax="1.3666893">
+					<MediaRefs>
+						<MediaRef Id="1068946712"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2320974141" Name="Submit" DurationType="OneShot" DurationMin="0.25562358" DurationMax="0.7813152">
+					<MediaRefs>
+						<MediaRef Id="330473102"/>
+						<MediaRef Id="665845962"/>
+						<MediaRef Id="672252065"/>
+					</MediaRefs>
+				</Event>
 			</Events>
 			<StateGroups>
 				<StateGroup Id="3103015060" Name="MusicStates">
@@ -39,7 +122,7 @@
 				</StateGroup>
 			</StateGroups>
 		</SoundBank>
-		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{FF57D361-7E2A-BAC7-3181-23DD097D5631}">
+		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{0B82267C-D416-DA9E-F7E8-473543E8E3FC}">
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 			<Plugins>
@@ -300,5 +383,5 @@
 			</StateGroups>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{27F505F1-60AB-5292-DCFB-00E709EE5F4D}</FileHash>
+	<FileHash>{A2D68DA1-4CB0-0CB9-A69B-37F042223C33}</FileHash>
 </SoundBanksInfo>

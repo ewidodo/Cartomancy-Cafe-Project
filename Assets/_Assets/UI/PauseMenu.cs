@@ -8,6 +8,9 @@ public class PauseMenu : SingletonDontDestroy<PauseMenu>
     [Header("Display References")]
     public GameObject menu;
 
+    [Header("Audio Events")]
+    public AK.Wwise.Event pause;
+    public AK.Wwise.Event resume;
 
     new private void Awake()
     {
@@ -40,12 +43,16 @@ public class PauseMenu : SingletonDontDestroy<PauseMenu>
             return;
         }
 
+        pause.Post(this.gameObject);
+
         menu.SetActive(true);
         Time.timeScale = 0;
     }
 
     public void Resume()
     {
+        resume.Post(this.gameObject);
+
         menu.SetActive(false);
         Time.timeScale = 1;
     }

@@ -1,7 +1,26 @@
 Event	ID	Name			Wwise Object Path	Notes
 	1518434845	GameplaySceneUnloaded			\Default Work Unit\SceneManagement\GameplaySceneUnloaded	
+	1591902251	Pour			\Default Work Unit\SFX\Pour	
+	1761501022	Book			\Default Work Unit\SFX\Book	
 	2191945436	GameplaySceneLoaded			\Default Work Unit\SceneManagement\GameplaySceneLoaded	
+	2320974141	Submit			\Default Work Unit\SFX\Submit	
+	4189504227	Card			\Default Work Unit\SFX\Card	
+
+Effect plug-ins	ID	Name	Type				Notes
+	1008402193	Low_Pass_20KHz	Wwise Parametric EQ			
+	2998002419	Boost_3dB_10KHz	Wwise Parametric EQ			
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
-	211939400	Ambience	S:\2_Games\Projects\Unity\DaniJam\Cartomancy-Cafe-Project\Cartomancy-Cafe-Project_WwiseProject\.cache\Windows\SFX\Ambience_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ambience		12108844
+	211939400	Ambience	S:\2_Games\Projects\Unity\DaniJam\Cartomancy-Cafe-Project\Cartomancy-Cafe-Project_WwiseProject\.cache\Windows\SFX\Ambience_FBC78EF0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ambience Container\Ambience		12108844
+	238068912	Card1	S:\2_Games\Projects\Unity\DaniJam\Cartomancy-Cafe-Project\Cartomancy-Cafe-Project_WwiseProject\.cache\Windows\SFX\Card1_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Card\Card1		39472
+	330473102	Submit2	S:\2_Games\Projects\Unity\DaniJam\Cartomancy-Cafe-Project\Cartomancy-Cafe-Project_WwiseProject\.cache\Windows\SFX\Submit2_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Submit\Submit2		129088
+	414271480	CloseBook	S:\2_Games\Projects\Unity\DaniJam\Cartomancy-Cafe-Project\Cartomancy-Cafe-Project_WwiseProject\.cache\Windows\SFX\CloseBook_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Book\CloseBook		29796
+	651868947	Card4	S:\2_Games\Projects\Unity\DaniJam\Cartomancy-Cafe-Project\Cartomancy-Cafe-Project_WwiseProject\.cache\Windows\SFX\Card4_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Card\Card4		45480
+	660825494	Card2	S:\2_Games\Projects\Unity\DaniJam\Cartomancy-Cafe-Project\Cartomancy-Cafe-Project_WwiseProject\.cache\Windows\SFX\Card2_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Card\Card2		62244
+	665845962	Submit3	S:\2_Games\Projects\Unity\DaniJam\Cartomancy-Cafe-Project\Cartomancy-Cafe-Project_WwiseProject\.cache\Windows\SFX\Submit3_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Submit\Submit3		45188
+	672252065	Submit1	S:\2_Games\Projects\Unity\DaniJam\Cartomancy-Cafe-Project\Cartomancy-Cafe-Project_WwiseProject\.cache\Windows\SFX\Submit1_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Submit\Submit1		137920
+	843558624	OpenBook	S:\2_Games\Projects\Unity\DaniJam\Cartomancy-Cafe-Project\Cartomancy-Cafe-Project_WwiseProject\.cache\Windows\SFX\OpenBook_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Book\OpenBook		30464
+	945234134	Card5	S:\2_Games\Projects\Unity\DaniJam\Cartomancy-Cafe-Project\Cartomancy-Cafe-Project_WwiseProject\.cache\Windows\SFX\Card5_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Card\Card5		35880
+	1068946712	Pour1	S:\2_Games\Projects\Unity\DaniJam\Cartomancy-Cafe-Project\Cartomancy-Cafe-Project_WwiseProject\.cache\Windows\SFX\Pour1_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Pour1		241180
+	1071386084	Card3	S:\2_Games\Projects\Unity\DaniJam\Cartomancy-Cafe-Project\Cartomancy-Cafe-Project_WwiseProject\.cache\Windows\SFX\Card3_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Card\Card3		35800
 

@@ -52,6 +52,13 @@
 					</ChildrenList>
 				</Folder>
 				<Sound Name="Pour1" ID="{7D81AF28-C725-448F-B7DE-BAA55A7011EE}" ShortID="653405086">
+					<PropertyList>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>9</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
 					<ReferenceList>
 						<Reference Name="Conversion">
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6D89A2C9-FAF0-4CC3-A6F1-A7315AB958FC}"/>
@@ -71,28 +78,6 @@
 					</ChildrenList>
 					<ActiveSourceList>
 						<ActiveSource Name="Pour1" ID="{8C006182-6AD0-41BF-A708-6AF15218051B}" Platform="Linked"/>
-					</ActiveSourceList>
-				</Sound>
-				<Sound Name="Ambience" ID="{E3FE0423-73EC-4935-8F61-99EE084BCE89}" ShortID="857419847">
-					<ReferenceList>
-						<Reference Name="Conversion">
-							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6D89A2C9-FAF0-4CC3-A6F1-A7315AB958FC}"/>
-						</Reference>
-						<Reference Name="OutputBus">
-							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{61DB7342-716B-4ADA-8E0E-AD113FC0CB4B}"/>
-						</Reference>
-					</ReferenceList>
-					<ChildrenList>
-						<AudioFileSource Name="Ambience" ID="{62332585-84EB-45AB-92BC-4A466CA302CF}">
-							<Language>SFX</Language>
-							<AudioFile>Ambience.wav</AudioFile>
-							<MediaIDList>
-								<MediaID ID="211939400"/>
-							</MediaIDList>
-						</AudioFileSource>
-					</ChildrenList>
-					<ActiveSourceList>
-						<ActiveSource Name="Ambience" ID="{62332585-84EB-45AB-92BC-4A466CA302CF}" Platform="Linked"/>
 					</ActiveSourceList>
 				</Sound>
 				<RandomSequenceContainer Name="Card" ID="{E8EC1DEA-7199-469D-9F66-2A905182B10A}" ShortID="776370769">
@@ -360,6 +345,115 @@
 							</Reference>
 							<Reference>
 								<ObjectRef Name="CloseBook" ID="{E9F8995B-D279-442B-9BDE-5ECD18229274}" WorkUnitID="{90AC13BD-24B4-4141-9BEF-0F4B77B371EB}"/>
+							</Reference>
+						</ObjectList>
+					</ObjectLists>
+				</RandomSequenceContainer>
+				<RandomSequenceContainer Name="Ambience Container" ID="{FBB7D63F-FD72-4E98-A87B-5C8EFA5684D1}" ShortID="78408454">
+					<PropertyList>
+						<Property Name="PlayMechanismLoop" Type="bool" Value="True"/>
+						<Property Name="PlayMechanismSpecialTransitions" Type="bool" Value="True"/>
+						<Property Name="PlayMechanismSpecialTransitionsValue" Type="Real64" Value="4"/>
+						<Property Name="PlayMechanismStepOrContinuous" Type="int16" Value="0"/>
+						<Property Name="RandomOrSequence" Type="int16" Value="0"/>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>15</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6D89A2C9-FAF0-4CC3-A6F1-A7315AB958FC}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{61DB7342-716B-4ADA-8E0E-AD113FC0CB4B}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<Sound Name="Ambience" ID="{E3FE0423-73EC-4935-8F61-99EE084BCE89}" ShortID="857419847">
+							<PropertyList>
+								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6D89A2C9-FAF0-4CC3-A6F1-A7315AB958FC}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{61DB7342-716B-4ADA-8E0E-AD113FC0CB4B}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Ambience" ID="{62332585-84EB-45AB-92BC-4A466CA302CF}">
+									<Language>SFX</Language>
+									<AudioFile>Ambience.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="211939400"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists>
+								<ObjectList Name="Effects">
+									<Reference>
+										<Local>
+											<EffectSlot Name="" ID="{EA5A1758-4470-4EE9-9B74-26F2850E50FA}" ShortID="338053101">
+												<ReferenceList>
+													<Reference Name="Effect" PluginName="Wwise Parametric EQ" CompanyID="0" PluginID="105" PluginType="3">
+														<ObjectRef Name="Boost_3dB_10KHz" ID="{59632554-9396-4E15-889E-7A2F5458DEC3}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
+													</Reference>
+												</ReferenceList>
+											</EffectSlot>
+										</Local>
+									</Reference>
+								</ObjectList>
+							</ObjectLists>
+							<ActiveSourceList>
+								<ActiveSource Name="Ambience" ID="{62332585-84EB-45AB-92BC-4A466CA302CF}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+					</ChildrenList>
+					<ObjectLists>
+						<ObjectList Name="Effects">
+							<Reference>
+								<Local>
+									<EffectSlot Name="" ID="{58DBD584-6F73-423D-A188-9EBD9D0A5BE3}" ShortID="979433677">
+										<ReferenceList>
+											<Reference Name="Effect" PluginName="Wwise Parametric EQ" CompanyID="0" PluginID="105" PluginType="3">
+												<ObjectRef Name="Boost_3dB_10KHz" ID="{59632554-9396-4E15-889E-7A2F5458DEC3}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
+											</Reference>
+										</ReferenceList>
+									</EffectSlot>
+								</Local>
+							</Reference>
+							<Reference>
+								<Local>
+									<EffectSlot Name="" ID="{60E58994-68CD-4008-B216-2B461169AD7D}" ShortID="440791299">
+										<ReferenceList>
+											<Reference Name="Effect" PluginName="Wwise Parametric EQ" CompanyID="0" PluginID="105" PluginType="3">
+												<ObjectRef Name="Low_Pass_20KHz" ID="{830124FB-B9D5-4AE8-846E-E94A74652666}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
+											</Reference>
+										</ReferenceList>
+									</EffectSlot>
+								</Local>
+							</Reference>
+							<Reference>
+								<Local>
+									<EffectSlot Name="" ID="{19868B20-C500-49E0-81FA-BFB43AB7DE5B}" ShortID="16300794">
+										<ReferenceList>
+											<Reference Name="Effect" PluginName="Wwise Parametric EQ" CompanyID="0" PluginID="105" PluginType="3">
+												<ObjectRef Name="Cut_3dB_100Hz" ID="{67423B74-4F0A-4719-92FE-343347C717C7}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
+											</Reference>
+										</ReferenceList>
+									</EffectSlot>
+								</Local>
+							</Reference>
+						</ObjectList>
+						<ObjectList Name="Playlist">
+							<Reference>
+								<ObjectRef Name="Ambience" ID="{E3FE0423-73EC-4935-8F61-99EE084BCE89}" WorkUnitID="{90AC13BD-24B4-4141-9BEF-0F4B77B371EB}"/>
+							</Reference>
+							<Reference>
+								<ObjectRef Name="Ambience" ID="{E3FE0423-73EC-4935-8F61-99EE084BCE89}" WorkUnitID="{90AC13BD-24B4-4141-9BEF-0F4B77B371EB}"/>
 							</Reference>
 						</ObjectList>
 					</ObjectLists>

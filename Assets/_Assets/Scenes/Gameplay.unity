@@ -617,6 +617,7 @@ GameObject:
   - component: {fileID: 230517759}
   - component: {fileID: 230517758}
   - component: {fileID: 230517757}
+  - component: {fileID: 230517760}
   m_Layer: 5
   m_Name: Finish Drink Button
   m_TagString: Untagged
@@ -700,6 +701,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 230517760}
+        m_TargetAssemblyTypeName: ButtonActions, Assembly-CSharp
+        m_MethodName: PlayButtonSound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &230517758
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -738,6 +751,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 230517755}
   m_CullTransparentMesh: 1
+--- !u!114 &230517760
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 230517755}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b24b29fb321b78e44bb26274307cf331, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  buttonPressSound:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: a3b6841682c9be94e890628175ecbc10, type: 2}
 --- !u!1 &246719570
 GameObject:
   m_ObjectHideFlags: 0
@@ -1193,6 +1222,7 @@ GameObject:
   m_Component:
   - component: {fileID: 477699870}
   - component: {fileID: 477699869}
+  - component: {fileID: 477699871}
   m_Layer: 0
   m_Name: WwiseGlobal
   m_TagString: Untagged
@@ -1240,6 +1270,31 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &477699871
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 477699868}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9cc4232f50d011942a32764caf6a6e92, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  triggerList: ae8d9d44
+  useOtherObject: 0
+  data:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 335414dfe8469a544a0bf1dc136b812a, type: 2}
+  decodeBank: 0
+  overrideLoadSetting: 0
+  loadAsynchronous: 0
+  saveDecodedBank: 0
+  unloadTriggerList: 958ca0ea
+  bankNameInternal: 
+  valueGuidInternal: 
 --- !u!1 &484546048
 GameObject:
   m_ObjectHideFlags: 0
@@ -1755,6 +1810,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b24b29fb321b78e44bb26274307cf331, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  buttonPressSound:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 13fd0113fc103574a8245a6976e2c2ee, type: 2}
 --- !u!114 &1018246307
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1814,6 +1873,18 @@ MonoBehaviour:
       - m_Target: {fileID: 1018246306}
         m_TargetAssemblyTypeName: ButtonActions, Assembly-CSharp
         m_MethodName: UpdateRecipeTutorial
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1018246306}
+        m_TargetAssemblyTypeName: ButtonActions, Assembly-CSharp
+        m_MethodName: PlayButtonSound
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

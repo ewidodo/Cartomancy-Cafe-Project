@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 7138551570566819636}
   - component: {fileID: 5158901740256770078}
   - component: {fileID: 6916534173846682981}
+  - component: {fileID: 8284251536947480697}
   m_Layer: 5
   m_Name: IngredientCard
   m_TagString: Untagged
@@ -76,6 +77,10 @@ MonoBehaviour:
   hoverScaleTime: 0.1
   defaultScale: {x: 1, y: 1, z: 1}
   arrowHighlightColor: {r: 0, g: 0, b: 0, a: 0}
+  cardHover:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 66a6680a13b54ee49999a388102bd95e, type: 2}
 --- !u!114 &6421474043354566796
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -123,6 +128,18 @@ MonoBehaviour:
       - m_Target: {fileID: 1754893878691075684}
         m_TargetAssemblyTypeName: Ingredient, Assembly-CSharp
         m_MethodName: SelectIngredient
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 8284251536947480697}
+        m_TargetAssemblyTypeName: ButtonActions, Assembly-CSharp
+        m_MethodName: PlayButtonSound
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -217,6 +234,22 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
+--- !u!114 &8284251536947480697
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1116501641337421285}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b24b29fb321b78e44bb26274307cf331, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  buttonPressSound:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 2d3c79099a638a64abbbc343890aec26, type: 2}
 --- !u!1 &4078680535941711499
 GameObject:
   m_ObjectHideFlags: 0

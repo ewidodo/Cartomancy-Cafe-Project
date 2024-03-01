@@ -27,6 +27,9 @@ public class IngredientCard : MonoBehaviour
     public Vector3 defaultScale = Vector3.one;
     public Color arrowHighlightColor;
 
+    [Header("Audio Events")]
+    public AK.Wwise.Event cardHover;
+
 
     private void Awake()
     {
@@ -49,6 +52,9 @@ public class IngredientCard : MonoBehaviour
 
     public void Enlarge()
     {
+        // SFX
+        cardHover.Post(this.gameObject);
+
         // Display in front
         GetComponent<Canvas>().sortingOrder += 1;
         // Cancel any other ongoing scale tweens
