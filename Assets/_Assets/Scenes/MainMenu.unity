@@ -280,7 +280,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: -565.9919, y: 340.48245}
+  m_AnchoredPosition: {x: 327, y: 284}
   m_SizeDelta: {x: 578.0164, y: 380.9648}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &250972802
@@ -2862,10 +2862,12 @@ MonoBehaviour:
 
     ryomams - Design
 
-    Naman Bhushan
-    - Design, Sound Design
+    Johnny Choi
+    - Design
 
-    Johnny Choi - Design'
+    Naman Bhushan - SFX
+
+'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 6a01d7c03f687854981700bdcbdcabc7, type: 2}
   m_sharedMaterial: {fileID: -622886877429086213, guid: 6a01d7c03f687854981700bdcbdcabc7, type: 2}
@@ -2892,7 +2894,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 29.7
+  m_fontSize: 33.1
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
