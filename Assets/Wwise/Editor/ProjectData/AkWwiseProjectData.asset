@@ -118,7 +118,7 @@ MonoBehaviour:
     ParentPath: SoundBanks\Default Work Unit
     guid: 01b0af0ec7ad604696383e25c56eb617
     GuidInternal: 
-    m_lastTime: -8584923546420509255
+    m_lastTime: -8584923529486195943
     List:
     - name: Credits
       guid: 8c1098d2a3514849acc01f0a12a1c70e
@@ -202,7 +202,7 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: 423b03fbe80d9141b98abfeb44c02c12
     GuidInternal: 
-    m_lastTime: -8584923536050063933
+    m_lastTime: -8584923529512310144
     List:
     - name: Book
       guid: b1e2f469f8639d45b1d4131964dcf808
@@ -302,8 +302,8 @@ MonoBehaviour:
         guid: 022627a7caffff4fb3618c7a25167944
       Path: Events\Default Work Unit\SceneManagement\GameplaySceneLoaded
       maxAttenuation: 0
-      maxDuration: 68.6437
-      minDuration: 68.6437
+      maxDuration: -1
+      minDuration: -1
     - name: GameplaySceneUnloaded
       guid: d5269715b1571747a80d3d58a5c03cc4
       id: 1518434845
